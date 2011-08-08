@@ -11586,3 +11586,123 @@ Served asset /forms.css - 304 Not Modified (0ms)
 
 Started GET "/assets/tables.css" for 127.0.0.1 at Sun Aug 07 21:04:10 -0700 2011
 Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 07 21:34:27 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 1
+Rendered pages/index.html.erb (18.8ms)
+Completed 200 OK in 139ms (Views: 30.8ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Aug 07 21:34:27 -0700 2011
+Served asset /layout.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Aug 07 21:34:27 -0700 2011
+Served asset /forms.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Aug 07 21:34:27 -0700 2011
+Served asset /navi.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Aug 07 21:34:27 -0700 2011
+Served asset /tables.css - 304 Not Modified (4ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sun Aug 07 21:34:31 -0700 2011
+  Processing by PagesController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 114ms (Views: 15.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Aug 07 21:34:31 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Aug 07 21:34:31 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Aug 07 21:34:32 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Aug 07 21:34:32 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at Sun Aug 07 21:34:33 -0700 2011
+  Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered posts/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 53ms (Views: 32.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Aug 07 21:34:33 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Aug 07 21:34:34 -0700 2011
+Served asset /forms.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Aug 07 21:34:34 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Aug 07 21:34:34 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/join" for 127.0.0.1 at Sun Aug 07 21:34:36 -0700 2011
+  Processing by PagesController#join as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/join.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 14.1ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Aug 07 21:34:36 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Aug 07 21:34:36 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Aug 07 21:34:36 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Aug 07 21:34:36 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Aug 07 21:34:38 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 1
+Rendered pages/index.html.erb (13.0ms)
+Completed 200 OK in 119ms (Views: 17.5ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Aug 07 21:34:38 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Aug 07 21:34:38 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Aug 07 21:34:38 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Aug 07 21:34:38 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
