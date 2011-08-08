@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<head>
+<title>Vivat Jesus!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+<%= stylesheet_link_tag "layout" %>
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</head>
+<body id="top">
+<div class="wrapper col1">
+	<p align="right"><% if @current_user %>
+		Welcome <%= @current_user.username.capitalize %> | 
+
+		<% if @current_user.admin %>
+			<%= link_to 'users', '/users' %> |
+		<% end %>
+
+		<%= link_to 'logout', '/logout' %>
+
+	<% else %>
+		<%= link_to 'register', new_user_path %> | 
+		<%= link_to 'login', '/login' %>
+	<% end %></p>
+  <div id="header">
+    <div id="topnav">
+      <ul>
+		<% if controller.action_name == "join" %>
+	      <li class="active last"><a href="/join">become a knight</a></li>
+		<% else %>
+	    <li class="last"><a href="/join">become a knight</a></li>
+		<% end %>
+
+		<% if controller.controller_name == "events" %>
+	      <li class="active"><a href="/events">events</a></li>
+		<% else %>
+	    <li><a href="/events">events</a></li>
+		<% end %>
+
+		<% if controller.controller_name == "posts" %>
+	      <li class="active"><a href="/posts">news</a></li>
+		<% else %>
+	    <li><a href="/posts">news</a></li>
+		<% end %>
+
+		<% if controller.action_name == "about" %>
+	      <li class="active"><a href="/about">about</a></li>
+		<% else %>
+	    <li><a href="/about">about</a></li>
+		<% end %>
+
+		<% if controller.controller_name == "pages" && controller.action_name == "index" %>
+	      <li class="active"><a href="/">Home</a></li>
+		<% else %>
+	    <li><a href="/">Home</a></li>
+		<% end %>
+      </ul>
+    </div>
+    <div id="logo">
+      <h1><a href="/"><%=image_tag "/images/vivatjesus.png", :width => "50"%> Vivat Jesus!</a></h1>
+      <!-- <p>Knights of Columbus Corpus Christi Coucil 10062</p> -->
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col2">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="/">Home</a></li>
+      <li>&#187;</li>
+      <li class="current">
+		<% if controller.controller_name == "pages" %>
+			<%=link_to controller.action_name %>
+		<% else %>
+			<%=link_to controller.controller_name %>
+		<% end %>
+	  </li>
+    </ul>
+  </div>
+</div>
+<div class="wrapper col4">
+  <div id="container">
+
+		<%= yield %>
+	
+  </div>
+</div>
+<div class="wrapper col5">
+  <div id="footer">
+    <div id="contactform">
+      <h2>Why Not Contact Us Today !</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Contact Form</legend>
+          <label for="fullname">Name:
+            <input id="fullname" name="fullname" type="text" value="" />
+          </label>
+          <label for="emailaddress" class="margin">Email:
+            <input id="emailaddress" name="emailaddress" type="text" value="" />
+          </label>
+          <label for="message">Message:<br />
+            <textarea id="message" name="message" cols="40" rows="4"></textarea>
+          </label>
+          <p>
+            <input id="submitform" name="submitform" type="submit" value="Submit" />
+            &nbsp;
+            <input id="resetform" name="resetform" type="reset" value="Reset" />
+          </p>
+        </fieldset>
+      </form>
+    </div>
+    <div class="fl_right">
+      <div class="footbox">
+        <h2>Lacus interdum</h2>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Suspendisse in neque</a></li>
+          <li><a href="#">Praesent et eros</a></li>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Suspendisse in neque</a></li>
+          <li><a href="#">Praesent et eros</a></li>
+          <li><a href="#">Praesent et eros</a></li>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Suspendisse in neque</a></li>
+          <li class="last"><a href="#">Praesent et eros</a></li>
+        </ul>
+      </div>
+      <div class="footbox">
+        <h2>Lacus interdum</h2>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Suspendisse in neque</a></li>
+          <li><a href="#">Praesent et eros</a></li>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Suspendisse in neque</a></li>
+          <li><a href="#">Praesent et eros</a></li>
+          <li><a href="#">Praesent et eros</a></li>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Suspendisse in neque</a></li>
+          <li class="last"><a href="#">Praesent et eros</a></li>
+        </ul>
+      </div>
+      <div class="footbox last">
+        <h2>Lacus interdum</h2>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Suspendisse in neque</a></li>
+          <li><a href="#">Praesent et eros</a></li>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Suspendisse in neque</a></li>
+          <li><a href="#">Praesent et eros</a></li>
+          <li><a href="#">Praesent et eros</a></li>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Suspendisse in neque</a></li>
+          <li class="last"><a href="#">Praesent et eros</a></li>
+        </ul>
+      </div>
+      <div id="newsletter">
+        <p>Enter your email to join our mailing list &raquo;</p>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>News Letter</legend>
+            <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
+            <input type="submit" name="news_go" id="news_go" value="GO" />
+          </fieldset>
+        </form>
+        <br class="clear" />
+      </div>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2011 - All Rights Reserved - <a href="/">KofC 10062</a></p>
+    <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>
+
+	
+
+
+
