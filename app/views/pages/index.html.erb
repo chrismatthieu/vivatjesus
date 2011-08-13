@@ -135,7 +135,7 @@
 		<% math1 = 1 + rand(10) %>
 		<% math2 = 1 + rand(10) %>
 		<% mathanswer = math1 + math2 %>
-      <label for="message">Are you human?  What's <%=math1%> + <%=math2%>?
+      <label for="message">Are you human?<br/>What's <%=math1%> + <%=math2%>?
       <%= text_field("contact", "answer") -%></label>
       <%= hidden_field("contact", "mathanswer", :value => mathanswer) -%><br/>
       <p>
