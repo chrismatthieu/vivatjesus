@@ -1,7 +1,6 @@
 Vivatjesus::Application.routes.draw do
 
   match '/posts/rss' => 'posts#rss'
-  match '/posts/rssreal' => 'posts#rssreal'
 
   resources :posts
   resources :users

@@ -5,10 +5,11 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
     respond_to do |format|
       format.html {
-        if !@current_user.admin
+        if @current_user.admin
+          @users = User.order("username")
+        else
           redirect_to "/"
         end
       }

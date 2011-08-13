@@ -100,18 +100,11 @@ class PostsController < ApplicationController
     render :action => 'index'    
   end
   
-  def rss
-    #@headers["Content-Type"] = "application/xml" 
-    #@posts = Post.find(:all, :order => "timestamp desc")
-    #render :layout => false
-    
-    redirect_to 'http://feeds.feedburner.com/vivatjesus'
-    
-  end
+  # def rss
+  #   redirect_to 'http://feeds.feedburner.com/vivatjesus'    
+  # end
 
-  def rssreal
-    # @headers["Content-Type"] = "application/xml" 
-    
+  def rss    
     @posts = Post.find(:all, :order => "created_at desc")
     render :action => 'rss', :content_type => "application/xml", :layout => false 
     

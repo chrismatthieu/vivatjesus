@@ -8,6 +8,10 @@ class PagesController < ApplicationController
     render :layout => false 
   end
   
+  def about
+    @users = User.order("username").where("officer = true")
+  end
+  
   def contact
     if params[:newsletteremail]
       
