@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= gravatar_image_tag @user.email, :class => "gravatar" rescue ""%>
+
 <p>
   <b>Username:</b>
   <%= @user.username %>

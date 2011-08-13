@@ -2,7 +2,7 @@
 	
 	<p id="notice"><%= notice %></p>
 
-	<h2 class="title"><a href="/posts/<%=@post.id%>"><%= @post.postname %></a> <small>Posted by <%= link_to @post.user.username.capitalize, user_path(@post.user.id) rescue ""%> on <%= @post.created_at.strftime("%A %B %d, %Y") %></small><br/>
+	<h2 class="title"><%= gravatar_image_tag @post.user.email, :class => "gravatar", :width => "25" rescue ""%> <a href="/posts/<%=@post.id%>"><%= @post.postname %></a> <small>Posted by <%= link_to @post.user.username.capitalize, user_path(@post.user.id) rescue ""%> on <%= @post.created_at.strftime("%A %B %d, %Y") %></small><br/>
 		</h2>
 
     <p><%= raw(@post.postbody) %></p>

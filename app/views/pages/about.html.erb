@@ -17,10 +17,16 @@
 <h2>Council Officers</h2>
 <p>
 	<table>
+		<thead>
+	    <th>Username</th>
+	    <th>Officer Title</th>
+	    <th>Social Networks</th>
+	  </thead>
+	  
 
 	<% @users.each do |user| %>
 	  <tr>
-	    <td><%= link_to user.username.capitalize, user_path(user) rescue ""%></td>
+	    <td><%= gravatar_image_tag user.email, :class => "gravatar", :width => "25" %> <%= link_to user.username.capitalize, user_path(user) rescue ""%></td>
 	    <td><%= user.officertitle %></td>
 		<td>
 			<% if user.twitter %>

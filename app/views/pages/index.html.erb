@@ -9,7 +9,7 @@
 <body id="top">
 <div class="wrapper col1">
 	<p align="right"><% if @current_user %>
-		Welcome <%= @current_user.username.capitalize %> | 
+		<%= gravatar_image_tag @post.user.email, :class => "gravatar", :width => "15" %> <%= @current_user.username.capitalize %> | 
 
 		<% if @current_user.admin %>
 			<%= link_to 'users*', '/users' %> |
@@ -91,7 +91,7 @@
 <div class="wrapper col3">
   <div id="latest">
 	<% if @post %>
-	<h1><a href="/posts/<%= @post.id.to_s rescue ""%>"><%= @post.postname rescue ""%></a> (<%= link_to "more news...", "/posts"%> )<br/>
+	<h1><%= gravatar_image_tag @post.user.email, :class => "gravatar", :width => "25" %> <a href="/posts/<%= @post.id.to_s rescue ""%>"><%= @post.postname rescue ""%></a> (<%= link_to "more news...", "/posts"%> )<br/>
 		</h1>
 		<p>
 		<%= raw(@post.postbody) rescue ""%>

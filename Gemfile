@@ -2,7 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0.rc5'
 
-gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
+# gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
+gem "will_paginate"
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -16,6 +17,7 @@ group :production do
 end 
 
 gem 'json'
+gem 'gravatar_image_tag', '1.0.0.pre2'
 
 # Gems used only for assets and not required
 # in production environments by default.
