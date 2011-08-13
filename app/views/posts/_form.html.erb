@@ -20,6 +20,10 @@
     <%= f.label "Body" %><br />
     <%= f.text_area :postbody %>
   </div>
+  <div class="field">
+    <%= f.check_box :privateflag %>
+    <%= f.label "Requires user to be logged in to read this post." %><br />
+  </div>
   <div class="actions">
     <p><%= f.submit %></p>
   </div>

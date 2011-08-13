@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   before_filter :current_user  
   
   def index
-    @post = Post.first :order => 'created_at DESC'
+    @post = Post.first :conditions => ["privateflag = ?", false], :order => 'created_at DESC'
     
     render :layout => false 
   end

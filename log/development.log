@@ -17734,3 +17734,693 @@ Served asset /forms.css - 304 Not Modified (0ms)
 
 Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 13:49:08 -0700
 Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-08-13 14:19:56 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 3 OFFSET 0
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered posts/index.html.erb within layouts/application (184.7ms)
+Completed 200 OK in 349ms (Views: 243.7ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:19:57 -0700
+Served asset /layout.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:19:57 -0700
+Served asset /tables.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:19:57 -0700
+Served asset /forms.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:19:57 -0700
+Served asset /navi.css - 304 Not Modified (3ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-08-13 14:23:11 -0700
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (4.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered posts/show.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 140ms (Views: 64.3ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:23:12 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:23:12 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:23:12 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:23:12 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:26:26 -0700
+
+SyntaxError (/usr/local/src/vivatjesus/app/controllers/pages_controller.rb:6: syntax error, unexpected ',', expecting ')'
+...ditions => [("privateflag = ?", false)]
+...                               ^):
+  
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:26:37 -0700
+
+SyntaxError (/usr/local/src/vivatjesus/app/controllers/pages_controller.rb:6: syntax error, unexpected ',', expecting ')'
+...itions => [("privateflag != ?", true)]
+...                               ^):
+  
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:26:55 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (5.4ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+Rendered pages/index.html.erb (90.6ms)
+Completed 200 OK in 135ms (Views: 95.9ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:26:55 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:26:55 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:26:55 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:26:55 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:28:04 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag != 1) ORDER BY created_at DESC LIMIT 1[0m
+Rendered pages/index.html.erb (56.2ms)
+Completed 200 OK in 94ms (Views: 60.2ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:28:04 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:28:04 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:28:04 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:28:04 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:28:05 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag != 1) ORDER BY created_at DESC LIMIT 1[0m
+Rendered pages/index.html.erb (24.8ms)
+Completed 200 OK in 67ms (Views: 32.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:28:05 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:28:05 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:28:05 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:28:05 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:28:23 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+Rendered pages/index.html.erb (21.5ms)
+Completed 200 OK in 68ms (Views: 26.4ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:28:23 -0700
+Served asset /layout.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:28:23 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:28:23 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:28:23 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:29:26 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag == 0) ORDER BY created_at DESC LIMIT 1[0m
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 0) ORDER BY created_at DESC LIMIT 1' at line 1: SELECT  `posts`.* FROM `posts`  WHERE (privateflag == 0) ORDER BY created_at DESC LIMIT 1
+Completed 500 Internal Server Error in 48ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 0) ORDER BY created_at DESC LIMIT 1' at line 1: SELECT  `posts`.* FROM `posts`  WHERE (privateflag == 0) ORDER BY created_at DESC LIMIT 1):
+  app/controllers/pages_controller.rb:6:in `index'
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:29:29 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+Rendered pages/index.html.erb (19.3ms)
+Completed 200 OK in 97ms (Views: 22.7ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:29:29 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:29:29 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:29:29 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:29:29 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:29:50 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+Rendered pages/index.html.erb (54.2ms)
+Completed 200 OK in 93ms (Views: 58.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:29:50 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:29:51 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:29:51 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:29:51 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:30:45 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0 or privateflag = NULL) ORDER BY created_at DESC LIMIT 1[0m
+Rendered pages/index.html.erb (51.1ms)
+Completed 200 OK in 88ms (Views: 54.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:30:45 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:30:45 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:30:45 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:30:45 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:30:47 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0 or privateflag = NULL) ORDER BY created_at DESC LIMIT 1[0m
+Rendered pages/index.html.erb (17.7ms)
+Completed 200 OK in 52ms (Views: 21.2ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:30:47 -0700
+Served asset /layout.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:30:47 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:30:47 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:30:47 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:30:48 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0 or privateflag = NULL) ORDER BY created_at DESC LIMIT 1[0m
+Rendered pages/index.html.erb (17.2ms)
+Completed 200 OK in 55ms (Views: 20.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:30:48 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:30:48 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:30:48 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:30:48 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:30:53 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 500 Internal Server Error in 100ms
+
+NameError (undefined local variable or method `blank' for #<PagesController:0x0000010328a1c8>):
+  app/controllers/pages_controller.rb:6:in `index'
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:30:58 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0 or privateflag = 'blank') ORDER BY created_at DESC LIMIT 1
+Rendered pages/index.html.erb (50.9ms)
+Completed 200 OK in 89ms (Views: 54.2ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:30:58 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:30:58 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:30:58 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:30:58 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:31:50 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.6ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0 or privateflag = '') ORDER BY created_at DESC LIMIT 1
+Rendered pages/index.html.erb (66.5ms)
+Completed 200 OK in 112ms (Views: 70.1ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:31:51 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:31:51 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:31:51 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:31:51 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:32:00 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0 or privateflag = NULL) ORDER BY created_at DESC LIMIT 1
+Rendered pages/index.html.erb (18.1ms)
+Completed 200 OK in 54ms (Views: 21.7ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:32:01 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:32:01 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:32:01 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:32:01 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:35:25 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag != 1 ) ORDER BY created_at DESC LIMIT 1
+Rendered pages/index.html.erb (17.8ms)
+Completed 200 OK in 55ms (Views: 21.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:35:26 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:35:26 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:35:26 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:35:26 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:35:27 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag != 1 ) ORDER BY created_at DESC LIMIT 1
+Rendered pages/index.html.erb (18.1ms)
+Completed 200 OK in 53ms (Views: 21.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:35:27 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:35:27 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:35:27 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:35:27 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:35:28 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag != 1 ) ORDER BY created_at DESC LIMIT 1
+Rendered pages/index.html.erb (22.8ms)
+Completed 200 OK in 72ms (Views: 26.8ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:35:28 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:35:28 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:35:28 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:35:28 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:35:42 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag != true ) ORDER BY created_at DESC LIMIT 1
+Rendered pages/index.html.erb (17.2ms)
+Completed 200 OK in 52ms (Views: 20.9ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:35:42 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:35:42 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:35:42 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:35:42 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:38:05 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 92ms
+
+NameError (uninitialized constant PagesController::NULL):
+  app/controllers/pages_controller.rb:6:in `index'
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:38:12 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0 or privateflag = NULL) ORDER BY created_at DESC LIMIT 1[0m
+Rendered pages/index.html.erb (51.5ms)
+Completed 200 OK in 87ms (Views: 54.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:38:12 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:38:12 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:38:12 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:38:12 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:38:46 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (64.5ms)
+Completed 200 OK in 102ms (Views: 67.4ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:38:46 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:38:46 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:38:46 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:38:46 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-08-13 14:40:07 -0700
+  Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 3 OFFSET 0
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered posts/index.html.erb within layouts/application (89.8ms)
+Completed 200 OK in 123ms (Views: 96.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:40:07 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:40:07 -0700
+Served asset /navi.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:40:07 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:40:07 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-08-13 14:40:10 -0700
+  Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered posts/_form.html.erb (14.7ms)
+Rendered posts/new.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 105ms (Views: 84.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:40:10 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:40:10 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:40:10 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:40:10 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-08-13 14:40:26 -0700
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lhJdlPs+FDXeQ/n8gQxpsFB3V4Et5XA/hccSneqMggE=", "post"=>{"postname"=>"test 3", "postbody"=>"new test", "privateflag"=>"1"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO `posts` (`created_at`, `postbody`, `postname`, `privateflag`, `updated_at`, `user_id`) VALUES ('2011-08-13 21:40:26', 'new test', 'test 3', 1, '2011-08-13 21:40:26', 1)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 65ms
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2011-08-13 14:40:26 -0700
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered posts/show.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 76ms (Views: 46.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:40:26 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:40:26 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:40:26 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:40:26 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-13 14:40:28 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+  [1m[36mUser Load (3.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (35.9ms)
+Completed 200 OK in 99ms (Views: 35.5ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:40:28 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:40:28 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:40:28 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:40:28 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-08-13 14:40:32 -0700
+  Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `posts` 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Rendered posts/index.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 77ms (Views: 54.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-13 14:40:32 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-13 14:40:32 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-13 14:40:32 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-13 14:40:32 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
