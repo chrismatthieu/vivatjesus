@@ -29,16 +29,16 @@
 	    <td><%= gravatar_image_tag user.email, :class => "gravatar", :width => "25" %> <%= link_to user.username.capitalize, user_path(user) rescue ""%></td>
 	    <td><%= user.officertitle %></td>
 		<td>
-			<% if !user.twitter.nil? %>
+			<% if !user.twitter.blank? %>
 				<%= link_to image_tag("/images/twitter1.png", :width => "25"), "http://twitter.com/" + user.twitter%>
 			<% end %>
-			<% if !user.facebook.nil? %>
+			<% if !user.facebook.blank? %>
 				<%= link_to image_tag("/images/facebook.png", :width => "25"), user.facebook%>
 			<% end %>
-			<% if !user.linkedin.nil? %>
+			<% if !user.linkedin.blank? %>
 				<%= link_to image_tag("/images/linkedin.png", :width => "25"), user.linkedin%>
 			<% end %>
-			<% if !user.googleplus.nil? %>
+			<% if !user.googleplus.blank? %>
 				<%= link_to image_tag("/images/google_plus_150x150.png", :width => "27"), user.googleplus%>
 			<% end %>
 		</td>
