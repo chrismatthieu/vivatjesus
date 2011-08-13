@@ -9,7 +9,7 @@
 <body id="top">
 <div class="wrapper col1">
 	<p align="right"><% if @current_user %>
-		<%= gravatar_image_tag @post.user.email, :class => "gravatar", :width => "15" %> <%= @current_user.username.capitalize %> | 
+		<%= gravatar_image_tag @current_user.email, :class => "gravatar", :width => "15" %> <%= @current_user.username.capitalize %> | 
 
 		<% if @current_user.admin %>
 			<%= link_to 'users*', '/users' %> |
