@@ -12,7 +12,11 @@
 		Welcome <%= @current_user.username.capitalize %> | 
 
 		<% if @current_user.admin %>
-			<%= link_to 'users', '/users' %> |
+			<%= link_to 'users*', '/users' %> |
+		<% end %>
+
+		<% if @current_user %>
+			<%= link_to 'profile', user_path(@current_user) %> |
 		<% end %>
 
 		<%= link_to 'logout', '/logout' %>
@@ -89,26 +93,29 @@
 <div class="wrapper col5">
   <div id="footer">
     <div id="contactform">
-      <h2>Why Not Contact Us Today !</h2>
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Contact Form</legend>
-          <label for="fullname">Name:
-            <input id="fullname" name="fullname" type="text" value="" />
-          </label>
-          <label for="emailaddress" class="margin">Email:
-            <input id="emailaddress" name="emailaddress" type="text" value="" />
-          </label>
-          <label for="message">Message:<br />
-            <textarea id="message" name="message" cols="40" rows="4"></textarea>
-          </label>
-          <p>
-            <input id="submitform" name="submitform" type="submit" value="Submit" />
-            &nbsp;
-            <input id="resetform" name="resetform" type="reset" value="Reset" />
-          </p>
-        </fieldset>
-      </form>
+      <h2>Contact Us Today !</h2>
+		<%= form_tag :controller=>"pages", :action=>"contact" do -%>
+      <fieldset>
+      <legend>Contact Form</legend>
+      <label for="fullname">Name:
+      <%= text_field("contact", "fullname") -%>
+      </label>
+      <label for="emailaddress" class="margin">Email:
+      <%= text_field("contact", "emailaddress") -%>
+      </label>
+      <label for="message">Message:<br />
+      <%= text_area("contact", "message", {"cols"=>"40", "rows"=>"4"}) -%>
+      </label>
+      </fieldset>
+		<% math1 = 1 + rand(10) %>
+		<% math2 = 1 + rand(10) %>
+		<% mathanswer = math1 + math2 %>
+      <label for="message">Are you human?  What's <%=math1%> + <%=math2%>?
+      <%= text_field("contact", "answer") -%></label>
+      <%= hidden_field("contact", "mathanswer", :value => mathanswer) -%><br/>
+      <p>
+        <%= submit_tag "Send" -%></p>
+		<% end -%>
     </div>
     <div class="fl_right">
       <div class="footbox">
@@ -158,11 +165,11 @@
       </div>
       <div id="newsletter">
         <p>Enter your email to join our mailing list &raquo;</p>
-        <form action="#" method="post">
+        <form action="/pages/contact" method="post">
           <fieldset>
-            <legend>News Letter</legend>
-            <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
-            <input type="submit" name="news_go" id="news_go" value="GO" />
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" name="newsletteremail"/>
+          <input type="submit" name="news_go" id="news_go" value="GO" />
           </fieldset>
         </form>
         <br class="clear" />

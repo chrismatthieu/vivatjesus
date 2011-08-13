@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110807193006) do
+ActiveRecord::Schema.define(:version => 20110813170624) do
 
   create_table "posts", :force => true do |t|
     t.string   "postname"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20110807193006) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.boolean  "privateflag"
   end
 
   create_table "users", :force => true do |t|
@@ -28,6 +29,14 @@ ActiveRecord::Schema.define(:version => 20110807193006) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin"
+    t.integer  "degree"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "googleplus"
+    t.boolean  "member"
+    t.boolean  "officer"
+    t.string   "officertitle"
+    t.string   "linkedin"
   end
 
 end

@@ -1,14 +1,27 @@
 <% for post in @posts %>
 
-	<h2 class="title"><a href="/posts/<%=post.id%>"><%= post.postname %></a> <small>Posted by <%=post.user.username.capitalize rescue ""%> on  <%= post.created_at.strftime("%A %B %d, %Y") %></small><br/>
+	<h2 class="title"><a href="/posts/<%=post.id%>"><%= post.postname %></a> <small>Posted by <%= link_to post.user.username.capitalize, user_path(post.user.id) rescue ""%> on  <%= post.created_at.strftime("%A %B %d, %Y") %></small><br/>
 		<a href="http://twitter.com/share?text=<%= post.postname rescue ""%>&amp;url=http://vivatjes.us/posts/<%=post.id%>" class="twitter-share-button">Tweet</a>
+		
+		<!-- Place this tag where you want the +1 button to render -->
+		<g:plusone href="http://vivatjes.us/posts/<%=post.id%>"></g:plusone>
+
+		<!--  Place this tag after the last plusone tag -->
+		<script type="text/javascript">
+		  (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		    po.src = 'https://apis.google.com/js/plusone.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+		
 		<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=151901608223813&amp;xfbml=1"></script><fb:like href="http://vivatjes.us/posts/<%=post.id%>" send="true" width="450" show_faces="true" font=""></fb:like>
 		</h2>
 
     <p><%= raw(post.postbody) %></p>
 
     <% if @current_user && @current_user.admin %>
-      <p><%= link_to 'Edit', :action => 'edit', :id => post %> | <%= link_to 'Destroy', { :action => 'destroy', :id => post }, :confirm => 'Are you sure?', :method => :post %></p>
+      <p><%= link_to 'Edit*', :action => 'edit', :id => post %> | <%= link_to 'Destroy*', { :action => 'destroy', :id => post }, :confirm => 'Are you sure?', :method => :post %></p>
     <% end %>
 		
 <br class="clear" />
@@ -19,7 +32,7 @@
 <br />
 
 <% if @current_user && @current_user.admin %>
-  <%= link_to 'New post', :action => 'new' %>
+  <%= link_to 'New post*', :action => 'new' %>
 <% end %>
 
 

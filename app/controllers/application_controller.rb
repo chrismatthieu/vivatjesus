@@ -19,5 +19,13 @@ class ApplicationController < ActionController::Base
        redirect_to '/'
     end
   end
+
+  def login_required
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+
+    if !@current_user 
+       redirect_to '/'
+    end
+  end
   
 end

@@ -1,14 +1,18 @@
 class UsersController < ApplicationController
   
-  before_filter :admin_required, :except => [:new, :create]
+  before_filter :login_required, :except => [:new, :create]
   
   # GET /users
   # GET /users.json
   def index
     @users = User.all
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @users }
+      format.html {
+        if !@current_user.admin
+          redirect_to "/"
+        end
+      }
+      # format.json { render :json => @users }
     end
   end
 
@@ -36,7 +40,11 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
+    if @current_user.admin
+      @user = User.find(params[:id])
+    else
+      @user = User.find(@current_user.id)
+    end
   end
 
   # POST /users
@@ -74,8 +82,12 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.json
   def update
-    @user = User.find(params[:id])
-
+    if @current_user.admin
+      @user = User.find(params[:id])
+    else
+      @user = User.find(@current_user.id)
+    end
+    
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to @user, :notice => 'User was successfully updated.' }
@@ -90,7 +102,12 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user = User.find(params[:id])
+    if @current_user.admin
+      @user = User.find(params[:id])
+    else
+      @user = User.find(@current_user.id)
+    end
+    
     @user.destroy
 
     respond_to do |format|

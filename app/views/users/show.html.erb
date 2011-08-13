@@ -6,20 +6,45 @@
 </p>
 
 <p>
+  <b>Membership:</b>
+<% if @user.member %>
+	Good Standing
+<% else %>
+	Status Pending
+<% end %>
+</p>
+
+<p>
+  <b>Degree:</b>
+  <%= @user.degree %>
+</p>
+<% if @user.officer %>
+<p>
+  <b>Officer:</b>
+  <%= @user.officertitle %>
+</p>
+<% end %>
+
+<p>
   <b>Email:</b>
   <%= @user.email %>
 </p>
-
 <p>
-  <b>Password digest:</b>
-  <%= @user.password_digest %>
+  <b>Twitter:</b>
+  <%= link_to "@" + @user.twitter, "http://twitter.com/" + @user.twitter if @user.twitter  %>
 </p>
-
 <p>
-  <b>Token:</b>
-  <%= @user.token %>
+  <b>Facebook:</b>
+  <%= link_to @user.facebook, @user.facebook  if @user.facebook %>
 </p>
-
+<p>
+  <b>LinkedIn:</b>
+  <%= link_to @user.linkedin, @user.linkedin  if @user.linkedin %>
+</p>
+<p>
+  <b>Google+:</b>
+  <%= link_to @user.googleplus, @user.googleplus  if @user.googleplus %>
+</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
