@@ -1,4 +1,6 @@
 class CalendarController < ApplicationController
+
+  before_filter :current_user  
   
   def index
     @month = (params[:month] || (Time.zone || Time).now.month).to_i

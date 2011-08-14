@@ -1,0 +1,31 @@
+<h1>Listing Events - <%= link_to "Calendar", "/calendar"%></h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Starts at</th>
+    <th>Ends at</th>
+    <th></th>
+  </tr>
+
+<% @events.each do |event| %>
+  <tr>
+    <td><%= event.name %></td>
+    <td><%= I18n.localize(event.start_at, :format => "%m/%d/%y %I:%M%p ")%></td>
+    <td><%= I18n.localize(event.end_at, :format => "%m/%d/%y %I:%M%p ") %></td>
+    <td><%= link_to 'Show', event %>
+    <% if @current_user && @current_user.admin %>
+    	| <%= link_to 'Edit', edit_event_path(event) %>
+    	| <%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %>
+	<% end %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @events %>
+<br/>
+
+<% if @current_user && @current_user.admin %>
+	<%= link_to 'New Event', new_event_path %>
+<% end %>

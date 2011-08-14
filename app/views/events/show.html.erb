@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @event.name %>
+</p>
+
+<p>
+  <b>Start at:</b>
+  <%= I18n.localize(@event.start_at, :format => "%m/%d/%y %I:%M%p ")%>
+</p>
+
+<p>
+  <b>End at:</b>
+  <%= I18n.localize(@event.end_at, :format => "%m/%d/%y %I:%M%p ") %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @event.location %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @event.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
