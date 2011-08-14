@@ -13,7 +13,7 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= gravatar_image_tag user.email, :class => "gravatar", :width => "25" %> <%= user.username %></td>
+    <td><%= gravatar_image_tag user.email, :class => "gravatar", :width => "25" %> <%= user.fullname %> (<%= user.username %>)</td>
     <td><%= user.email %></td>
     <td><%= user.member %></td>
     <td><%= user.admin %></td>

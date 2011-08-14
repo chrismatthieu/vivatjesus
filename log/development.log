@@ -21966,3 +21966,93 @@ Served asset /forms.css - 304 Not Modified (0ms)
 
 Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-14 10:50:30 -0700
 Served asset /tables.css - 304 Not Modified (0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20110727233228)
+Migrating to AddAdminToUsers (20110728003357)
+Migrating to CreatePosts (20110803213119)
+Migrating to AddUserIdToPosts (20110807193006)
+Migrating to AddProfileToUsers (20110813161014)
+Migrating to AddLinkedinToUsers (20110813170520)
+Migrating to AddPrivateflagToPosts (20110813170624)
+Migrating to CreateEvents (20110814032931)
+Migrating to AddNotesToEvents (20110814165654)
+Migrating to AddLocationToEvents (20110814170150)
+Migrating to AddUseridToEvents (20110814171206)
+Migrating to ChangeLocationInEvents (20110814174618)
+Migrating to AddFullnameToUsers (20110814224313)
+  [1m[35m (41.2ms)[0m  ALTER TABLE `users` ADD `fullname` varchar(255)
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110814224313')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-14 15:46:35 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.7ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (128.8ms)
+Completed 200 OK in 228ms (Views: 170.0ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-14 15:46:35 -0700
+Served asset /layout.css - 200 OK (8ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-14 15:46:35 -0700
+Served asset /navi.css - 200 OK (2ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-14 15:46:35 -0700
+Served asset /forms.css - 200 OK (2ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-14 15:46:35 -0700
+Served asset /tables.css - 200 OK (2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-08-14 15:46:37 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 34ms (Views: 27.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-14 15:46:42 -0700
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_profile.html.erb (8.6ms)
+Rendered users/edit.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 84ms (Views: 28.1ms | ActiveRecord: 4.7ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2011-08-14 15:46:48 -0700
+  Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JweAWhgrGVJFgE4VjyLEAfW5DWoylz6Hts/H8g+dGTQ=", "user"=>{"username"=>"chris", "fullname"=>"Chris Matthieu", "email"=>"chris@matthieu.us", "degree"=>"4", "twitter"=>"chrismatthieu", "facebook"=>"http://facebook.com/chrismatthieu", "linkedin"=>"http://www.linkedin.com/in/chrismatthieu", "googleplus"=>"https://plus.google.com/103312078473626397504/posts", "member"=>"1", "officer"=>"0", "officertitle"=>"", "admin"=>"1"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE `users` SET `fullname` = 'Chris Matthieu', `updated_at` = '2011-08-14 22:46:48' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 66ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-08-14 15:46:48 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-08-14 15:46:51 -0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY username
+Rendered users/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 34ms (Views: 12.4ms | ActiveRecord: 4.5ms)
