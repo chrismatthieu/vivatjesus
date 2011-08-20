@@ -84,4 +84,11 @@ class EventsController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  def rss    
+    @events = Event.find(:all, :order => "created_at desc")
+    render :action => 'rss', :content_type => "application/xml", :layout => false 
+  end
+  
+  
 end

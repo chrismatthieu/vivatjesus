@@ -1,3 +1,5 @@
+<%= link_to image_tag("/images/rss2.jpeg", :width => "25", :align => "right"), "/posts/rss" %>
+
 <% for post in @posts %>
 
 	<% if post.privateflag != true or (post.privateflag == true and @current_user) %>

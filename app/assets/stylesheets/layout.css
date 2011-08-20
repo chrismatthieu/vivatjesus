@@ -68,7 +68,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .col4{color:#666666; background-color:#FFFFFF;font-size:22px;}
 .col4 a{color:#FF9900; background-color:#FFFFFF;}
 .col4 a:hover{color:#FF9900; background-color:#000;}
-.col5{color:#1B1B1B; background-color:#323D7D; border-top:1px solid #D9D9D9;}
+.col5{color:#ccc; background-color:#323D7D; border-top:1px solid #D9D9D9;}
 .col6, .col6 a{color:#CCCCCC; background-color:#2E2E2E;}
 
 /* ----------------------------------------------Generalise-------------------------------------*/
@@ -450,7 +450,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .wrapper #newsletter p{
 	float:left;
 	padding:5px;
-	color:#666666;
+	color:#ccc;
 	background-color:#323D7D;
 	}
 

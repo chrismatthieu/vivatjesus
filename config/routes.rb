@@ -1,11 +1,12 @@
 Vivatjesus::Application.routes.draw do
 
-  resources :events
 
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   match '/posts/rss' => 'posts#rss'
+  match '/events/rss' => 'events#rss'
 
+  resources :events
   resources :posts
   resources :users
   resources :sessions

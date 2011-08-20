@@ -1,6 +1,8 @@
 <!-- Probably move the stylesheet to you layout. Also make sure you include the javascript. -->
 <%= stylesheet_link_tag "/stylesheets/event_calendar" %>
 
+<%= link_to image_tag("/images/rss2.jpeg", :width => "25", :align => "right"), "/events/rss" %>
+
 <h1>Calendar - <%= link_to "Event Details", events_path %></h1>
 
 <%= raw(event_calendar) %>
