@@ -4,7 +4,7 @@ class Notifier < ActionMailer::Base
   def contact(toemail, fromemail, message)
     
     mail( :to => toemail,
-          :bcc => ["bcc@example.com", "Order Watcher <watcher@example.com>"],
+          :from => fromemail,
           :subject => "Vivat Jesus!",
           :body => message)
              
