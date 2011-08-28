@@ -79,9 +79,9 @@
       <li>&#187;</li>
       <li class="current">
 		<% if controller.controller_name == "pages" %>
-			<%=link_to controller.action_name %>
+			<%=link_to controller.action_name.capitalize %>
 		<% else %>
-			<%=link_to controller.controller_name %>
+			<%=link_to controller.controller_name.capitalize %>
 		<% end %>
 	  </li>
     </ul>
@@ -155,8 +155,6 @@
           <legend>News Letter</legend>
 			<%= text_field_tag "newsletteremail" %>
 			<%= submit_tag "Go", :id => "news_go", :name => "news_go" %>
-          <!input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" name="newsletteremail"/>
-          <!input type="submit" name="news_go" id="news_go" value="GO" />
           </fieldset>
         <!-- </form> -->
 		<% end %>
