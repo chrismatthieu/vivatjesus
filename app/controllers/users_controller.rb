@@ -48,6 +48,15 @@ class UsersController < ApplicationController
     end
   end
 
+  # GET /users/1/edit
+  def password
+    if @current_user.admin
+      @user = User.find(params[:id])
+    else
+      @user = User.find(@current_user.id)
+    end
+  end
+
   # POST /users
   # POST /users.json
   def create

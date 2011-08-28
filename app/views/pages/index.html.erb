@@ -171,13 +171,17 @@
       </div>
       <div id="newsletter">
         <p>Enter your email to join our mailing list &raquo;</p>
-        <form action="/pages/contact" method="post">
+        <!-- <form action="/pages/contact" method="post"> -->
+		<%= form_tag("/pages/contact", :metod => "post") do %>
           <fieldset>
           <legend>News Letter</legend>
-          <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" name="newsletteremail"/>
-          <input type="submit" name="news_go" id="news_go" value="GO" />
+			<%= text_field_tag "newsletteremail" %>
+			<%= submit_tag "Go", :id => "news_go", :name => "news_go" %>
+          <!input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" name="newsletteremail"/>
+          <!input type="submit" name="news_go" id="news_go" value="GO" />
           </fieldset>
-        </form>
+        <!-- </form> -->
+		<% end %>
         <br class="clear" />
       </div>
     </div>

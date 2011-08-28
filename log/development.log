@@ -22894,3 +22894,1458 @@ Served asset /tables.css - 304 Not Modified (0ms)
 
 Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-19 18:24:16 -0700
 Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-28 09:02:20 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mPost Load (3.2ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (5.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (172.6ms)
+Completed 200 OK in 263ms (Views: 204.4ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:02:21 -0700
+Served asset /layout.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:02:21 -0700
+Served asset /navi.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:02:21 -0700
+Served asset /forms.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:02:21 -0700
+Served asset /tables.css - 304 Not Modified (3ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at 2011-08-28 09:02:25 -0700
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:02:25 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:02:25 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:02:25 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:02:25 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at 2011-08-28 09:04:00 -0700
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:04:00 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:04:00 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:04:00 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:04:00 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at 2011-08-28 09:04:26 -0700
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:04:26 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:04:26 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:04:26 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:04:26 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at 2011-08-28 09:14:01 -0700
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:14:01 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:14:01 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:14:01 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:14:01 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at 2011-08-28 09:14:08 -0700
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:14:08 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:14:08 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:14:08 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:14:08 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at 2011-08-28 09:14:26 -0700
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:14:26 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:14:26 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:14:26 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:14:26 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at 2011-08-28 09:14:30 -0700
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:14:30 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:14:30 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:14:30 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:14:30 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at 2011-08-28 09:14:51 -0700
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:14:51 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:14:51 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:14:51 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:14:51 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at 2011-08-28 09:15:15 -0700
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:15:15 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:15:15 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:15:15 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:15:16 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at 2011-08-28 09:15:27 -0700
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:15:27 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:15:27 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:15:27 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:15:27 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-08-28 09:15:51 -0700
+  Processing by PagesController#about as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (officer = true) ORDER BY username[0m
+Rendered pages/about.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 64ms (Views: 31.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:15:51 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:15:51 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:15:51 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:15:51 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-08-28 09:20:28 -0700
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:20:28 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:20:28 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:20:28 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:20:28 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-08-28 09:20:30 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Spdklus9WXMSwopDlixVcaMCQQRJYm2WzKLd2bib8fs=", "username"=>"chris", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`username` = 'chris' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 298ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-28 09:20:30 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.6ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+  [1m[36mUser Load (4.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (122.2ms)
+Completed 200 OK in 192ms (Views: 122.9ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:20:30 -0700
+Served asset /layout.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:20:30 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:20:30 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:20:30 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-08-28 09:20:33 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (74.8ms)
+Completed 200 OK in 100ms (Views: 83.1ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:20:34 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:20:34 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:20:34 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:20:34 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-28 09:20:47 -0700
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_profile.html.erb (44.9ms)
+Rendered users/edit.html.erb within layouts/application (61.3ms)
+Completed 200 OK in 94ms (Views: 69.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:20:47 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:20:47 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:20:47 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:20:47 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/password" for 127.0.0.1 at 2011-08-28 09:20:49 -0700
+  Processing by UsersController#password as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/password.html.erb within layouts/application (32.1ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <div id="generalform">
+    2: <%= form_for(@user) do |f| %>
+    3:   <% if @user.errors.any? %>
+    4:     <div id="error_explanation">
+    5:       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  app/views/users/password.html.erb:2:in `_app_views_users_password_html_erb__2221849612096725800_2159730920'
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/password" for 127.0.0.1 at 2011-08-28 09:21:27 -0700
+  Processing by UsersController#password as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 404 Not Found in 23ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:54:in `password'
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.5ms)
+
+
+Started GET "/password" for 127.0.0.1 at 2011-08-28 09:22:19 -0700
+  Processing by UsersController#password as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 404 Not Found in 21ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:54:in `password'
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-28 09:22:24 -0700
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/_profile.html.erb (15.6ms)
+Rendered users/edit.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 105ms (Views: 35.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:22:24 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:22:24 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:22:24 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:22:24 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/password/1" for 127.0.0.1 at 2011-08-28 09:22:26 -0700
+
+ActionController::RoutingError (No route matches [GET] "/password/1"):
+  
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/password/1" for 127.0.0.1 at 2011-08-28 09:22:42 -0700
+  Processing by UsersController#password as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/password.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 53ms (Views: 16.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:22:42 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:22:42 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:22:42 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:22:42 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2011-08-28 09:23:15 -0700
+  Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Spdklus9WXMSwopDlixVcaMCQQRJYm2WzKLd2bib8fs=", "user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.9ms)[0m  ROLLBACK
+Rendered users/_profile.html.erb (7.7ms)
+Rendered users/edit.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 155ms (Views: 16.7ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:23:16 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:23:16 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:23:16 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:23:16 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/password/1" for 127.0.0.1 at 2011-08-28 09:23:27 -0700
+  Processing by UsersController#password as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/password.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 72ms (Views: 11.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:23:27 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:23:27 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:23:27 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:23:27 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2011-08-28 09:23:35 -0700
+  Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Spdklus9WXMSwopDlixVcaMCQQRJYm2WzKLd2bib8fs=", "user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (8.3ms)[0m  UPDATE `users` SET `password_digest` = '$2a$10$JyFR6U6D7mMrp9oL.QdemeWCJ29dw.dUbaEPA/QQiw9TfRNb6aGJi', `updated_at` = '2011-08-28 16:23:35' WHERE `users`.`id` = 1
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 199ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-08-28 09:23:35 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 31ms (Views: 25.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:23:35 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:23:35 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:23:35 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:23:35 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-08-28 09:23:42 -0700
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-28 09:23:42 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (102.3ms)
+Completed 200 OK in 127ms (Views: 102.6ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:23:42 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:23:42 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:23:42 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:23:42 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-08-28 09:23:44 -0700
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:23:44 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:23:44 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:23:44 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:23:45 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-08-28 09:23:50 -0700
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Spdklus9WXMSwopDlixVcaMCQQRJYm2WzKLd2bib8fs=", "username"=>"chris", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`username` = 'chris' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 283ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-28 09:23:50 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (103.8ms)
+Completed 200 OK in 164ms (Views: 108.9ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:23:51 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:23:51 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:23:51 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:23:51 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-08-28 09:23:54 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 72ms (Views: 62.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:23:54 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:23:54 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:23:54 -0700
+Served asset /forms.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:23:54 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-08-28 09:23:57 -0700
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY username[0m
+Rendered users/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 74ms (Views: 53.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:23:58 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:23:58 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:23:58 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:23:58 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2011-08-28 09:24:00 -0700
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered users/_profile.html.erb (7.5ms)
+Rendered users/edit.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 44ms (Views: 17.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:24:00 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:24:00 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:24:00 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:24:00 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/password/2" for 127.0.0.1 at 2011-08-28 09:24:03 -0700
+  Processing by UsersController#password as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered users/password.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 11.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:24:03 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:24:03 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:24:03 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:24:03 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-08-28 09:24:39 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 30ms (Views: 24.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:24:39 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:24:39 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:24:40 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:24:40 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-08-28 09:24:48 -0700
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/_profile.html.erb (7.6ms)
+Rendered users/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 39ms (Views: 17.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:24:48 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:24:48 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:24:48 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:24:48 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/password/1" for 127.0.0.1 at 2011-08-28 09:25:22 -0700
+  Processing by UsersController#password as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/password.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 73ms (Views: 10.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:25:22 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:25:22 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:25:22 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:25:22 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started PUT "/users/1" for 127.0.0.1 at 2011-08-28 09:25:32 -0700
+  Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Spdklus9WXMSwopDlixVcaMCQQRJYm2WzKLd2bib8fs=", "user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE `users` SET `password_digest` = '$2a$10$ywi3pfkQN/KFNWDsyBdJzOSc3zuKL5Cw18ABrvACDquqrVbMDVuCa', `updated_at` = '2011-08-28 16:25:32' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 133ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-08-28 09:25:32 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 55ms (Views: 40.9ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:25:32 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:25:32 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:25:32 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:25:32 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-08-28 09:25:37 -0700
+  Processing by PagesController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (officer = true) ORDER BY username
+Rendered pages/about.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 55ms (Views: 26.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:25:37 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:25:37 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:25:37 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:25:37 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-28 09:25:38 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (31.0ms)
+Completed 200 OK in 111ms (Views: 33.9ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:25:38 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:25:38 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:25:38 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:25:38 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started POST "/pages/contact" for 127.0.0.1 at 2011-08-28 09:27:38 -0700
+  Processing by PagesController#contact as HTML
+  Parameters: {"newsletteremail"=>"chris@matthieu.us", "news_go"=>"GO"}
+WARNING: Can't verify CSRF token authenticity
+Rendered pages/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2797ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:27:41 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:27:41 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:27:41 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:27:41 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-28 09:31:19 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (148.7ms)
+Completed 200 OK in 177ms (Views: 147.8ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:31:19 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:31:19 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:31:19 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:31:19 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-28 09:33:45 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+ERROR: compiling _app_views_pages_index_html_erb__2676970456181818583_2174494980 RAISED /usr/local/src/vivatjesus/app/views/pages/index.html.erb:171: syntax error, unexpected tASSOC, expecting '}'
+...r.append=  form_tag {:action => "contact"} do @output_buffer...
+...                               ^
+/usr/local/src/vivatjesus/app/views/pages/index.html.erb:171: syntax error, unexpected keyword_do_block, expecting keyword_end
+...m_tag {:action => "contact"} do @output_buffer.safe_concat('
+...                               ^
+/usr/local/src/vivatjesus/app/views/pages/index.html.erb:196: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_pages_index_html_erb__2676970456181818583_2174494980(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "pages/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<head>
+<title>Vivat Jesus!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+');@output_buffer.append= ( stylesheet_link_tag "layout" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</head>
+<body id="top">
+<div class="wrapper col1">
+	<p align="right">'); if @current_user ;@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( gravatar_image_tag @current_user.email, :class => "gravatar", :width => "15" );@output_buffer.safe_concat(' ');@output_buffer.append= ( @current_user.username.capitalize );@output_buffer.safe_concat(' | 
+
+');		 if @current_user.admin 
+@output_buffer.safe_concat('			');@output_buffer.append= ( link_to 'users*', '/users' );@output_buffer.safe_concat(' |
+');		 end 
+@output_buffer.safe_concat('
+');		 if @current_user 
+@output_buffer.safe_concat('			');@output_buffer.append= ( link_to 'profile', user_path(@current_user) );@output_buffer.safe_concat(' |
+');		 end 
+@output_buffer.safe_concat('
+		');@output_buffer.append= ( link_to 'logout', '/logout' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+');	 else 
+@output_buffer.safe_concat('		');@output_buffer.append= ( link_to 'register', new_user_path );@output_buffer.safe_concat(' | 
+		');@output_buffer.append= ( link_to 'login', '/login' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	'); end ;@output_buffer.safe_concat('</p>
+  <div id="header">
+    
+    <div id="topnav">
+      <ul>
+');		 if controller.action_name == "join" 
+@output_buffer.safe_concat('	      <li class="active last"><a href="/join">become a knight</a></li>
+');		 else 
+@output_buffer.safe_concat('	    <li class="last"><a href="/join">become a knight</a></li>
+');		 end 
+@output_buffer.safe_concat('
+');		 if controller.controller_name == "calendar" 
+@output_buffer.safe_concat('	      <li class="active"><a href="/calendar">calendar</a></li>
+');		 else 
+@output_buffer.safe_concat('	    <li><a href="/calendar">calendar</a></li>
+');		 end 
+@output_buffer.safe_concat('
+');		 if controller.controller_name == "posts" 
+@output_buffer.safe_concat('	      <li class="active"><a href="/posts">news</a></li>
+');		 else 
+@output_buffer.safe_concat('	    <li><a href="/posts">news</a></li>
+');		 end 
+@output_buffer.safe_concat('
+');		 if controller.action_name == "about" 
+@output_buffer.safe_concat('	      <li class="active"><a href="/about">about</a></li>
+');		 else 
+@output_buffer.safe_concat('	    <li><a href="/about">about</a></li>
+');		 end 
+@output_buffer.safe_concat('
+');		 if controller.controller_name == "pages" && controller.action_name == "index" 
+@output_buffer.safe_concat('	      <li class="active"><a href="/">Home</a></li>
+');		 else 
+@output_buffer.safe_concat('	    <li><a href="/">Home</a></li>
+');		 end 
+@output_buffer.safe_concat('
+      </ul>
+    </div>
+    <div id="logo">
+      <h1><a href="/">');@output_buffer.append= (image_tag "/images/vivatjesus.png", :width => "50");@output_buffer.safe_concat(' Vivat Jesus!</a></h1>
+      <center><p>Corpus Christi Knights of Columbus 10062</p></center>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col2">
+  <div id="intro">
+    <div class="fl_left">
+      <h1>Knights of Columbus Corpus Christi 10062</h1>
+      <p>Corpus Christi Council 10062 is located in Ahwatukee in Phoenix, AZ on Knox and 36th Street.
+	Council meetings occur on the first Thursday of each month at 7:00 PM in rooms 5 and 6 at Corpus Christi. They are 1 hour to discuss busines items and 1 hour for social gathering. All knights are encouraged to attend at least 3 meetings a year.
+	There are many activities that occur throughout the year for the Corpus Christi Council including Pancake Breakfast, Golf Tournament, and PIDD just to name a few. Monies raised from these events help the local community.
+	 <a href="/about">Discover More About Us &raquo;</a></p>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li><a href="http://facebook.com/vivatjesus">');@output_buffer.append= (image_tag "/images/facebook.png", :width => "130");@output_buffer.safe_concat('</a></li>
+        <li><a href="http://www.linkedin.com/groups/VivatJesus-4028385">');@output_buffer.append= (image_tag "/images/linkedin.png", :width => "130");@output_buffer.safe_concat('</a></li>
+        <li><a href="http://twitter.com/vivatjesusaz">');@output_buffer.append= (image_tag "/images/twitter1.png", :width => "130");@output_buffer.safe_concat('</a></li>
+        <li class="last"><a href="/posts/rss">');@output_buffer.append= (image_tag "/images/rss.gif");@output_buffer.safe_concat('</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col3">
+  <div id="latest">
+');	 if @post 
+@output_buffer.safe_concat('	<h1>');@output_buffer.append= ( gravatar_image_tag @post.user.email, :class => "gravatar", :width => "25" );@output_buffer.safe_concat(' <a href="/posts/');@output_buffer.append= ( @post.id.to_s rescue "");@output_buffer.safe_concat('">');@output_buffer.append= ( @post.postname rescue "");@output_buffer.safe_concat('</a> (');@output_buffer.append= ( link_to "more news...", "/posts");@output_buffer.safe_concat(' )<br/>
+		</h1>
+		<p>
+		');@output_buffer.append= ( raw(@post.postbody) rescue "");@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		</p><br/><br/>
+	<a href="http://twitter.com/share?text=');@output_buffer.append= ( @post.postname rescue "");@output_buffer.safe_concat('&amp;url=http://vivatjes.us/posts/');@output_buffer.append= (@post.id);@output_buffer.safe_concat('" class="twitter-share-button">Tweet</a>
+		
+	<!-- Place this tag where you want the +1 button to render -->
+	<g:plusone href="http://vivatjes.us/posts/');@output_buffer.append= (@post.id);@output_buffer.safe_concat('"></g:plusone>
+
+	<!--  Place this tag after the last plusone tag -->
+	<script type="text/javascript">
+	  (function() {
+	    var po = document.createElement(\'script\'); po.type = \'text/javascript\'; po.async = true;
+	    po.src = \'https://apis.google.com/js/plusone.js\';
+	    var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
+		
+	<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=151901608223813&amp;xfbml=1"></script><fb:like href="http://vivatjes.us/posts/');@output_buffer.append= (@post.id);@output_buffer.safe_concat('" send="true" width="450" show_faces="true" font=""></fb:like>
+');	 end 
+@output_buffer.safe_concat('    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col5">
+  <div id="footer">
+    <div id="contactform">
+      <h2>Contact Us Today !</h2>
+		');@output_buffer.append=  form_tag :controller=>"pages", :action=>"contact" do @output_buffer.safe_concat('      <fieldset>
+      <legend>Contact Form</legend>
+      <label for="fullname">Name:
+      ');@output_buffer.append= ( text_field("contact", "fullname") );@output_buffer.safe_concat('      </label>
+      <label for="emailaddress" class="margin">Email:
+      ');@output_buffer.append= ( text_field("contact", "emailaddress") );@output_buffer.safe_concat('      </label>
+      <label for="message">Message:<br />
+      ');@output_buffer.append= ( text_area("contact", "message", {"cols"=>"40", "rows"=>"4"}) );@output_buffer.safe_concat('      </label>
+      </fieldset>
+');		 math1 = 1 + rand(10) 
+		 math2 = 1 + rand(10) 
+		 mathanswer = math1 + math2 
+@output_buffer.safe_concat('      <label for="message">Are you human?<br/>What\'s ');@output_buffer.append= (math1);@output_buffer.safe_concat(' + ');@output_buffer.append= (math2);@output_buffer.safe_concat('?
+      ');@output_buffer.append= ( text_field("contact", "answer") );@output_buffer.safe_concat('</label>
+      ');@output_buffer.append= ( hidden_field("contact", "mathanswer", :value => mathanswer) );@output_buffer.safe_concat('<br/>
+      <p>
+        ');@output_buffer.append= ( submit_tag "Send" );@output_buffer.safe_concat('</p>
+');		 end 
+@output_buffer.safe_concat('    </div>
+    <div class="fl_right">
+      <div class="footbox">
+        <h2>Our Founder</h2>
+        <ul>
+          <li>
+			Thanks to the efforts of Father Michael J. McGivney, assistant pastor of St. Mary’s Church in New Haven and some of his parishioners, the Connecticut state legislature on March 29, 1882, officially chartered the Knights of Columbus as a fraternal benefit society. The Order is still true to its founding principles of charity, unity and fraternity.
+			<br/><br/>
+			The Knights was formed to render financial aid to members and their families. 
+          </li>
+        </ul>
+      </div>
+      <div class="footbox">
+        <h2>Our Order</h2>
+        <ul>
+          <li>
+          	The history of the Order shows how the foresight of Father Michael J. McGivney, whose cause for sainthood is being investigated by the Vatican, brought about what has become the world\'s foremost Catholic fraternal benefit society. The Order has helped families obtain economic security and stability through its life insurance, annuity and long-term care programs, and has contributed time and energy worldwide to service in communities.
+          </li>
+        </ul>
+      </div>
+      <div class="footbox last">
+        <h2>Our Presence</h2>
+        <ul>
+          <li>
+          	The Knights of Columbus has grown from several members in one council to more than 14,000 councils and 1.8 million members throughout the United States, Canada, the Philippines, Mexico, Poland, the Dominican Republic, Puerto Rico, Panama, the Bahamas, the Virgin Islands, Cuba, Guatemala, Guam and Saipan.
+          </li>
+        </ul>
+      </div>
+      <div id="newsletter">
+        <p>Enter your email to join our mailing list &raquo;</p>
+        <!-- <form action="/pages/contact" method="post"> -->
+		');@output_buffer.append=  form_tag {:action => "contact"} do @output_buffer.safe_concat('
+');@output_buffer.safe_concat('          <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value==\'Enter Email Here&hellip;\')? \'\' : this.value ;" name="newsletteremail"/>
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+          </fieldset>
+        <!-- </form> -->
+');		 end 
+@output_buffer.safe_concat('        <br class="clear" />
+      </div>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2011 - All Rights Reserved - <a href="/">KofC 10062</a></p>
+    <p class="fl_right"></p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>
+
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/template.rb:282:in `module_eval'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/template.rb:282:in `compile'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/template.rb:190:in `compile!'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/template.rb:143:in `block in render'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/notifications.rb:57:in `instrument'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/template.rb:142:in `render'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/notifications.rb:55:in `block in instrument'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/notifications.rb:55:in `instrument'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/abstract_controller/rendering.rb:99:in `render'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/christoffe/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.1.0.rc5/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/src/vivatjesus/app/controllers/pages_controller.rb:8:in `index'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/callbacks.rb:425:in `_run__3910871396961095883__process_action__3097036390406583657__callbacks'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/notifications.rb:55:in `block in instrument'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/notifications.rb:55:in `instrument'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/params_wrapper.rb:202:in `process_action'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.1.0.rc5/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/abstract_controller/base.rb:121:in `process'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal.rb:193:in `dispatch'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_controller/metal.rb:236:in `block in action'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.2/lib/rack/mount/route_set.rb:152:in `block in call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.2/lib/rack/mount/code_generation.rb:95:in `recognize'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.8.2/lib/rack/mount/route_set.rb:141:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.1.0.rc5/lib/active_record/query_cache.rb:62:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.1.0.rc5/lib/active_record/connection_adapters/abstract/connection_pool.rb:466:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.1.0.rc5/lib/rails/rack/logger.rb:13:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.1.0.rc5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.1.0.rc5/lib/rails/engine.rb:455:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.1.0.rc5/lib/rails/rack/content_length.rb:16:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.1.0.rc5/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/Users/christoffe/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/christoffe/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/christoffe/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered pages/index.html.erb (3.7ms)
+Completed 500 Internal Server Error in 70ms
+
+ActionView::Template::Error (/usr/local/src/vivatjesus/app/views/pages/index.html.erb:171: syntax error, unexpected tASSOC, expecting '}'
+...r.append=  form_tag {:action => "contact"} do @output_buffer...
+...                               ^
+/usr/local/src/vivatjesus/app/views/pages/index.html.erb:171: syntax error, unexpected keyword_do_block, expecting keyword_end
+...m_tag {:action => "contact"} do @output_buffer.safe_concat('
+...                               ^
+/usr/local/src/vivatjesus/app/views/pages/index.html.erb:196: syntax error, unexpected keyword_ensure, expecting $end):
+    168:           	The Knights of Columbus has grown from several members in one council to more than 14,000 councils and 1.8 million members throughout the United States, Canada, the Philippines, Mexico, Poland, the Dominican Republic, Puerto Rico, Panama, the Bahamas, the Virgin Islands, Cuba, Guatemala, Guam and Saipan.
+    169:           </li>
+    170:         </ul>
+    171:       </div>
+    172:       <div id="newsletter">
+    173:         <p>Enter your email to join our mailing list &raquo;</p>
+    174:         <!-- <form action="/pages/contact" method="post"> -->
+  app/controllers/pages_controller.rb:8:in `index'
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-28 09:37:35 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (134.5ms)
+Completed 200 OK in 169ms (Views: 137.6ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:37:35 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:37:35 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:37:35 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:37:35 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started POST "/pages/contact" for 127.0.0.1 at 2011-08-28 09:37:42 -0700
+  Processing by PagesController#contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"guPDu6z2UXwt1kTXmz1vgZMrVNveFvyZnfjK6IoGpCg=", "newsletteremail"=>"chris@matthieu.us", "commit"=>"Go"}
+Rendered pages/contact.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:37:42 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:37:42 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:37:42 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:37:42 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-28 09:40:12 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mPost Load (1.9ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (195.1ms)
+Completed 200 OK in 223ms (Views: 190.9ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:40:12 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:40:12 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:40:12 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:40:12 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started POST "/pages/contact" for 127.0.0.1 at 2011-08-28 09:40:21 -0700
+  Processing by PagesController#contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"guPDu6z2UXwt1kTXmz1vgZMrVNveFvyZnfjK6IoGpCg=", "newsletteremail"=>"chris@matthieu.us", "news_go"=>"Go"}
+Rendered pages/contact.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 44ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:40:21 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:40:21 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:40:21 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:40:21 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started POST "/pages/contact" for 127.0.0.1 at 2011-08-28 09:42:15 -0700
+  Processing by PagesController#contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"guPDu6z2UXwt1kTXmz1vgZMrVNveFvyZnfjK6IoGpCg=", "contact"=>{"fullname"=>"chris", "emailaddress"=>"matthieu", "message"=>"testing", "answer"=>"11", "mathanswer"=>"11"}, "commit"=>"Send"}
+Rendered pages/contact.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 88ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:42:16 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:42:16 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:42:16 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:42:16 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-08-28 09:42:59 -0700
+  Processing by PagesController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (officer = true) ORDER BY username[0m
+Rendered pages/about.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 125ms (Views: 94.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:42:59 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:42:59 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:42:59 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:42:59 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started POST "/pages/contact" for 127.0.0.1 at 2011-08-28 09:43:04 -0700
+  Processing by PagesController#contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"guPDu6z2UXwt1kTXmz1vgZMrVNveFvyZnfjK6IoGpCg=", "newsletteremail"=>"chris@matthieu.us", "news_go"=>"Go"}
+Rendered pages/contact.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 09:43:05 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 09:43:05 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 09:43:05 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:43:05 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
