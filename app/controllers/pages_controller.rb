@@ -18,13 +18,13 @@ class PagesController < ApplicationController
       if params[:newsletteremail].index("@")
         @answer = true
         @message = "Please add me to your email newsletter!"
-        Notifier.contact("chris@matthieu.us", params[:newsletteremail],  @message)
+        Notifier.contact("chris@matthieu.us", params[:newsletteremail],  @message).deliver
       end
       
     elsif params[:contact][:answer] == params[:contact][:mathanswer] and params[:contact][:mathanswer].to_i > 0
       @answer = true
       @message = params[:contact][:message] + ' - ' + params[:contact][:fullname]
-      Notifier.contact("chris@matthieu.us", params[:contact][:emailaddress],  @message)
+      Notifier.contact("chris@matthieu.us", params[:contact][:emailaddress],  @message).deliver
       
     else
       @answer = false

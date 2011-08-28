@@ -24349,3 +24349,99 @@ Served asset /navi.css - 304 Not Modified (0ms)
 
 Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 09:43:05 -0700
 Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-28 10:52:22 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (2.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (220.0ms)
+Completed 200 OK in 403ms (Views: 336.2ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 10:52:22 -0700
+Served asset /layout.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 10:52:22 -0700
+Served asset /navi.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 10:52:22 -0700
+Served asset /forms.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 10:52:22 -0700
+Served asset /tables.css - 304 Not Modified (2ms)
+
+
+Started POST "/pages/contact" for 127.0.0.1 at 2011-08-28 10:52:27 -0700
+  Processing by PagesController#contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"guPDu6z2UXwt1kTXmz1vgZMrVNveFvyZnfjK6IoGpCg=", "newsletteremail"=>"chris@getvocal.com", "news_go"=>"Go"}
+Completed 500 Internal Server Error in 124ms
+
+NoMethodError (undefined method `mail' for #<PagesController:0x0000010161b988>):
+  app/controllers/pages_controller.rb:25:in `contact'
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started POST "/pages/contact" for 127.0.0.1 at 2011-08-28 10:52:55 -0700
+  Processing by PagesController#contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"guPDu6z2UXwt1kTXmz1vgZMrVNveFvyZnfjK6IoGpCg=", "newsletteremail"=>"chris@getvocal.com", "news_go"=>"Go"}
+Rendered pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2639ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 10:52:57 -0700
+Served asset /layout.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 10:52:57 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 10:52:57 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 10:52:58 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started POST "/pages/contact" for 127.0.0.1 at 2011-08-28 10:58:30 -0700
+  Processing by PagesController#contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"guPDu6z2UXwt1kTXmz1vgZMrVNveFvyZnfjK6IoGpCg=", "newsletteremail"=>"chris@getvocal.com", "news_go"=>"Go"}
+
+Sent mail to chris@matthieu.us (178ms)
+Date: Sun, 28 Aug 2011 10:58:30 -0700
+From: chris@getvocal.com
+To: chris@matthieu.us
+Message-ID: <4e5a81c65abeb_550a81981a305735c@christoffe.local.mail>
+Subject: Vivat Jesus!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Please add me to your email newsletter!
+Rendered pages/contact.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 223ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-08-28 10:58:30 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-08-28 10:58:30 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-08-28 10:58:30 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 10:58:30 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
