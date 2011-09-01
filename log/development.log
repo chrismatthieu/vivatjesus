@@ -24807,3 +24807,63 @@ Served asset /forms.css - 304 Not Modified (0ms)
 
 Started GET "/assets/navi.css" for 127.0.0.1 at 2011-08-28 11:24:30 -0700
 Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-01 11:45:42 -0700
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.6ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-01 11:46:31 -0700
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.4ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-01 11:46:34 -0700
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  
+
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.1.0.rc5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-01 11:47:19 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (227.2ms)
+Completed 200 OK in 340ms (Views: 226.4ms | ActiveRecord: 29.9ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-09-01 11:47:20 -0700
+Served asset /layout.css - 200 OK (27ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-09-01 11:47:20 -0700
+Served asset /forms.css - 200 OK (2ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-09-01 11:47:20 -0700
+Served asset /tables.css - 200 OK (3ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-09-01 11:47:20 -0700
+Served asset /navi.css - 200 OK (11ms)
+
+
+Started GET "/mobile" for 127.0.0.1 at 2011-09-01 11:47:25 -0700
+  Processing by PagesController#mobile as HTML
+Redirected to http://www.radioindy.com/kofc/index.html
+Completed 302 Found in 1ms

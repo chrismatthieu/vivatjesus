@@ -25,6 +25,7 @@ Vivatjesus::Application.routes.draw do
   match '/join' => 'pages#join'
   match '/pages/contact' => 'pages#contact'
   match '/search' => 'posts#search'
+  match '/mobile' => 'pages#mobile'
 
 
 

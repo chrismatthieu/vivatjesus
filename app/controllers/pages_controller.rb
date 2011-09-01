@@ -31,5 +31,9 @@ class PagesController < ApplicationController
     end
 
   end
+  
+  def mobile
+    redirect_to "http://www.radioindy.com/kofc/index.html"
+  end
 
 end
