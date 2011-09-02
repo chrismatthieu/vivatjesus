@@ -24867,3 +24867,87 @@ Started GET "/mobile" for 127.0.0.1 at 2011-09-01 11:47:25 -0700
   Processing by PagesController#mobile as HTML
 Redirected to http://www.radioindy.com/kofc/index.html
 Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-01 16:35:48 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (149.9ms)
+Completed 200 OK in 227ms (Views: 187.4ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-09-01 16:35:48 -0700
+Served asset /layout.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-09-01 16:35:48 -0700
+Served asset /forms.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-09-01 16:35:48 -0700
+Served asset /tables.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-09-01 16:35:48 -0700
+Served asset /navi.css - 304 Not Modified (20ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-01 16:58:53 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (69.8ms)
+Completed 200 OK in 89ms (Views: 66.3ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-09-01 16:58:53 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-09-01 16:58:53 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-09-01 16:58:53 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-09-01 16:58:53 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/mobile" for 127.0.0.1 at 2011-09-01 16:59:00 -0700
+  Processing by PagesController#mobile as HTML
+Redirected to http://www.radioindy.com/kofc/index.html
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-01 17:01:28 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (86.2ms)
+Completed 200 OK in 104ms (Views: 85.7ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-09-01 17:01:28 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-09-01 17:01:28 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-09-01 17:01:28 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-09-01 17:01:28 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/mobile" for 127.0.0.1 at 2011-09-01 17:01:42 -0700
+  Processing by PagesController#mobile as HTML
+Redirected to http://www.radioindy.com/kofc/index.html
+Completed 302 Found in 0ms
