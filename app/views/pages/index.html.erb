@@ -11,10 +11,6 @@
 	<p align="right"><% if @current_user %>
 		<%= gravatar_image_tag @current_user.email, :class => "gravatar", :width => "15" %> <%= @current_user.username.capitalize %> | 
 
-		<% if @current_user.admin %>
-			<%= link_to 'users*', '/users' %> |
-		<% end %>
-
 		<% if @current_user %>
 			<%= link_to 'profile', user_path(@current_user) %> |
 		<% end %>
@@ -34,6 +30,14 @@
 		<% else %>
 	    <li class="last"><a href="/join">become a knight</a></li>
 		<% end %>
+		
+		<% if @current_user && @current_user.member %>
+			<% if controller.controller_name == "users" %>
+		      <li class="active"><a href="/users">knights</a></li>
+			<% else %>
+		    <li><a href="/users">knights</a></li>
+			<% end %>
+		<% end %>		
 
 		<% if controller.controller_name == "calendar" %>
 	      <li class="active"><a href="/calendar">calendar</a></li>
@@ -170,7 +174,7 @@
           </li>
         </ul>
       </div>
-      <div id="newsletter">
+      <!-- <div id="newsletter">
         <p>Enter your email to join our mailing list &raquo;</p>
 		<%= form_tag("/pages/contact", :metod => "post") do %>
           <fieldset>
@@ -180,7 +184,7 @@
           </fieldset>
 		<% end %>
         <br class="clear" />
-      </div>
+      </div> -->
     </div>
     <br class="clear" />
   </div>

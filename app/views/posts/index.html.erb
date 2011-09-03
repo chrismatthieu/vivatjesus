@@ -25,7 +25,7 @@
 	
 		<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=151901608223813&amp;xfbml=1"></script><fb:like href="http://vivatjes.us/posts/<%=post.id%>" send="true" width="450" show_faces="true" font=""></fb:like>
 
-	    <% if @current_user && @current_user.admin %>
+	    <% if @current_user && @current_user.publisher %>
 	      <p><%= link_to 'Edit*', :action => 'edit', :id => post %> | <%= link_to 'Destroy*', { :action => 'destroy', :id => post }, :confirm => 'Are you sure?', :method => :post %></p>
 	    <% end %>
 		
@@ -36,7 +36,7 @@
 
 <%= will_paginate @posts %>
 
-<% if @current_user && @current_user.admin %>
+<% if @current_user && @current_user.publisher %>
   <%= link_to 'New post*', :action => 'new' %>
 <% end %>
 

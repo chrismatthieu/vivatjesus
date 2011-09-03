@@ -27,14 +27,14 @@
 
 	<% end %>
 	
-    <% if @current_user && @current_user.admin %>
+    <% if @current_user && @current_user.publisher %>
       <p><%= link_to 'Edit*', :action => 'edit', :id => @post %> | <%= link_to 'Destroy*', @post, :confirm => 'Are you sure?', :method => :delete %></p>
     <% end %>
 
 </div>
 
 
-<% if  @current_user && @current_user.admin %>
+<% if  @current_user && @current_user.publisher %>
   <%= link_to 'New post*', :action => 'new' %>
 <% end %>
 

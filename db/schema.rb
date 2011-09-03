@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110814224313) do
+ActiveRecord::Schema.define(:version => 20110903154718) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20110814224313) do
     t.string   "officertitle"
     t.string   "linkedin"
     t.string   "fullname"
+    t.boolean  "publisher"
   end
 
 end

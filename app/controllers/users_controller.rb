@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def index
     respond_to do |format|
       format.html {
-        if @current_user.admin
+        if @current_user.member
           @users = User.order("username")
         else
           redirect_to "/"

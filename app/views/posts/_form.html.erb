@@ -19,6 +19,15 @@
   <div class="field">
     <%= f.label "Body" %><br />
     <%= f.text_area :postbody %>
+	<%# text_area_tag :editor, "", :rows => 40, :cols => 120 %>
+
+	<script type="text/javascript">
+	  $(function() {
+	    $('textarea').tinymce({
+	      theme: 'advanced'
+	    });
+	  });
+	</script>
   </div>
   <div class="field">
     <%= f.check_box :privateflag %>

@@ -1,29 +1,47 @@
-<h1>Listing users</h1>
+<h1>Listing Knights</h1>
 
 <table>
   <thead>
     <th>Username</th>
     <th>Email</th>
-    <th>Member</th>
-    <th>Admin</th>
-    <th></th>
-    <th></th>
-    <th></th>
+	<% if @current_user && @current_user.admin %>
+	    <th>Mbr</th>
+	    <th>Ofcr</th>
+	    <th>Pub</th>
+	    <th>Admin</th>
+	    <th></th>
+	<% elsif @current_user && @current_user.member %>
+		<th>Status</th>  
+	<% end %>
   </thead>
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= gravatar_image_tag user.email, :class => "gravatar", :width => "25" %> <%= user.fullname rescue ""%> (<%= user.username %>)</td>
-    <td><%= user.email %></td>
-    <td><%= user.member %></td>
-    <td><%= user.admin %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><a href="/users/<%=user.id%>"><%= gravatar_image_tag user.email, :class => "gravatar", :width => "25" %> <%= user.fullname rescue ""%> (<%= user.username %>)</a></td>
+    <td><a href="mailto:<%= user.email %>"><%= user.email %></a></td>
+	<% if @current_user && @current_user.admin %>
+	    <td><%= user.member %></td>
+	    <td><%= user.officer %></td>
+	    <td><%= user.publisher %></td>
+	    <td><%= user.admin %></td>
+	    <td><%= link_to 'Show', user %> 
+	    <%= link_to 'Edit', edit_user_path(user) %>
+	    <%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% elsif @current_user && @current_user.member %>
+		<% status = "" %>
+		<% if user.member %>
+			<% status << "member " %>
+		<% end %>
+		<% if user.officer %>
+			<% status << "officer " %>
+		<% end %>
+		<td><%= status %></td>
+	<% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
+<% if @current_user && @current_user.admin %>
 <%= link_to 'New User', new_user_path %>
+<% end %>

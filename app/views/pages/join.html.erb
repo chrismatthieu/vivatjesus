@@ -1,1 +1,39 @@
-<h1>Join the Knights of Columbus!</h1>
+<h1>Join the Knights of Columbus - <a href="#">Click Here to Get Stared!</a></h1>
+<!-- <button>Get Started!</button> -->
+<div id="joincontact" style="display:none">
+	<div id="generalform">
+	<p>Contact us today to start the process of becoming a Knight of Columbus!</p>
+	<%= form_tag :controller=>"pages", :action=>"contact" do -%>
+    <fieldset>
+    <legend>Contact Form</legend>
+    <label for="fullname">Name:<br/>
+    <%= text_field("contact", "fullname") -%>
+    </label><br/>
+    <label for="emailaddress" class="margin">Email:<br/>
+    <%= text_field("contact", "emailaddress") -%>
+    </label><br/>
+    <label for="message">Message:<br />
+    <%= text_area("contact", "message", {"cols"=>"40", "rows"=>"4"}) -%>
+    </label>
+    </fieldset>
+		<% math1 = 1 + rand(10) %>
+		<% math2 = 1 + rand(10) %>
+		<% mathanswer = math1 + math2 %>
+    <!-- <label for="message">Are you human?<br/>What's <%=math1%> + <%=math2%>?
+    <%# text_field("contact", "answer") -%></label> -->
+    <%= hidden_field("contact", "answer", :value => mathanswer) -%>
+    <%= hidden_field("contact", "mathanswer", :value => mathanswer) -%>
+    <p>
+      <%= submit_tag "Send" -%></p>
+	<% end -%>
+</div>
+</div>
+<script>
+    $("a").click(function () {
+      $("#joincontact").slideToggle("slow");
+      $("#video").slideToggle("slow");
+    });
+</script>
+<div id="video">
+<center><iframe width="853" height="510" src="http://www.youtube.com/embed/Wgus2xXk5sE?rel=0&amp;hd=1" frameborder="0" allowfullscreen></iframe></center>
+</div>
