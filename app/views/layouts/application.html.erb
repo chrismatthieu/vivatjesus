@@ -69,7 +69,7 @@
     </div>
     <div id="logo">
       <h1><a href="/"><%=image_tag "/images/vivatjesus.png", :width => "50"%> Vivat Jesus!</a></h1>
-      <center><p>Corpus Christi Knights of Columbus 10062</p></center>
+      <center><p><%=@council.councilname%></p></center>
     </div>
     <br class="clear" />
   </div>
@@ -170,7 +170,8 @@
 </div>
 <div class="wrapper col6">
   <div id="copyright">
-    <p class="fl_left">Copyright &copy; 2011 - All Rights Reserved - <a href="/">KofC 10062</a></p>
+	<% time = Time.new %>
+    <p class="fl_left">Copyright &copy; <%=time.year%> - All Rights Reserved - <a href="/">Knights of Columbus</a></p>
     <p class="fl_right"></p>
     <br class="clear" />
   </div>
