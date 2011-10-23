@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     if @subdomain == "www" or @subdomain == "vivatjes" 
       @council = Council.find(1)
     else
-      @council = Council.find_by_councilnumber(@subdmail)
+      @council = Council.find_by_councilnumber(@subdomain)
       if @council.nil?
         @council = Council.find(1)      
       end
