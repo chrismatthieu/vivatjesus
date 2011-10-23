@@ -9,14 +9,14 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_council
-    @subdomain = request.domain.split(".")[0].downcase
+    @subdomain = request.env['HTTP_HOST'].split(".")[0].downcase
     if @subdomain == "www" or @subdomain == "vivatjes" 
       @council = Council.find(1)
     else
       @council = Council.find_by_councilnumber(@subdomain)
-      # if @council.nil?
-      #   @council = Council.find(1)      
-      # end
+      if @council.nil?
+        @council = Council.find(1)      
+      end
     end
   end
   
