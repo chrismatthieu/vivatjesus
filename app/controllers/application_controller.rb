@@ -5,13 +5,12 @@ class ApplicationController < ActionController::Base
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
-    @subdomain = request.subdomain
   end
   helper_method :current_user
 
   def current_council
-    @subdomain = request.subdomain
-    if @subdomain.nil? or @subdomain == "www" or @subdomain == "" 
+    @subdomain = request.domain.split(".")[0].downcase
+    if @subdomain == "www" or @subdomain == "vivatjes" 
       @council = Council.find(1)
     else
       @council = Council.find_by_councilnumber(@subdmail)
