@@ -93,7 +93,7 @@
 </div>
 <div class="wrapper col3">
   <div id="latest">
-	subdomain:  <%= request.domain%> - <%= request.domain.split(".")[0].downcase %>
+	subdomain:  <%= request.env['HTTP_HOST'] %> - <%= request.domain%> - <%= request.domain.split(".")[0].downcase %>
 	<% if false #@post %>
 	<h1><%= gravatar_image_tag @post.user.email, :class => "gravatar", :width => "25" %> <a href="/posts/<%= @post.id.to_s rescue ""%>"><%= @post.postname rescue ""%></a> (<%= link_to "more news...", "/posts"%> )<br/>
 		</h1>
