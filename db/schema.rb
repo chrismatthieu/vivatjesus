@@ -10,7 +10,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110903154718) do
+ActiveRecord::Schema.define(:version => 20111023152507) do
+
+  create_table "councils", :force => true do |t|
+    t.string   "councilname"
+    t.integer  "councilnumber"
+    t.string   "twitterurl"
+    t.string   "facebookurl"
+    t.string   "linkedinurl"
+    t.string   "googleplusurl"
+    t.string   "email"
+    t.string   "posterousurl"
+    t.string   "calendarurl"
+    t.text     "about"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "mobileurl"
+  end
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -50,6 +66,7 @@ ActiveRecord::Schema.define(:version => 20110903154718) do
     t.string   "linkedin"
     t.string   "fullname"
     t.boolean  "publisher"
+    t.integer  "council_id"
   end
 
 end

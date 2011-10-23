@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   
   before_filter :login_required, :except => [:new, :create]
+  before_filter :current_council  
   
   # GET /users
   # GET /users.json
@@ -8,7 +9,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html {
         if @current_user.member
-          @users = User.order("username")
+          @users = User.order("username").where("council_id = ?", @council.id)
         else
           redirect_to "/"
         end
@@ -76,6 +77,8 @@ class UsersController < ApplicationController
     if token
       @user.token = token
     end
+    
+    @user.council_id = @council.id
 
     respond_to do |format|
       if @user.save

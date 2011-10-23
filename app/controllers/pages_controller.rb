@@ -1,15 +1,16 @@
 class PagesController < ApplicationController
 
   before_filter :current_user  
+  before_filter :current_council  
   
   def index
-    @post = Post.first :conditions => ["privateflag = ?", false], :order => 'created_at DESC'
+    #@post = Post.first :conditions => ["privateflag = ?", false], :order => 'created_at DESC'
     
     render :layout => false 
   end
   
   def about
-    @users = User.order("username").where("officer = true")
+    @users = User.order("username").where("officer = true and council_id = ?", @council.id)
   end
   
   def contact

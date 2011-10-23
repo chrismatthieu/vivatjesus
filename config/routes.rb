@@ -1,5 +1,7 @@
 Vivatjesus::Application.routes.draw do
 
+  resources :councils
+
   match '/calendar' => 'pages#calendar'
   # match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
@@ -26,6 +28,7 @@ Vivatjesus::Application.routes.draw do
   match '/pages/contact' => 'pages#contact'
   match '/search' => 'posts#search'
   match '/mobile' => 'pages#mobile'
+  match '/news' => 'pages#news'
 
 
 

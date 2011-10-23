@@ -39,16 +39,16 @@
 			<% end %>
 		<% end %>		
 
-		<% if controller.controller_name == "calendar" %>
+		<% if controller.controller_name == "calendar" || controller.action_name == "calendar" %>
 	      <li class="active"><a href="/calendar">calendar</a></li>
 		<% else %>
 	    <li><a href="/calendar">calendar</a></li>
 		<% end %>
 
-		<% if controller.controller_name == "posts" %>
-	      <li class="active"><a href="/posts">news</a></li>
+		<% if controller.controller_name == "posts" || controller.action_name == "news" %>
+	      <li class="active"><a href="/news">news</a></li>
 		<% else %>
-	    <li><a href="/posts">news</a></li>
+	    <li><a href="/news">news</a></li>
 		<% end %>
 
 		<% if controller.action_name == "about" %>
@@ -67,7 +67,7 @@
     </div>
     <div id="logo">
       <h1><a href="/"><%=image_tag "/images/vivatjesus.png", :width => "50"%> Vivat Jesus!</a></h1>
-      <center><p>Corpus Christi Knights of Columbus 10062</p></center>
+      <center><p><%=@council.councilname%></p></center>
     </div>
     <br class="clear" />
   </div>
@@ -75,19 +75,17 @@
 <div class="wrapper col2">
   <div id="intro">
     <div class="fl_left">
-      <h1>Knights of Columbus Corpus Christi 10062</h1>
-      <p>Corpus Christi Council 10062 is located in Ahwatukee in Phoenix, AZ on Knox and 36th Street.
-	Council meetings occur on the first Thursday of each month at 7:00 PM in rooms 5 and 6 at Corpus Christi. They are 1 hour to discuss busines items and 1 hour for social gathering. All knights are encouraged to attend at least 3 meetings a year.
-	There are many activities that occur throughout the year for the Corpus Christi Council including Pancake Breakfast, Golf Tournament, and PIDD just to name a few. Monies raised from these events help the local community.
+      <h1><%=@council.councilname%></h1>
+      <p><%=@council.about%>
 	 <a href="/about">Discover More About Us &raquo;</a></p>
     </div>
     <div class="fl_right">
       <ul>
-        <li><a href="http://facebook.com/vivatjesus"><%=image_tag "/images/facebook.png", :width => "130"%></a></li>
-        <li><a href="http://www.linkedin.com/groups/VivatJesus-4028385"><%=image_tag "/images/linkedin.png", :width => "130"%></a></li>
-        <li><a href="http://twitter.com/kofcaz"><%=image_tag "/images/twitter1.png", :width => "130"%></a></li>
+        <li><a href="<%=@council.facebookurl%>"><%=image_tag "/images/facebook.png", :width => "130"%></a></li>
+        <li><a href="<%=@council.linkedinurl%>"><%=image_tag "/images/linkedin.png", :width => "130"%></a></li>
+        <li><a href="<%=@council.twitterurl%>"><%=image_tag "/images/twitter1.png", :width => "130"%></a></li>
         <!-- <li class="last"><a href="/posts/rss"><%=image_tag "/images/rss.gif"%></a></li> -->
-        <li class="last"><a href="/mobile"><%=image_tag "/images/mobile.png", :width => "130"%></a></li>
+        <li class="last"><a href="<%=@council.mobileurl%>"><%=image_tag "/images/mobile.png", :width => "130"%></a></li>
       </ul>
     </div>
     <br class="clear" />
@@ -95,7 +93,7 @@
 </div>
 <div class="wrapper col3">
   <div id="latest">
-	<% if @post %>
+	<% if false #@post %>
 	<h1><%= gravatar_image_tag @post.user.email, :class => "gravatar", :width => "25" %> <a href="/posts/<%= @post.id.to_s rescue ""%>"><%= @post.postname rescue ""%></a> (<%= link_to "more news...", "/posts"%> )<br/>
 		</h1>
 		<p>

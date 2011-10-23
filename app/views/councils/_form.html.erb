@@ -1,0 +1,63 @@
+<div id="generalform">
+<%= form_for(@council) do |f| %>
+  <% if @council.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@council.errors.count, "error") %> prohibited this council from being saved:</h2>
+
+      <ul>
+      <% @council.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :councilname %><br />
+    <%= f.text_field :councilname %>
+  </div>
+  <div class="field">
+    <%= f.label :councilnumber %><br />
+    <%= f.number_field :councilnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :twitterurl %><br />
+    <%= f.text_field :twitterurl %>
+  </div>
+  <div class="field">
+    <%= f.label :facebookurl %><br />
+    <%= f.text_field :facebookurl %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedinurl %><br />
+    <%= f.text_field :linkedinurl %>
+  </div>
+  <div class="field">
+    <%= f.label :googleplusurl %><br />
+    <%= f.text_field :googleplusurl %>
+  </div>
+  <div class="field">
+    <%= f.label :mobileurl %><br />
+    <%= f.text_field :mobileurl %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :posterousurl %><br />
+    <%= f.text_field :posterousurl %>
+  </div>
+  <div class="field">
+    <%= f.label :calendarurl %><br />
+    <%= f.text_field :calendarurl %>
+  </div>
+  <div class="field">
+    <%= f.label :about %><br />
+    <%= f.text_area :about %>
+  </div>
+  <div class="actions">
+    <p><%= f.submit %></p>
+  </div>
+<% end %>
+</div>

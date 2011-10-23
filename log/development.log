@@ -30276,3 +30276,1817 @@ Served asset /forms.css - 304 Not Modified (0ms)
 
 Started GET "/assets/tables.css" for 127.0.0.1 at 2011-09-03 11:16:25 -0700
 Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 13:16:11 -0700
+  Processing by PagesController#index as HTML
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (161.8ms)
+Completed 200 OK in 240ms (Views: 199.8ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-09-27 13:16:11 -0700
+Served asset /layout.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-09-27 13:16:11 -0700
+Served asset /navi.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-09-27 13:16:11 -0700
+Served asset /forms.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-09-27 13:16:11 -0700
+Served asset /tables.css - 304 Not Modified (2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-27 13:17:07 -0700
+  Processing by PagesController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (officer = true) ORDER BY username[0m
+Rendered pages/about.html.erb within layouts/application (67.3ms)
+Completed 200 OK in 90ms (Views: 75.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-09-27 13:17:08 -0700
+Served asset /layout.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-09-27 13:17:08 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-09-27 13:17:08 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-09-27 13:17:08 -0700
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-09-27 13:17:08 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-09-27 13:17:14 -0700
+  Processing by PagesController#join as HTML
+Rendered pages/join.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-09-27 13:17:14 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2011-09-27 13:17:14 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-09-27 13:17:14 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-09-27 13:17:14 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-09-27 13:17:14 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 13:18:01 -0700
+  Processing by PagesController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (100.3ms)
+Completed 200 OK in 112ms (Views: 100.0ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2011-09-27 13:18:01 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2011-09-27 13:18:01 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2011-09-27 13:18:01 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2011-09-27 13:18:01 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 07:54:03 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+Rendered pages/index.html.erb (40.9ms)
+Completed 500 Internal Server Error in 86ms
+
+ActionView::Template::Error (bcrypt-ruby is not part of the bundle. Add it to Gemfile.):
+    96: <div class="wrapper col3">
+    97:   <div id="latest">
+    98: 	<% if @post %>
+    99: 	<h1><%= gravatar_image_tag @post.user.email, :class => "gravatar", :width => "25" %> <a href="/posts/<%= @post.id.to_s rescue ""%>"><%= @post.postname rescue ""%></a> (<%= link_to "more news...", "/posts"%> )<br/>
+    100: 		</h1>
+    101: 		<p>
+    102: 		<%= raw(@post.postbody) rescue ""%>
+  app/models/user.rb:3
+  app/views/pages/index.html.erb:99:in `_app_views_pages_index_html_erb___364085571_2165170400'
+  app/controllers/pages_controller.rb:8:in `index'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 07:59:09 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (2.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (166.8ms)
+Completed 200 OK in 209ms (Views: 175.9ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 07:59:09 -0700 2011
+Compiled layout.css  (1ms)  (pid 13662)
+Served asset /layout.css - 200 OK (28ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 07:59:10 -0700 2011
+Compiled forms.css  (1ms)  (pid 13662)
+Served asset /forms.css - 200 OK (23ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 07:59:10 -0700 2011
+Compiled navi.css  (1ms)  (pid 13662)
+Served asset /navi.css - 200 OK (34ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 07:59:10 -0700 2011
+Compiled tables.css  (0ms)  (pid 13662)
+Served asset /tables.css - 200 OK (23ms)
+
+
+Started GET "/posts" for 127.0.0.1 at Sun Oct 23 07:59:20 -0700 2011
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered posts/index.html.erb within layouts/application (129.0ms)
+Completed 200 OK in 149ms (Views: 139.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 07:59:20 -0700 2011
+Compiled application.js  (8ms)  (pid 13662)
+Compiled jquery.js  (19ms)  (pid 13662)
+Compiled jquery_ujs.js  (2ms)  (pid 13662)
+Compiled events.js  (0ms)  (pid 13662)
+Served asset /application.js - 200 OK (100ms)
+
+
+Started GET "/posts" for 127.0.0.1 at Sun Oct 23 08:01:06 -0700 2011
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered posts/index.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 64ms (Views: 56.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:01:07 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:01:07 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:01:07 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:01:07 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:01:07 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 08:01:09 -0700 2011
+  Processing by PagesController#news as HTML
+Rendered pages/news.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:01:09 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:01:09 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:01:10 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:01:10 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:01:10 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 08:01:43 -0700 2011
+  Processing by PagesController#news as HTML
+Rendered pages/news.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:01:43 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:01:43 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:01:43 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:01:43 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:01:43 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 08:06:26 -0700 2011
+  Processing by PagesController#news as HTML
+Rendered pages/news.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:06:26 -0700 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:06:26 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:06:27 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:06:27 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:06:27 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 08:06:50 -0700 2011
+  Processing by PagesController#news as HTML
+Rendered pages/news.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:06:50 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:06:50 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:06:50 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:06:50 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:06:50 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 08:06:55 -0700 2011
+  Processing by PagesController#news as HTML
+Rendered pages/news.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:06:55 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:06:55 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:06:56 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:06:56 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:06:56 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 08:07:17 -0700 2011
+  Processing by PagesController#news as HTML
+Rendered pages/news.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 181ms (Views: 177.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:07:18 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:07:18 -0700 2011
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:07:18 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:07:18 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:07:18 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sun Oct 23 08:08:05 -0700 2011
+  Processing by PagesController#about as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (officer = true) ORDER BY username[0m
+Rendered pages/about.html.erb within layouts/application (192.5ms)
+Completed 200 OK in 414ms (Views: 224.9ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:08:07 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:08:07 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:08:07 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:08:07 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:08:07 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at Sun Oct 23 08:08:14 -0700 2011
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:08:14 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:08:14 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:08:14 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:08:14 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:08:14 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at Sun Oct 23 08:08:44 -0700 2011
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:08:44 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:08:44 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:08:44 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:08:44 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:08:44 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 08:08:49 -0700 2011
+  Processing by PagesController#news as HTML
+Rendered pages/news.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:08:49 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:08:49 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:08:49 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:08:49 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:08:49 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sun Oct 23 08:08:51 -0700 2011
+  Processing by PagesController#about as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE (officer = true) ORDER BY username
+Rendered pages/about.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 57ms (Views: 35.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:08:51 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:08:51 -0700 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:08:51 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:08:51 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:08:51 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 08:08:52 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (61.7ms)
+Completed 200 OK in 82ms (Views: 61.9ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:08:53 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:08:53 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:08:53 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:08:53 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sun Oct 23 08:09:21 -0700 2011
+  Processing by PagesController#about as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (officer = true) ORDER BY username[0m
+Rendered pages/about.html.erb within layouts/application (103.0ms)
+Completed 200 OK in 133ms (Views: 112.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:09:21 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:09:21 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:09:21 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:09:21 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:09:21 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/join" for 127.0.0.1 at Sun Oct 23 08:09:27 -0700 2011
+  Processing by PagesController#join as HTML
+Rendered pages/join.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:09:27 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:09:27 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:09:27 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:09:27 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:09:27 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 08:09:38 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (383.1ms)
+Completed 200 OK in 445ms (Views: 394.5ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:09:38 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:09:39 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:09:39 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:09:39 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20110727233228)
+Migrating to AddAdminToUsers (20110728003357)
+Migrating to CreatePosts (20110803213119)
+Migrating to AddUserIdToPosts (20110807193006)
+Migrating to AddProfileToUsers (20110813161014)
+Migrating to AddLinkedinToUsers (20110813170520)
+Migrating to AddPrivateflagToPosts (20110813170624)
+Migrating to CreateEvents (20110814032931)
+Migrating to AddNotesToEvents (20110814165654)
+Migrating to AddLocationToEvents (20110814170150)
+Migrating to AddUseridToEvents (20110814171206)
+Migrating to ChangeLocationInEvents (20110814174618)
+Migrating to AddFullnameToUsers (20110814224313)
+Migrating to AddPublisherToUsers (20110903154718)
+Migrating to CreateCouncils (20111023151906)
+  [1m[35m (133.1ms)[0m  CREATE TABLE `councils` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `councilname` varchar(255), `councilnumber` int(11), `twitterurl` varchar(255), `facebookurl` varchar(255), `linkedinurl` varchar(255), `googleplusurl` varchar(255), `email` varchar(255), `posterousurl` varchar(255), `calendarurl` varchar(255), `about` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (7.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20111023151906')[0m
+Migrating to AddCouncilidToUsers (20111023152046)
+  [1m[35m (201.1ms)[0m  ALTER TABLE `users` ADD `council_id` int(11)
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20111023152046')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 08:22:25 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+Rendered pages/index.html.erb (9.3ms)
+Completed 200 OK in 46ms (Views: 26.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:22:25 -0700 2011
+Served asset /layout.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:22:25 -0700 2011
+Served asset /forms.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:22:25 -0700 2011
+Served asset /navi.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:22:25 -0700 2011
+Served asset /tables.css - 304 Not Modified (4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 08:22:57 -0700 2011
+  Processing by PagesController#index as HTML
+Rendered pages/index.html.erb (3.4ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:22:57 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:22:57 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:22:57 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:22:57 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 08:23:16 -0700 2011
+  Processing by PagesController#news as HTML
+Rendered pages/news.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:23:16 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:23:16 -0700 2011
+Compiled application.js  (9ms)  (pid 13821)
+Compiled councils.js  (0ms)  (pid 13821)
+Served asset /application.js - 200 OK (159ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:23:16 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:23:16 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:23:16 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sun Oct 23 08:23:21 -0700 2011
+  Processing by PagesController#about as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (officer = true) ORDER BY username
+Rendered pages/about.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 60ms (Views: 32.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:23:21 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:23:21 -0700 2011
+Served asset /layout.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:23:21 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:23:21 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:23:21 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 08:23:24 -0700 2011
+  Processing by PagesController#news as HTML
+Rendered pages/news.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:23:24 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:23:24 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:23:24 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:23:24 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:23:24 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at Sun Oct 23 08:23:46 -0700 2011
+  Processing by PagesController#calendar as HTML
+Rendered pages/calendar.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:23:46 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:23:46 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:23:46 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:23:46 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:23:46 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20110727233228)
+Migrating to AddAdminToUsers (20110728003357)
+Migrating to CreatePosts (20110803213119)
+Migrating to AddUserIdToPosts (20110807193006)
+Migrating to AddProfileToUsers (20110813161014)
+Migrating to AddLinkedinToUsers (20110813170520)
+Migrating to AddPrivateflagToPosts (20110813170624)
+Migrating to CreateEvents (20110814032931)
+Migrating to AddNotesToEvents (20110814165654)
+Migrating to AddLocationToEvents (20110814170150)
+Migrating to AddUseridToEvents (20110814171206)
+Migrating to ChangeLocationInEvents (20110814174618)
+Migrating to AddFullnameToUsers (20110814224313)
+Migrating to AddPublisherToUsers (20110903154718)
+Migrating to CreateCouncils (20111023151906)
+Migrating to AddCouncilidToUsers (20111023152046)
+Migrating to AddMobileToCouncil (20111023152507)
+  [1m[35m (17.2ms)[0m  ALTER TABLE `councils` ADD `mobileurl` varchar(255)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20111023152507')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/councils" for 127.0.0.1 at Sun Oct 23 08:25:50 -0700 2011
+  Processing by CouncilsController#index as HTML
+  [1m[36mCouncil Load (0.4ms)[0m  [1mSELECT `councils`.* FROM `councils` [0m
+Rendered councils/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:25:50 -0700 2011
+Served asset /layout.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:25:50 -0700 2011
+Served asset /application.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:25:50 -0700 2011
+Served asset /navi.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:25:50 -0700 2011
+Served asset /tables.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:25:50 -0700 2011
+Served asset /forms.css - 304 Not Modified (2ms)
+
+
+Started GET "/councils/new" for 127.0.0.1 at Sun Oct 23 08:25:54 -0700 2011
+  Processing by CouncilsController#new as HTML
+Rendered councils/_form.html.erb (24.7ms)
+Rendered councils/new.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:25:54 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:25:54 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:25:54 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:25:54 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:25:54 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/councils/new" for 127.0.0.1 at Sun Oct 23 08:26:21 -0700 2011
+  Processing by CouncilsController#new as HTML
+Rendered councils/_form.html.erb (26.4ms)
+Rendered councils/new.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:26:21 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:26:21 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:26:21 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:26:21 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:26:21 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started POST "/councils" for 127.0.0.1 at Sun Oct 23 08:34:03 -0700 2011
+  Processing by CouncilsController#create as HTML
+  Parameters: {"commit"=>"Create Council", "council"=>{"councilnumber"=>"10062", "facebookurl"=>"http://www.facebook.com/VivatJesus", "posterousurl"=>"http://10062.posterous.com/", "councilname"=>"Corpus Christi Knights of Columbus 10062", "about"=>"Corpus Christi Council 10062 is located in Ahwatukee in Phoenix, AZ on Knox and 36th Street. Council meetings occur on the first Thursday of each month at 7:00 PM in rooms 5 and 6 at Corpus Christi. They are 1 hour to discuss busines items and 1 hour for social gathering. All knights are encouraged to attend at least 3 meetings a year. There are many activities that occur throughout the year for the Corpus Christi Council including Pancake Breakfast, Golf Tournament, and PIDD just to name a few. Monies raised from these events help the local community.", "mobileurl"=>"http://www.radioindy.com/kofc/index.html", "linkedinurl"=>"http://www.linkedin.com/groups/VivatJesus-4028385", "twitterurl"=>"http://twitter.com/#!/vivatjesusaz", "calendarurl"=>"http://www.google.com/calendar/embed?title=Knights%20of%20Columbus%20Council%2010062&amp;height=600&amp;wkst=1&amp;bgcolor=%233366ff&amp;src=tpg0ni9rp7mdkrdsfarnvi1oqk%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FPhoenix", "googleplusurl"=>"", "email"=>"christophermatthieu@gmail.com"}, "authenticity_token"=>"CbNqnATuVt29Axb1nSikXfDuXxdSBKyhJ5aMwIWo6ZM=", "utf8"=>"\342\234\223"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `councils` (`about`, `calendarurl`, `councilname`, `councilnumber`, `created_at`, `email`, `facebookurl`, `googleplusurl`, `linkedinurl`, `mobileurl`, `posterousurl`, `twitterurl`, `updated_at`) VALUES ('Corpus Christi Council 10062 is located in Ahwatukee in Phoenix, AZ on Knox and 36th Street. Council meetings occur on the first Thursday of each month at 7:00 PM in rooms 5 and 6 at Corpus Christi. They are 1 hour to discuss busines items and 1 hour for social gathering. All knights are encouraged to attend at least 3 meetings a year. There are many activities that occur throughout the year for the Corpus Christi Council including Pancake Breakfast, Golf Tournament, and PIDD just to name a few. Monies raised from these events help the local community.', 'http://www.google.com/calendar/embed?title=Knights%20of%20Columbus%20Council%2010062&amp;height=600&amp;wkst=1&amp;bgcolor=%233366ff&amp;src=tpg0ni9rp7mdkrdsfarnvi1oqk%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FPhoenix', 'Corpus Christi Knights of Columbus 10062', 10062, '2011-10-23 15:34:03', 'christophermatthieu@gmail.com', 'http://www.facebook.com/VivatJesus', '', 'http://www.linkedin.com/groups/VivatJesus-4028385', 'http://www.radioindy.com/kofc/index.html', 'http://10062.posterous.com/', 'http://twitter.com/#!/vivatjesusaz', '2011-10-23 15:34:03')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/councils/1
+Completed 302 Found in 37ms
+
+
+Started GET "/councils/1" for 127.0.0.1 at Sun Oct 23 08:34:03 -0700 2011
+  Processing by CouncilsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCouncil Load (0.4ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+Rendered councils/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 32ms (Views: 23.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:34:04 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 08:34:04 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:34:04 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:34:04 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:34:04 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 08:54:50 -0700 2011
+  Processing by PagesController#index as HTML
+Rendered pages/index.html.erb (8.8ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 08:54:50 -0700 2011
+Served asset /layout.css - 200 OK (6ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 08:54:50 -0700 2011
+Served asset /forms.css - 200 OK (4ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 08:54:50 -0700 2011
+Served asset /navi.css - 200 OK (5ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 08:54:50 -0700 2011
+Served asset /tables.css - 200 OK (4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:05:25 -0700 2011
+  Processing by PagesController#index as HTML
+Rendered pages/index.html.erb (7.8ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:05:26 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:05:26 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:05:26 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:05:26 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:05:28 -0700 2011
+  Processing by PagesController#index as HTML
+Rendered pages/index.html.erb (3.8ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:05:28 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:05:28 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:05:28 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:05:28 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:05:43 -0700 2011
+  Processing by PagesController#index as HTML
+Rendered pages/index.html.erb (6.7ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:05:43 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:05:43 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:05:43 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:05:43 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:14:49 -0700 2011
+  Processing by PagesController#index as HTML
+Rendered pages/index.html.erb (4.5ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:14:49 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:14:49 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:14:49 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:14:49 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:15:04 -0700 2011
+  Processing by PagesController#index as HTML
+Rendered pages/index.html.erb (9.0ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:15:04 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:15:04 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:15:04 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:15:04 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:15:10 -0700 2011
+  Processing by PagesController#index as HTML
+Rendered pages/index.html.erb (3.5ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:15:10 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:15:10 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:15:10 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:15:10 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:19:49 -0700 2011
+  Processing by PagesController#index as HTML
+Rendered pages/index.html.erb (7.2ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:19:49 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:19:49 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:19:49 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:19:49 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:19:51 -0700 2011
+  Processing by PagesController#index as HTML
+Rendered pages/index.html.erb (3.5ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:19:51 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:19:51 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:19:51 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:19:51 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:19:52 -0700 2011
+  Processing by PagesController#index as HTML
+Rendered pages/index.html.erb (3.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:19:52 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:19:52 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:19:52 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:19:52 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:37:26 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[36mCouncil Load (0.7ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (21.5ms)
+Completed 200 OK in 141ms (Views: 54.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:37:26 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:37:26 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:37:26 -0700 2011
+Served asset /tables.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:37:26 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:37:32 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[35mCouncil Load (0.3ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (20.8ms)
+Completed 200 OK in 258ms (Views: 26.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:37:32 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:37:32 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:37:32 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:37:32 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:38:13 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (18.6ms)
+Completed 200 OK in 41ms (Views: 26.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:38:13 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:38:13 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:38:13 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:38:13 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:38:44 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[35mCouncil Load (0.3ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (16.9ms)
+Completed 200 OK in 37ms (Views: 22.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:38:44 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:38:44 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:38:44 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:38:44 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:38:54 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (18.6ms)
+Completed 200 OK in 39ms (Views: 24.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:38:54 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:38:55 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:38:55 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:38:55 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:40:39 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[35mCouncil Load (0.3ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (18.5ms)
+Completed 200 OK in 37ms (Views: 23.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:40:39 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:40:39 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:40:39 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:40:39 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:42:36 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (16.0ms)
+Completed 200 OK in 116ms (Views: 21.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:42:37 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:42:37 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:42:37 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:42:37 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at Sun Oct 23 09:43:56 -0700 2011
+  Processing by PagesController#calendar as HTML
+  [1m[35mCouncil Load (0.3ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+Rendered pages/calendar.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 38ms (Views: 24.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:43:56 -0700 2011
+Served asset /application.js - 200 OK (137ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:43:56 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:43:56 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:43:56 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:43:56 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at Sun Oct 23 09:44:27 -0700 2011
+  Processing by PagesController#calendar as HTML
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+Rendered pages/calendar.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 38ms (Views: 24.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:44:27 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:44:27 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:44:27 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:44:27 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:44:27 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:45:14 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[35mCouncil Load (0.4ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (13.7ms)
+Completed 200 OK in 115ms (Views: 19.0ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:45:14 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:45:14 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:45:15 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:45:15 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 09:45:16 -0700 2011
+  Processing by PagesController#news as HTML
+  [1m[36mCouncil Load (0.4ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+Rendered pages/news.html.erb within layouts/application (57.0ms)
+Completed 500 Internal Server Error in 96ms
+
+ActionView::Template::Error (undefined method `posteruousurl' for #<Council:0x10b914428>):
+    3: Your browser does not support inline frames or is currently configured not to display inline frames.
+    4: </iframe></p> -->
+    5: 
+    6: <iframe name="I11" src="<%=@council.posteruousurl%>" width="900" height="10000">
+    7: 	Your browser does not support inline frames or is currently configured not to display inline frames.
+    8: </iframe>
+  app/views/pages/news.html.erb:6:in `_app_views_pages_news_html_erb___259314895_2244419980'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.5ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 09:45:27 -0700 2011
+  Processing by PagesController#news as HTML
+  [1m[35mCouncil Load (0.4ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+Rendered pages/news.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 146ms (Views: 25.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:45:27 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:45:27 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:45:28 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:45:28 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:45:28 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at Sun Oct 23 09:45:32 -0700 2011
+  Processing by PagesController#calendar as HTML
+  [1m[36mCouncil Load (0.4ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+Rendered pages/calendar.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 36ms (Views: 21.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:45:33 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:45:33 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:45:33 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:45:33 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:45:33 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 09:45:37 -0700 2011
+  Processing by PagesController#news as HTML
+  [1m[35mCouncil Load (0.3ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+Rendered pages/news.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 35ms (Views: 20.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:45:37 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:45:37 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:45:37 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:45:37 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:45:37 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sun Oct 23 09:45:39 -0700 2011
+  Processing by PagesController#about as HTML
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE (officer = true) ORDER BY username
+Rendered pages/about.html.erb within layouts/application (139.0ms)
+Completed 200 OK in 202ms (Views: 141.3ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:45:39 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:45:39 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:45:39 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:45:39 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:45:39 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sun Oct 23 09:46:54 -0700 2011
+  Processing by PagesController#about as HTML
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE (officer = true) ORDER BY username
+Rendered pages/about.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 73ms (Views: 40.5ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:46:54 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:46:54 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:46:55 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:46:55 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:46:55 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sun Oct 23 09:47:46 -0700 2011
+  Processing by PagesController#about as HTML
+  [1m[36mCouncil Load (0.5ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (officer = true and council_id = 1) ORDER BY username
+Rendered pages/about.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 54ms (Views: 13.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:47:46 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:47:46 -0700 2011
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:47:46 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:47:46 -0700 2011
+Served asset /tables.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:47:46 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/news" for 127.0.0.1 at Sun Oct 23 09:48:20 -0700 2011
+  Processing by PagesController#news as HTML
+  [1m[36mCouncil Load (0.4ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+Rendered pages/news.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 35ms (Views: 22.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:48:20 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:48:20 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:48:20 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:48:20 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:48:20 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:48:22 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[35mCouncil Load (0.3ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (20.1ms)
+Completed 200 OK in 49ms (Views: 30.2ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:48:23 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:48:23 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:48:23 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:48:23 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sun Oct 23 09:48:26 -0700 2011
+  Processing by PagesController#about as HTML
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (officer = true and council_id = 1) ORDER BY username
+Rendered pages/about.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 69ms (Views: 18.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:48:26 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:48:26 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:48:26 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:48:26 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:48:26 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/join" for 127.0.0.1 at Sun Oct 23 09:48:36 -0700 2011
+  Processing by PagesController#join as HTML
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+Rendered pages/join.html.erb within layouts/application (89.3ms)
+Completed 200 OK in 112ms (Views: 99.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:48:36 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:48:36 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:48:36 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:48:36 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:48:36 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sun Oct 23 09:48:40 -0700 2011
+  Processing by PagesController#about as HTML
+  [1m[35mCouncil Load (1.1ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (officer = true and council_id = 1) ORDER BY username[0m
+Rendered pages/about.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 66ms (Views: 15.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:48:41 -0700 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:48:41 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:48:41 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:48:41 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:48:41 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:48:42 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[35mCouncil Load (0.3ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+Rendered pages/index.html.erb (14.3ms)
+Completed 200 OK in 38ms (Views: 19.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:48:42 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:48:42 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:48:42 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:48:42 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sun Oct 23 09:50:00 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:50:00 -0700 2011
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:50:00 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:50:00 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:50:00 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:50:00 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Sun Oct 23 09:50:04 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "username"=>"chris", "authenticity_token"=>"87FOVZng24Arnxg9wqGVgvrxUTUaA1O0M85+M+GypKo=", "utf8"=>"\342\234\223", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'chris' LIMIT 1[0m
+Redirected to http://a.localhost:3000/
+Completed 302 Found in 232ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 23 09:50:04 -0700 2011
+  Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+Rendered pages/index.html.erb (30.4ms)
+Completed 200 OK in 70ms (Views: 35.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:50:05 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:50:05 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:50:05 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:50:05 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Oct 23 09:50:08 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (council_id = 1) ORDER BY username
+Rendered users/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 71ms (Views: 17.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:50:08 -0700 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:50:08 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:50:08 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:50:08 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:50:08 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Oct 23 09:52:51 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCouncil Load (0.3ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (council_id = 1) ORDER BY username[0m
+Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 65ms (Views: 13.6ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at Sun Oct 23 09:52:51 -0700 2011
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at Sun Oct 23 09:52:51 -0700 2011
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at Sun Oct 23 09:52:51 -0700 2011
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at Sun Oct 23 09:52:51 -0700 2011
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at Sun Oct 23 09:52:51 -0700 2011
+Served asset /tables.css - 304 Not Modified (0ms)

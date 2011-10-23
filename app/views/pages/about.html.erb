@@ -2,13 +2,10 @@
 
 <p>
 	The <%= link_to "Knights of Columbus", "http://kofc.org"%> is a Catholic fraternity for men totaling over 1.8M members worldwide. 
-	This site is for the <%= link_to "Corpus Christi Catholic Church", "http://www.corpuschristiphx.org/"%> Knights of Columbus Council 10062.
+	This site is for the <%=@council.councilname%>.
 </p>
 <p>
-	Council meetings occur on the first Thursday of each month at 7:00 PM in rooms 5 and 6 at Corpus Christi Catholic Church in Ahwatukee in Phoenix, AZ on Knox and 36th Street. 
-	They are 1 hour to discuss busines items and 1 hour for social gathering. All knights are encouraged to attend at least 3 meetings a year. 
-	There are many activities that occur throughout the year for the Corpus Christi Council including Pancake Breakfast, Golf Tournament, and PIDD just to name a few. 
-	Monies raised from these events help the local community. 
+	<%=@council.about%>
 </p>
 <p>
 	<%=link_to "Join us!", "/join" %> Vivat Jesus!

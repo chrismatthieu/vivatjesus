@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  councilname: MyString
+  councilnumber: 1
+  twitterurl: MyString
+  facebookurl: MyString
+  linkedinurl: MyString
+  googleplusurl: MyString
+  email: MyString
+  posterousurl: MyString
+  calendarurl: MyString
+  about: MyText
+
+two:
+  councilname: MyString
+  councilnumber: 1
+  twitterurl: MyString
+  facebookurl: MyString
+  linkedinurl: MyString
+  googleplusurl: MyString
+  email: MyString
+  posterousurl: MyString
+  calendarurl: MyString
+  about: MyText

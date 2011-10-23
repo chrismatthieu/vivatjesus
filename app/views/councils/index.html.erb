@@ -1,0 +1,41 @@
+<h1>Listing councils</h1>
+
+<table>
+  <tr>
+    <th>Councilname</th>
+    <th>Councilnumber</th>
+    <th>Twitterurl</th>
+    <th>Facebookurl</th>
+    <th>Linkedinurl</th>
+    <th>Googleplusurl</th>
+    <th>Email</th>
+    <th>Posterousurl</th>
+    <th>Calendarurl</th>
+    <th>About</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @councils.each do |council| %>
+  <tr>
+    <td><%= council.councilname %></td>
+    <td><%= council.councilnumber %></td>
+    <td><%= council.twitterurl %></td>
+    <td><%= council.facebookurl %></td>
+    <td><%= council.linkedinurl %></td>
+    <td><%= council.googleplusurl %></td>
+    <td><%= council.email %></td>
+    <td><%= council.posterousurl %></td>
+    <td><%= council.calendarurl %></td>
+    <td><%= council.about %></td>
+    <td><%= link_to 'Show', council %></td>
+    <td><%= link_to 'Edit', edit_council_path(council) %></td>
+    <td><%= link_to 'Destroy', council, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Council', new_council_path %>

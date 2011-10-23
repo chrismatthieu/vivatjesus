@@ -42,16 +42,16 @@
 			<% end %>
 		<% end %>
 
-		<% if controller.controller_name == "calendar" %>
+		<% if controller.controller_name == "calendar" || controller.action_name == "calendar" %>
 	      <li class="active"><a href="/calendar">calendar</a></li>
 		<% else %>
 	    <li><a href="/calendar">calendar</a></li>
 		<% end %>
 
-		<% if controller.controller_name == "posts" %>
-	      <li class="active"><a href="/posts">news</a></li>
+		<% if controller.controller_name == "posts" || controller.action_name == "news" %>
+	      <li class="active"><a href="/news">news</a></li>
 		<% else %>
-	    <li><a href="/posts">news</a></li>
+	    <li><a href="/news">news</a></li>
 		<% end %>
 
 		<% if controller.action_name == "about" %>

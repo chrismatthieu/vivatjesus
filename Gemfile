@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc8'
+gem 'rails', '3.1.1'
 
 # gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
 gem "will_paginate"
@@ -20,6 +20,7 @@ gem 'json'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'event-calendar', :require => 'event_calendar'
 gem 'tinymce-rails'
+gem 'bcrypt-ruby'
 
 # Gems used only for assets and not required
 # in production environments by default.
