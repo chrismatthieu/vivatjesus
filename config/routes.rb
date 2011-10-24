@@ -30,6 +30,11 @@ Vivatjesus::Application.routes.draw do
   match '/mobile' => 'pages#mobile'
   match '/news' => 'pages#news'
 
+  match '/mobile/home' => 'mobile#index'
+  match '/mobile/about' => 'mobile#about'
+  match '/mobile/news' => 'mobile#news'
+  match '/mobile/calendar' => 'mobile#calendar'
+
 
 
   # Sample of named route:

@@ -34,7 +34,7 @@ class PagesController < ApplicationController
   end
   
   def mobile
-    redirect_to @council.mobileurl
+    redirect_to @council.mobileurl    
   end
 
 end
