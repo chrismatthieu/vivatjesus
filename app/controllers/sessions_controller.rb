@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_filter :current_council  
+  
   def new
   end
   def create

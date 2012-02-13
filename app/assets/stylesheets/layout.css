@@ -431,6 +431,11 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	margin:0 15px 0 0;
 	padding:0;
 	}
+	
+#footer a{
+		color:#fff;
+		text-decoration:underline;
+		}	
 
 #footer li{
 	margin-bottom:3px;

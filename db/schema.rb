@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111023152507) do
+ActiveRecord::Schema.define(:version => 20120213034452) do
 
   create_table "councils", :force => true do |t|
     t.string   "councilname"
-    t.integer  "councilnumber"
+    t.string   "councilnumber"
     t.string   "twitterurl"
     t.string   "facebookurl"
     t.string   "linkedinurl"
@@ -46,6 +47,14 @@ ActiveRecord::Schema.define(:version => 20111023152507) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.boolean  "privateflag"
+  end
+
+  create_table "sponsors", :force => true do |t|
+    t.string   "sponsorname"
+    t.string   "url"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

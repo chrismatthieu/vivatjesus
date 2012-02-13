@@ -1,4 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@value{"asset_paths[",$root/app/assets/stylesheets/layout.css"	body"á#/*
+o: ActiveSupport::Cache::Entry	:@value{I"
+class:EFI"BundledAsset;FI"id;F"%b6ef7bd0fbf38c5ec5728775e6ccab66I"logical_path;FI"layout.css;TI"pathname;FI",$root/app/assets/stylesheets/layout.css;FI"content_type;FI"text/css;FI"
+mtime;FI"2012-02-12T21:56:55-07:00;FI"	body;FI"…#/*
 Template Name: OnlineStudio
 File: Layout CSS
 Author: OS Templates
@@ -432,6 +434,11 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	margin:0 15px 0 0;
 	padding:0;
 	}
+	
+#footer a{
+		color:#fff;
+		text-decoration:underline;
+		}	
 
 #footer li{
 	margin-bottom:3px;
@@ -466,7 +473,5 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	margin:0;
 	padding:0;
 	}
-"content_type"text/css"
-class"BundledAsset"
-mtime"2011-08-19T18:04:53-07:00"_version"%ae6d9eacd14d652b3363e444f7ccf3f9"id"%ee2e0349e03a1d519fbbd0a04e766adc"dependency_paths[{"hexdigest"%705e30c24f5fa8d21d9376bba8aa8e87"
-mtimeu:	TimeÅﬁÄ  P"	path",$root/app/assets/stylesheets/layout.css"pathname",$root/app/assets/stylesheets/layout.css"logical_path"layout.css:@expires_in0:@compressedF:@created_atf1319381949.971859 2
+;FI"asset_paths;F[I",$root/app/assets/stylesheets/layout.css;FI"dependency_paths;F[{I"	path;FI",$root/app/assets/stylesheets/layout.css;FI"
+mtime;FIu:	Time§Ä  p„:@_zone"MST:offseti˛êùI"hexdigest;F"%07db4e83843c75d17ef007dd13ad110eI"_version;F"%ae6d9eacd14d652b3363e444f7ccf3f9:@expires_in0:@compressedF:@created_atf1329109016.9898062 X¸

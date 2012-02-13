@@ -1,5 +1,7 @@
 Vivatjesus::Application.routes.draw do
 
+  resources :sponsors
+
   resources :councils
 
   match '/calendar' => 'pages#calendar'

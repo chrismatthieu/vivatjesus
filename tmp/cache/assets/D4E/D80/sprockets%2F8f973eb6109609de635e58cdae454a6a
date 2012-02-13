@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@value{	"_version"%ee2e0349e03a1d519fbbd0a04e766adc"digest"%9ddcb89b229fc9226bf86159396bcb25"lengthi‡#"source"‡#/*
+o: ActiveSupport::Cache::Entry	:@value{	I"length:EFiÉ#I"digest;F"%6603b57fa4170b6093e54de7aecae502I"source;FI"É#/*
 Template Name: OnlineStudio
 File: Layout CSS
 Author: OS Templates
@@ -432,6 +432,11 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	margin:0 15px 0 0;
 	padding:0;
 	}
+	
+#footer a{
+		color:#fff;
+		text-decoration:underline;
+		}	
 
 #footer li{
 	margin-bottom:3px;
@@ -466,4 +471,4 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	margin:0;
 	padding:0;
 	}
-:@expires_in0:@compressedF:@created_atf1319381949.9865029 "Ý
+;FI"_version;F"%b6ef7bd0fbf38c5ec5728775e6ccab66:@expires_in0:@compressedF:@created_atf1329109016.9910688 m¬
