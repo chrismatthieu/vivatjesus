@@ -31,6 +31,8 @@ Vivatjesus::Application.routes.draw do
   match '/search' => 'posts#search'
   match '/mobile' => 'pages#mobile'
   match '/news' => 'pages#news'
+  match '/raffle' => 'pages#raffle'
+  match '/success' => 'pages#success'
 
   match '/mobile/home' => 'mobile#index'
   match '/mobile/about' => 'mobile#about'

@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.3'
+gem 'rails', '3.2.1'
 
 # gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
 gem "will_paginate"
@@ -26,8 +26,8 @@ gem 'jquery_mobile-rails'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "~> 3.1.0.rc"
-  # gem 'coffee-rails', "~> 3.1.0.rc"
+  gem 'sass-rails' #, "~> 3.1.0.rc"
+  # gem 'coffee-rails' #, "~> 3.1.0.rc"
   # gem 'uglifier'
 end
 
