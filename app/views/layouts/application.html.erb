@@ -31,10 +31,16 @@
   <div id="header">
     <div id="topnav">
       <ul>
-		<% if controller.action_name == "join" %>
-	      <li class="active last"><a href="/join">become a knight</a></li>
+		<% if controller.controller_name == "pages" && controller.action_name == "raffle" %>
+	      <li class="active last"><a href="/raffle">Raffle</a></li>
 		<% else %>
-	    <li class="last"><a href="/join">become a knight</a></li>
+	    <li class="last"><a href="/raffle">Raffle</a></li>
+		<% end %>
+		
+		<% if controller.action_name == "join" %>
+	      <li class="active"><a href="/join">become a knight</a></li>
+		<% else %>
+	    <li class=""><a href="/join">become a knight</a></li>
 		<% end %>
 		
 		<% if @current_user && @current_user.member %>
