@@ -31,10 +31,10 @@
   <div id="header">
     <div id="topnav">
       <ul>
-		<% if controller.controller_name == "pages" && controller.action_name == "raffle" %>
-	      <li class="active last"><a href="/raffle">Raffle</a></li>
+		<% if controller.controller_name == "pages" && (controller.action_name == "payments" or controller.action_name == "raffle" or controller.action_name == "dues")%>
+	      <li class="active last"><a href="/payments">Payments</a></li>
 		<% else %>
-	    <li class="last"><a href="/raffle">Raffle</a></li>
+	    <li class="last"><a href="/payments">Payments</a></li>
 		<% end %>
 		
 		<% if controller.action_name == "join" %>
