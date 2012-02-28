@@ -37,11 +37,6 @@
 	    <li class="last"><a href="/payments">Payments</a></li>
 		<% end %>
 		
-		<% if controller.action_name == "join" %>
-	      <li class="active"><a href="/join">become a knight</a></li>
-		<% else %>
-	    <li class=""><a href="/join">become a knight</a></li>
-		<% end %>
 		
 		<% if @current_user && @current_user.member %>
 			<% if controller.controller_name == "users" %>
@@ -49,6 +44,15 @@
 			<% else %>
 		    <li><a href="/users">knights</a></li>
 			<% end %>
+			
+		<% else %>
+		
+			<% if controller.action_name == "join" %>
+		      <li class="active"><a href="/join">become a knight</a></li>
+			<% else %>
+		    <li class=""><a href="/join">become a knight</a></li>
+			<% end %>
+		
 		<% end %>
 
 		<% if controller.controller_name == "calendar" || controller.action_name == "calendar" %>
