@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120213034452) do
+ActiveRecord::Schema.define(:version => 20120619205126) do
 
   create_table "councils", :force => true do |t|
     t.string   "councilname"
@@ -76,6 +76,9 @@ ActiveRecord::Schema.define(:version => 20120213034452) do
     t.string   "fullname"
     t.boolean  "publisher"
     t.integer  "council_id"
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
+    t.string   "auth_token"
   end
 
 end

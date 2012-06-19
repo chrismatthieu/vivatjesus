@@ -1,8 +1,5 @@
 Vivatjesus::Application.routes.draw do
 
-  resources :sponsors
-
-  resources :councils
 
   match '/calendar' => 'pages#calendar'
   # match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
@@ -15,6 +12,10 @@ Vivatjesus::Application.routes.draw do
   resources :posts
   resources :users
   resources :sessions
+  resources :password_resets
+  resources :sponsors
+  resources :councils
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

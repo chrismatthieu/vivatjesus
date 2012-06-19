@@ -1,0 +1,12 @@
+<div class="hero-unit">
+
+<h1>Reset Password</h1>
+<div class="actions" id="generalform">
+<p>Enter your username below to receive a password reset email.</p>
+<%= form_tag password_resets_path, :method => :post do %>
+    <%= text_field_tag :username, params[:username], :class=>"input-large", :placeholder=>"Username" %>
+  <%= submit_tag "Reset Password", :class=> "btn btn-primary"%>
+<% end %>
+
+</div>
+</div>
