@@ -49,6 +49,18 @@ Vivatjesus::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
   
+  config.action_mailer.default_url_options = { host: "VivatJes.us" }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "VivatJes.us",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: "n7ice@73s.com",
+    password: "dvtdvtdvt"
+  }
 
   
   
