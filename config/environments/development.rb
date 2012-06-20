@@ -22,19 +22,19 @@ Vivatjesus::Application.configure do
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
 
-  config.action_mailer.default_url_options = { host: "VivatJes.us" }
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-
-  config.action_mailer.smtp_settings = {
-    :address        => "smtp.sendgrid.net",
-    :port           => "25",
-    :domain         =>"VivatJes.us",
-    :authentication => :plain,
-    :user_name      => ENV['SENDGRID_USERNAME'],
-    :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => ENV['SENDGRID_DOMAIN']
-  }
+  # config.action_mailer.default_url_options = { host: "VivatJes.us" }
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.delivery_method = :smtp
+  # 
+  # config.action_mailer.smtp_settings = {
+  #   :address        => "smtp.sendgrid.net",
+  #   :port           => "25",
+  #   :domain         =>"VivatJes.us",
+  #   :authentication => :plain,
+  #   :user_name      => ENV['SENDGRID_USERNAME'],
+  #   :password       => ENV['SENDGRID_PASSWORD'],
+  #   :domain         => ENV['SENDGRID_DOMAIN']
+  # }
 
 
   # Do not compress assets

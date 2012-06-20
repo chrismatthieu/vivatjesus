@@ -43042,3 +43042,199 @@ ActionController::RoutingError (No route matches [GET] "/undefined"):
 
 
   Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-19 21:48:01 -0700
+Processing by PagesController#index as HTML
+  [1m[36mCouncil Load (0.7ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`councilnumber` = 'localhost:3000' LIMIT 1[0m
+  [1m[35mCouncil Load (0.4ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+  Rendered pages/index.html.erb (29.8ms)
+Completed 200 OK in 209ms (Views: 82.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-06-19 21:48:02 -0700
+Served asset /application.js - 304 Not Modified (89ms)
+
+
+Started GET "/assets/slides.min.jquery.js" for 127.0.0.1 at 2012-06-19 21:48:02 -0700
+Served asset /slides.min.jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2012-06-19 21:48:02 -0700
+Served asset /layout.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2012-06-19 21:48:02 -0700
+Served asset /tables.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2012-06-19 21:48:02 -0700
+Served asset /navi.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2012-06-19 21:48:02 -0700
+Served asset /forms.css - 304 Not Modified (4ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2012-06-19 21:48:02 -0700
+
+ActionController::RoutingError (No route matches [GET] "/undefined"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/christoffe/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/christoffe/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/christoffe/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/assets/pagination.png" for 127.0.0.1 at 2012-06-19 21:48:02 -0700
+Served asset /pagination.png - 304 Not Modified (2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-06-19 21:48:04 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mCouncil Load (0.4ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`councilnumber` = 'localhost:3000' LIMIT 1[0m
+  [1m[35mCouncil Load (0.2ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-06-19 21:48:04 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2012-06-19 21:48:04 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2012-06-19 21:48:04 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2012-06-19 21:48:04 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2012-06-19 21:48:04 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2012-06-19 21:48:12 -0700
+Processing by PasswordResetsController#new as HTML
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`councilnumber` = 'localhost:3000' LIMIT 1[0m
+  [1m[35mCouncil Load (0.2ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+  Rendered password_resets/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2012-06-19 21:48:12 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-06-19 21:48:12 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2012-06-19 21:48:12 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2012-06-19 21:48:12 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2012-06-19 21:48:12 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2012-06-19 21:48:27 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+St9SPD2N20LIn3h/aHc+hTfROEBja4Mqo7AlbCeqC0=", "username"=>"chris", "commit"=>"Reset Password"}
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`councilnumber` = 'localhost:3000' LIMIT 1[0m
+  [1m[35mCouncil Load (0.2ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (username LIKE 'chris') LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`password_reset_token` = '2PpHpWzUwo83hP3YrifeEA' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (8.6ms)[0m  UPDATE `users` SET `password_reset_token` = '2PpHpWzUwo83hP3YrifeEA', `password_reset_sent_at` = '2012-06-20 04:48:27', `updated_at` = '2012-06-20 04:48:27' WHERE `users`.`id` = 1
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  Rendered user_mailer/password_reset.text.erb (28.6ms)
+Redirected to http://localhost:3000/
+Completed 302 Found in 342ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-19 21:48:27 -0700
+Processing by PagesController#index as HTML
+  [1m[35mCouncil Load (0.4ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`councilnumber` = 'localhost:3000' LIMIT 1
+  [1m[36mCouncil Load (0.2ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+  Rendered pages/index.html.erb (5.3ms)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/slides.min.jquery.js" for 127.0.0.1 at 2012-06-19 21:48:27 -0700
+Served asset /slides.min.jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-06-19 21:48:27 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2012-06-19 21:48:27 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tables.css" for 127.0.0.1 at 2012-06-19 21:48:27 -0700
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css" for 127.0.0.1 at 2012-06-19 21:48:27 -0700
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navi.css" for 127.0.0.1 at 2012-06-19 21:48:27 -0700
+Served asset /navi.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagination.png" for 127.0.0.1 at 2012-06-19 21:48:27 -0700
+Served asset /pagination.png - 304 Not Modified (0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2012-06-19 21:48:27 -0700
+
+ActionController::RoutingError (No route matches [GET] "/undefined"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/christoffe/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/christoffe/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/christoffe/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/christoffe/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
