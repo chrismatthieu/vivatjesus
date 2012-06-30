@@ -49731,3 +49731,37 @@ Processing by PostsController#show as HTML
 DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from _app_views_posts_show_html_erb__1037123406117805945_70273955461140 at /usr/local/src/vivatjesus/app/views/posts/show.html.erb:31)
   Rendered posts/show.html.erb within layouts/application (28.2ms)
 Completed 200 OK in 100ms (Views: 44.4ms | ActiveRecord: 11.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-30 16:23:54 -0700
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (13.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCouncil Load (2.4ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`councilnumber` = 'localhost:3000' LIMIT 1
+  [1m[36mCouncil Load (0.3ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (1.7ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (109.6ms)
+Completed 200 OK in 472ms (Views: 222.6ms | ActiveRecord: 77.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-30 16:24:36 -0700
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (6.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCouncil Load (0.4ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`councilnumber` = 'localhost:3000' LIMIT 1[0m
+  [1m[35mCouncil Load (0.2ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  Rendered pages/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 39ms (Views: 14.4ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-30 16:25:03 -0700
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCouncil Load (0.2ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`councilnumber` = 'localhost:3000' LIMIT 1
+  [1m[36mCouncil Load (0.2ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (2.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 3.7ms)
