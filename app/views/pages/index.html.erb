@@ -23,7 +23,7 @@
 <%= gravatar_image_tag @post.user.email, :class => "gravatar", :width => "25" %> 
 <a href="/posts/<%= @post.id.to_s rescue ""%>"><%= @post.postname rescue ""%></a> 
 </p>
-</h2><br/>
+</h2>
 
 <p>
 <%= raw(@post.postbody) rescue ""%>
