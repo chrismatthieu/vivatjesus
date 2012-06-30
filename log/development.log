@@ -49708,3 +49708,26 @@ Compiled application.css  (257ms)  (pid 5826)
 Compiled tinymce/preinit.js  (1ms)  (pid 5826)
 Compiled tinymce/tiny_mce_src.js  (6ms)  (pid 5826)
 Compiled tinymce.js  (74ms)  (pid 5826)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-30 14:41:10 -0700
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (6.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCouncil Load (0.7ms)[0m  SELECT `councils`.* FROM `councils` WHERE `councils`.`councilnumber` = 'localhost:3000' LIMIT 1
+  [1m[36mCouncil Load (0.4ms)[0m  [1mSELECT `councils`.* FROM `councils` WHERE `councils`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.7ms)[0m  SELECT `posts`.* FROM `posts` WHERE (privateflag = 0) ORDER BY created_at DESC LIMIT 1
+  [1m[36mUser Load (9.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered pages/index.html.erb within layouts/application (192.1ms)
+Completed 200 OK in 1042ms (Views: 586.8ms | ActiveRecord: 35.1ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2012-06-30 14:41:41 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (3.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mPost Load (6.2ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 10 LIMIT 1[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from _app_views_posts_show_html_erb__1037123406117805945_70273955461140 at /usr/local/src/vivatjesus/app/views/posts/show.html.erb:31)
+  Rendered posts/show.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 100ms (Views: 44.4ms | ActiveRecord: 11.1ms)
