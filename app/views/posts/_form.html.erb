@@ -1,4 +1,4 @@
-<div id="generalform">
+<%= tinymce_assets %>
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -12,29 +12,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label "Title" %><br />
-    <%= f.text_field :postname %>
+  <div>
+    <%= f.text_field :postname, :class=>"input-xxlarge", :placeholder=>"title", :autofocus => true %>
   </div>
-  <div class="field">
-    <%= f.label "Body" %><br />
-    <%= f.text_area :postbody %>
-	<%# text_area_tag :editor, "", :rows => 40, :cols => 120 %>
-
-	<script type="text/javascript">
-	  $(function() {
-	    $('textarea').tinymce({
-	      theme: 'advanced'
-	    });
-	  });
-	</script>
+  <div>
+    <%= f.text_area :postbody, :class=>"input-xxlarge tinymce" %>
+	<%= tinymce %>
   </div>
-  <div class="field">
+  <div class="field"><br />
     <%= f.check_box :privateflag %>
     <%= f.label "Requires user to be logged in to read this post." %><br />
   </div>
-  <div class="actions">
-    <p><%= f.submit %></p>
+  <div>
+    <p><%= f.submit "Submit", :class=>"btn  btn-primary btn-large" %></p>
   </div>
 <% end %>
-</div>

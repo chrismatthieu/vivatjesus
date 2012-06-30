@@ -12,63 +12,57 @@
     </div>
   <% end %>
 
+	<br />
   <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+    <%= f.label :username %><%= f.text_field :username %>
   </div>
   <div class="field">
-    <%= f.label "Full Name" %><br />
-    <%= f.text_field :fullname %>
+    <%= f.label "Full Name" %><%= f.text_field :fullname %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.label :email %><%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :degree %><br />
-    <%= f.text_field :degree %>
+    <%= f.label :degree %><%= f.text_field :degree %>
+  </div>
+
+  <div class="controls">
+	<%= f.label "Twitter page" %>
+    <div class="input-prepend">
+      <span class="add-on">@</span><%= f.text_field :twitter %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label "Facebook page" %><%= f.text_field :facebook %>
   </div>
   <div class="field">
-    <%= f.label "Twitter handle" %><br />
-    @<%= f.text_field :twitter %>
+    <%= f.label "LinkedIn page" %><%= f.text_field :linkedin %>
   </div>
   <div class="field">
-    <%= f.label "Facebook page" %><br />
-    <%= f.text_field :facebook %>
-  </div>
-  <div class="field">
-    <%= f.label "LinkedIn page" %><br />
-    <%= f.text_field :linkedin %>
-  </div>
-  <div class="field">
-    <%= f.label "Google+ page" %><br />
-    <%= f.text_field :googleplus %>
+    <%= f.label "Google+ page" %><%= f.text_field :googleplus %>
   </div>
   <% if @current_user && @current_user.admin %>
   <div class="field">
-    <%= f.label :member %><br />
-    <%= f.check_box :member %>
+    <%= f.label :member %><%= f.check_box :member %>
   </div>
   <div class="field">
-    <%= f.label :officer %><br />
-    <%= f.check_box :officer %>
+    <%= f.label :officer %><%= f.check_box :officer %>
   </div>
   <div class="field">
-    <%= f.label "Officer Title" %><br />
-    <%= f.text_field :officertitle %>
+    <%= f.label "Officer Title" %><%= f.text_field :officertitle %>
   </div>
   <div class="field">
-    <%= f.label :publisher %><br />
-    <%= f.check_box :publisher %>
+    <%= f.label :publisher %><%= f.check_box :publisher %>
   </div>
   <div class="field">
-    <%= f.label :admin %><br />
-    <%= f.check_box :admin %>
+    <%= f.label :admin %><%= f.check_box :admin %>
   </div>
   <% end %>
 
-  <div class="actions">
-    <p><%= f.submit %></p>
+  <div>
+    <p><%= f.submit "Update", :class=>"btn  btn-primary btn-large" %></p>
   </div>
+
 <% end %>
 </div>

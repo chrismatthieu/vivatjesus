@@ -1,24 +1,21 @@
 <p id="notice"><%= alert %></p>
 
-<div id="generalform">
-<h1>Log In</h1>
+<h1>Log In</h1><br />
 
 <%= form_tag sessions_path do %>
 
-	<div class="field">
-    <%= label_tag :username %><br />
-    <%= text_field_tag :username, params[:username] %>
-  </div>
-	<div class="field">
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password, params[:password] %>
-  </div>
-  <div class="actions">
-    <p><%= submit_tag "Log in" %></p>
+	<div>
+	<%= text_field_tag :username, params[:username], :class=>"input-large focus", :placeholder=>"Username"%> <!-- , :autofocus => true -->
+	</div>
+	<div>
+	<%= password_field_tag :password, params[:password], :class=>"input-large", :placeholder=>"password" %>
+	</div>
+
+  <div>
+    <%= submit_tag "Log in", :class=>"btn btn-primary btn-large" %>
   </div>
   
 <% end %>
 
 <p><%= link_to "Forgot password?", new_password_reset_path %></p>
 
-</div>

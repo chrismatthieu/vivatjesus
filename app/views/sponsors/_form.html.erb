@@ -1,4 +1,3 @@
-<div id="generalform">
 <%= form_for(@sponsor) do |f| %>
   <% if @sponsor.errors.any? %>
     <div id="error_explanation">
@@ -13,19 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :sponsor %><br />
-    <%= f.text_field :sponsorname %>
+    <%= f.text_field :sponsorname, :autofocus => true, :class=>"input-large focus", :placeholder=>"Spondor name" %>
   </div>
   <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
+    <%= f.text_field :url, :class=>"input-large", :placeholder=>"Spondor website" %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class=>"input-large", :placeholder=>"Spondor descrtiption" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div>
+    <p><%= f.submit "Submit", :class=>"btn  btn-primary btn-large" %></p>
   </div>
 <% end %>
-</div>

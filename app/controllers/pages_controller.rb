@@ -4,9 +4,9 @@ class PagesController < ApplicationController
   before_filter :current_council  
   
   def index
-    #@post = Post.first :conditions => ["privateflag = ?", false], :order => 'created_at DESC'
+    @post = Post.first :conditions => ["privateflag = ?", false], :order => 'created_at DESC'
     
-    render :layout => false 
+    # render :layout => false 
   end
   
   def about

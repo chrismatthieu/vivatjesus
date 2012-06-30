@@ -1,4 +1,4 @@
-<h1>Editing Profile</h1>
+<h1>Editing Profile</h1><br />
 
 <%= gravatar_image_tag @user.email, :class => "gravatar" rescue ""%> <%= link_to "Update Image", "http://gravatar.com"%> | <%= link_to "Change Password", "/password/" + @user.id.to_s%>
 
