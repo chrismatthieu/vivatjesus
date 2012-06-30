@@ -49564,3 +49564,71 @@ Served asset /application.js - 304 Not Modified (1ms)
 
 Started GET "/assets/vivatjesus.png" for 127.0.0.1 at 2012-06-30 13:15:16 -0700
 Served asset /vivatjesus.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-06-30 13:32:06 -0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 3 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `posts` [0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_posts_index_html_erb___3489971466233771178_70311732959280 at /usr/local/src/vivatjesus/app/views/posts/index.html.erb:29)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_posts_index_html_erb___3489971466233771178_70311732959280 at /usr/local/src/vivatjesus/app/views/posts/index.html.erb:29)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_posts_index_html_erb___3489971466233771178_70311732959280 at /usr/local/src/vivatjesus/app/views/posts/index.html.erb:29)
+  Rendered posts/index.html.erb within layouts/application (180.5ms)
+Completed 200 OK in 382ms (Views: 240.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-06-30 13:32:06 -0700
+Served asset /application.js - 304 Not Modified (51ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2012-06-30 13:32:11 -0700
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered posts/_form.html.erb (13.0ms)
+  Rendered posts/new.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-06-30 13:32:11 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tinymce.js" for 127.0.0.1 at 2012-06-30 13:32:11 -0700
+Served asset /tinymce.js - 304 Not Modified (67ms)
+
+
+Started GET "/assets/tinymce/plugins/table/editor_plugin.js?3.5.2" for 127.0.0.1 at 2012-06-30 13:32:11 -0700
+Served asset /tinymce/plugins/table/editor_plugin.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/tinymce/themes/advanced/editor_template.js?3.5.2" for 127.0.0.1 at 2012-06-30 13:32:11 -0700
+Served asset /tinymce/themes/advanced/editor_template.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/tinymce/langs/en.js?3.5.2" for 127.0.0.1 at 2012-06-30 13:32:11 -0700
+Served asset /tinymce/langs/en.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/tinymce/plugins/fullscreen/editor_plugin.js?3.5.2" for 127.0.0.1 at 2012-06-30 13:32:11 -0700
+Served asset /tinymce/plugins/fullscreen/editor_plugin.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/tinymce/themes/advanced/langs/en.js?3.5.2" for 127.0.0.1 at 2012-06-30 13:32:11 -0700
+Served asset /tinymce/themes/advanced/langs/en.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/tinymce/themes/advanced/skins/default/ui.css?3.5.2" for 127.0.0.1 at 2012-06-30 13:32:11 -0700
+Served asset /tinymce/themes/advanced/skins/default/ui.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/tinymce/themes/advanced/skins/default/content.css" for 127.0.0.1 at 2012-06-30 13:32:11 -0700
+Served asset /tinymce/themes/advanced/skins/default/content.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/tinymce/themes/advanced/img/icons.gif" for 127.0.0.1 at 2012-06-30 13:32:11 -0700
+Served asset /tinymce/themes/advanced/img/icons.gif - 304 Not Modified (6ms)
