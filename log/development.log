@@ -49632,3 +49632,79 @@ Served asset /tinymce/themes/advanced/skins/default/content.css - 304 Not Modifi
 
 Started GET "/assets/tinymce/themes/advanced/img/icons.gif" for 127.0.0.1 at 2012-06-30 13:32:11 -0700
 Served asset /tinymce/themes/advanced/img/icons.gif - 304 Not Modified (6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/tinymce/themes/advanced/link.htm?3.5.2" for 127.0.0.1 at 2012-06-30 14:14:57 -0700
+Served asset /tinymce/themes/advanced/link.htm - 200 OK (69ms)
+
+
+Started GET "/assets/tinymce/utils/mctabs.js" for 127.0.0.1 at 2012-06-30 14:14:57 -0700
+Compiled tinymce/utils/mctabs.js  (0ms)  (pid 5778)
+Served asset /tinymce/utils/mctabs.js - 200 OK (49ms)
+
+
+Started GET "/assets/tinymce/utils/form_utils.js" for 127.0.0.1 at 2012-06-30 14:14:57 -0700
+Compiled tinymce/utils/form_utils.js  (0ms)  (pid 5778)
+Served asset /tinymce/utils/form_utils.js - 200 OK (198ms)
+
+
+Started GET "/assets/tinymce/utils/validate.js" for 127.0.0.1 at 2012-06-30 14:14:57 -0700
+Compiled tinymce/utils/validate.js  (1ms)  (pid 5778)
+Served asset /tinymce/utils/validate.js - 200 OK (15ms)
+
+
+Started GET "/assets/tinymce/themes/advanced/js/link.js" for 127.0.0.1 at 2012-06-30 14:14:57 -0700
+Compiled tinymce/themes/advanced/js/link.js  (0ms)  (pid 5778)
+Served asset /tinymce/themes/advanced/js/link.js - 200 OK (60ms)
+
+
+Started GET "/assets/tinymce/tiny_mce_popup.js" for 127.0.0.1 at 2012-06-30 14:14:57 -0700
+Compiled tinymce/tiny_mce_popup.js  (0ms)  (pid 5778)
+Served asset /tinymce/tiny_mce_popup.js - 200 OK (13ms)
+
+
+Started GET "/assets/tinymce/themes/advanced/skins/default/dialog.css?3.5.2" for 127.0.0.1 at 2012-06-30 14:14:57 -0700
+Compiled tinymce/themes/advanced/skins/default/dialog.css  (0ms)  (pid 5778)
+Served asset /tinymce/themes/advanced/skins/default/dialog.css - 200 OK (19ms)
+
+
+Started GET "/assets/tinymce/themes/advanced/langs/en_dlg.js?3.5.2" for 127.0.0.1 at 2012-06-30 14:14:57 -0700
+Compiled tinymce/themes/advanced/langs/en_dlg.js  (0ms)  (pid 5778)
+Served asset /tinymce/themes/advanced/langs/en_dlg.js - 200 OK (42ms)
+
+
+Started GET "/assets/tinymce/themes/advanced/skins/default/img/buttons.png" for 127.0.0.1 at 2012-06-30 14:14:58 -0700
+Served asset /tinymce/themes/advanced/skins/default/img/buttons.png - 200 OK (17ms)
+
+
+Started GET "/assets/tinymce/themes/advanced/skins/default/img/tabs.gif" for 127.0.0.1 at 2012-06-30 14:14:58 -0700
+Served asset /tinymce/themes/advanced/skins/default/img/tabs.gif - 200 OK (26ms)
+Connecting to database specified by database.yml
+Compiled jquery.js  (2ms)  (pid 5826)
+Compiled jquery_ujs.js  (0ms)  (pid 5826)
+Compiled councils.js  (0ms)  (pid 5826)
+Compiled events.js  (0ms)  (pid 5826)
+Compiled mobile.js  (0ms)  (pid 5826)
+Compiled password_resets.js  (0ms)  (pid 5826)
+Compiled slides.min.jquery.js  (0ms)  (pid 5826)
+Compiled sponsors.js  (0ms)  (pid 5826)
+Compiled application.js  (123ms)  (pid 5826)
+Compiled councils.css  (27ms)  (pid 5826)
+Compiled events.css  (2ms)  (pid 5826)
+Compiled forms.css  (0ms)  (pid 5826)
+Compiled layout.css  (0ms)  (pid 5826)
+Compiled mobile.css  (1ms)  (pid 5826)
+Compiled navi.css  (0ms)  (pid 5826)
+Compiled pages.css  (2ms)  (pid 5826)
+Compiled password_resets.css  (1ms)  (pid 5826)
+Compiled posts.css  (1ms)  (pid 5826)
+Compiled scaffolds.css  (19ms)  (pid 5826)
+Compiled sessions.css  (9ms)  (pid 5826)
+Compiled sponsors.css  (1ms)  (pid 5826)
+Compiled tables.css  (2ms)  (pid 5826)
+Compiled users.css  (1ms)  (pid 5826)
+Compiled application.css  (257ms)  (pid 5826)
+Compiled tinymce/preinit.js  (1ms)  (pid 5826)
+Compiled tinymce/tiny_mce_src.js  (6ms)  (pid 5826)
+Compiled tinymce.js  (74ms)  (pid 5826)
