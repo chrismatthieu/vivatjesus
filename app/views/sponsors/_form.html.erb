@@ -11,14 +11,15 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :council_id, :value => @council.id %>
   <div class="field">
-    <%= f.text_field :sponsorname, :autofocus => true, :class=>"input-large focus", :placeholder=>"Spondor name" %>
+    <%= f.text_field :sponsorname, :autofocus => true, :class=>"input-xxlarge", :autofocus => true, :placeholder=>"Spondor name" %>
   </div>
   <div class="field">
-    <%= f.text_field :url, :class=>"input-large", :placeholder=>"Spondor website" %>
+    <%= f.text_field :url, :class=>"input-xxlarge", :placeholder=>"Spondor website" %>
   </div>
   <div class="field">
-    <%= f.text_area :description, :class=>"input-large", :placeholder=>"Spondor descrtiption" %>
+    <%= f.text_area :description, :class=>"input-xxlarge", :placeholder=>"Spondor descrtiption" %>
   </div>
   <div>
     <p><%= f.submit "Submit", :class=>"btn  btn-primary btn-large" %></p>

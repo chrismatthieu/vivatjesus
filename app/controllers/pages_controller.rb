@@ -4,9 +4,15 @@ class PagesController < ApplicationController
   before_filter :current_council  
   
   def index
-    @post = Post.first :conditions => ["privateflag = ?", false], :order => 'created_at DESC'
     
-    # render :layout => false 
+    @post = Post.first :conditions => ["privateflag = ? and council_id = ?", false, @council.id], :order => 'created_at DESC'
+
+    if @council and @council.id > 1
+      render "social"
+    else
+      render "index"
+    end  
+    
   end
   
   def about

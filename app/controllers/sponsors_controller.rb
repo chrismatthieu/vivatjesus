@@ -6,7 +6,7 @@ class SponsorsController < ApplicationController
   # GET /sponsors
   # GET /sponsors.json
   def index
-    @sponsors = Sponsor.all
+    @sponsors = Sponsor.order("sponsorname").where("council_id = ?", @council.id)
 
     respond_to do |format|
       format.html # index.html.erb

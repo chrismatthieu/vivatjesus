@@ -85,7 +85,8 @@
 				<li><%= link_to 'Become a Knight', '/join'%> </li>
 
 			  	<% if @current_user && @current_user.admin %>
-					<li><%= link_to 'Posts', '/posts'%> </li>
+					<li><%= link_to 'Posts*', '/posts'%> </li>
+					<li><%= link_to 'Councils*', '/councils'%> </li>
 				<% end %>
                </ul>
 	           <ul class="nav pull-right">

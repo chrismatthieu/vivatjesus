@@ -1,13 +1,15 @@
 class PostsController < ApplicationController
 
   before_filter :current_user  
+  before_filter :current_council  
+  
 
   # GET /posts
   # GET /posts.json
   def index
     # @posts = Post.order("created_at DESC")
     # @posts = Post.all :page => params[:page], :order => 'created_at DESC'
-    @posts = Post.paginate :page => params[:page], :per_page => 3, :order => 'created_at DESC'
+    @posts = Post.paginate :page => params[:page], :per_page => 3, :conditions => ['council_id = ?', @council.id], :order => 'created_at DESC'
 
     respond_to do |format|
       format.html # index.html.erb
@@ -79,7 +81,9 @@ class PostsController < ApplicationController
   # DELETE /posts/1.json
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
+    if @current_user.council_id == @post.council_id or @current_user.admin
+      @post.destroy
+    end
 
     respond_to do |format|
       format.html { redirect_to posts_url }

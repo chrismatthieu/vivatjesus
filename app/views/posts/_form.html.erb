@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :council_id, :value => @council.id %>
+
   <div>
     <%= f.text_field :postname, :class=>"input-xxlarge", :placeholder=>"title", :autofocus => true %>
   </div>
