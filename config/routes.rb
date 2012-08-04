@@ -56,6 +56,7 @@ Vivatjesus::Application.routes.draw do
   match '/payments' => 'pages#payments'
   match '/dues' => 'pages#dues'
   match '/users/password' => "users#password"
+  match ':user/edit' => 'users#edit'
 
   match '/mobile/home' => 'mobile#index'
   match '/mobile/about' => 'mobile#about'

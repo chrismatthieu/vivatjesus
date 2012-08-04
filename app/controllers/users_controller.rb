@@ -8,11 +8,11 @@ class UsersController < ApplicationController
   def index
     respond_to do |format|
       format.html {
-        if @current_user.member
+        # if @current_user.member
           @users = User.order("username").where("council_id = ?", @council.id)
-        else
-          redirect_to "/"
-        end
+        # else
+          # redirect_to "/pending"
+        # end
       }
       # format.json { render :json => @users }
     end
@@ -75,17 +75,23 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    if params[:id] and isNumeric(params[:id])
-      @user = User.find(params[:id])
-    else
-      # @user = User.find_by_username(params[:id])
-      if request.url.index('localhost')
-        @user = User.find(:first, :conditions => ['username LIKE ?', params[:id]])
-       else
-        @user = User.find(:first, :conditions => ['username ILIKE ?', params[:id]])
+    
+    if @current_user.admin
+      if params[:id] and isNumeric(params[:id])
+        @user = User.find(params[:id])
+      else
+        # @user = User.find_by_username(params[:id])
+        if request.url.index('localhost')
+          @user = User.find(:first, :conditions => ['username LIKE ?', params[:user]])
+         else
+          @user = User.find(:first, :conditions => ['username ILIKE ?', params[:user]])
+        end
       end
-      
+
+    else
+      @user = User.find(@current_user.id)
     end
+    
   end
 
   # GET /users/1/edit

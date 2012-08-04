@@ -1,21 +1,24 @@
 <p id="notice"><%= alert %></p>
+<div class="hero-unit">
 <img src="/images/k_of_c_logo.png" width="300" align="right">
 
 <h1>Log In</h1><br />
 <%= form_tag sessions_path do %>
 
 	<div>
+	Username<br />
 	<%= text_field_tag :username, params[:username], :class=>"input-large focus", :placeholder=>"Username"%> <!-- , :autofocus => true -->
 	</div>
 	<div>
+	Password<br />
 	<%= password_field_tag :password, params[:password], :class=>"input-large", :placeholder=>"password" %>
 	</div>
 
-  <div>
+  <div><br />
     <%= submit_tag "Log in", :class=>"btn btn-primary btn-large" %>
   </div>
   
 <% end %>
 
 <p><%= link_to "Forgot password?", new_password_reset_path %></p>
-
+</div>

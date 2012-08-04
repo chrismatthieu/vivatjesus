@@ -9,7 +9,9 @@
 		<% if status.user and !status.user.photo.blank? %>	
 			<img src="<%= status.user.photo  rescue ""%>" style="width:75px; height: 75px;" align="left"  />
 		<% else %>
-			<%= gravatar_image_tag status.user.email, :class => "gravatar", :align=>"left", :style=>"width:75px; height: 75px;"  rescue ""%>
+			<!-- <%= gravatar_image_tag status.user.email, :class => "gravatar", :align=>"left", :style=>"width:75px; height: 75px;"  rescue ""%> -->
+			<img src="http://avatars.io/auto/<%=activity.user.username%>" width="75" height="75" align="left">
+			
 		<% end %>
 		</a>
 	</div>

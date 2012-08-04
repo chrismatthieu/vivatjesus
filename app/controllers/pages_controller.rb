@@ -5,12 +5,12 @@ class PagesController < ApplicationController
   
   def index
     
-    @post = Post.first :conditions => ["privateflag = ? and council_id = ?", false, @council.id], :order => 'created_at DESC'
-
     if @council and @council.id > 1
-      render "social"
-    else
+      @post = Post.first :conditions => ["privateflag = ? and council_id = ?", false, @council.id], :order => 'created_at DESC'
       render "index"
+    else
+      @councils = Council.all
+      render "social"
     end  
     
   end

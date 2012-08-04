@@ -11,12 +11,13 @@ class ApplicationController < ActionController::Base
   def current_council
     @subdomain = request.env['HTTP_HOST'].split(".")[0].downcase
     if @subdomain == "www" or @subdomain == "vivatjes" 
-      @council = Council.find(1)
+      # @council = Council.find(1)
+      @council = nil
     else
       @council = Council.find_by_councilnumber(@subdomain)
-      if @council.nil?
-        @council = Council.find(1)      
-      end
+      # if @council.nil?
+      #   @council = Council.find(1)      
+      # end
     end
   end
   

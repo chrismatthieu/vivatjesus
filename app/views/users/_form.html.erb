@@ -12,9 +12,15 @@
   <% end %>
 
   <div class="field">
+	Username<br />
     <%= f.text_field :username, :autofocus => true, :class=>"input-large focus", :placeholder=>"Username" %>
   </div>
   <div class="field">
+	Full Name<br />
+    <%= f.text_field :fullname, :class=>"input-large focus", :placeholder=>"Full Name" %>
+  </div>
+  <div class="field">
+	Email Address<br />
     <%= f.text_field :email, :class=>"input-large", :placeholder=>"Email" %>
   </div>
   <% if @current_user && @current_user.admin %>
@@ -24,16 +30,19 @@
   </div>
   <% else %>
   <div class="field">
+	Password<br />
     <%= f.password_field :password, :class=>"input-large", :placeholder=>"Password" %>
   </div>
   <div class="field">
+	Password Confirmation<br />
     <%= f.password_field :password_confirmation, :class=>"input-large", :placeholder=>"Password Confirmation" %>
   </div>
   <% end %>
-  <!-- <div class="field">
-    <%# f.check_box :allowemail, :checked => true %> Allow news & update emails
-  </div> -->
+  <div class="field">
+    <%= f.check_box :allowemail, :checked => true %> Allow news & update emails
+  </div>
   <div>
+	<br />
     <p><%= f.submit "Create Account", :class=>"btn  btn-primary btn-large" %></p>
   </div>
 <% end %>

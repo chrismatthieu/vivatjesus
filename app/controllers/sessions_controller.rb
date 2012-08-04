@@ -105,8 +105,8 @@ class SessionsController < ApplicationController
     
         if user && user.authenticate(params[:password])
           session[:user_id] = user.id
-          session["username"] = user.username
-          redirect_to root_url, :notice => "Logged in"
+          session[:username] = user.username
+          redirect_to '/activity', :notice => "Logged in"
         else
           flash.now.alert = "Invalid username or password"
           render "new"
@@ -117,6 +117,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    session[:username] = nil
     redirect_to root_url, :notice => "Logged out"
   end
 end
