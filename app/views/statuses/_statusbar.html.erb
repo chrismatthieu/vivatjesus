@@ -24,11 +24,11 @@ function setbuttonclick() {
     <%= f.text_field :message, :size => 100, :maxlength => 140, :id => "status_input_box", :value => @replycall, :class => "input-xxlarge"  %>
 
 	<% if !session["access_token"].blank? %>
-		<%= image_tag "twitter_newbird_blue_small.gif", :style => "width:30px; height:30px" %>
+		<%= image_tag "/images/twitter_newbird_blue_small.gif", :style => "width:30px; height:30px" %>
 		<%= f.check_box :twitter, :checked => true %> &nbsp;
 	<% end %>
 	<% if !session["fbtoken"].blank? %>
-		<%= image_tag "fblogo.jpg", :style => "width:30px; height:30px" %> 
+		<%= image_tag "/images/fblogo.jpg", :style => "width:30px; height:30px" %> 
 		<%= f.check_box :facebook, :checked => true %> &nbsp;
 	<% end %>
 	
@@ -44,7 +44,7 @@ function setbuttonclick() {
 </p>
 <% end %>
 
-<div id="spinner" style="display:none"><%=image_tag("ajax-spinner.gif")%></div>
+<div id="spinner" style="display:none"><%=image_tag("/images/ajax-spinner.gif")%></div>
 <script>
 $(function() {
  $("#statusbutton").click(function() {

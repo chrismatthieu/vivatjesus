@@ -21,7 +21,7 @@ VivatJesus tries to find your avatar on facebook, twitter, or linkedin based on 
 <%= render 'profile' %>
 
 <p>
-<%= image_tag "twitter_newbird_blue.png", :width => "50"%> 
+<%= image_tag "/images/twitter_newbird_blue.png", :width => "50"%> 
 <% if @user.access_token.blank?%>
 	<%= link_to "Link VivatJesus to Twitter", "/auth/twitter" %>
 <% else %>
@@ -30,7 +30,7 @@ VivatJesus tries to find your avatar on facebook, twitter, or linkedin based on 
 </p>
 
 <p>
-<%= image_tag "fblogo.jpg", :width => "30", :style => "padding-left:10px" %> 
+<%= image_tag "/images/fblogo.jpg", :width => "30", :style => "padding-left:10px" %> 
 <% if @user.fbtoken.blank?%>
 	&nbsp;&nbsp;&nbsp;<%= link_to "Link VivatJesus to Facebook", "/auth/facebook" %>
 <% else %>

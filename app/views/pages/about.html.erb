@@ -21,7 +21,10 @@
 
 	<% @users.each do |user| %>
 	  <tr>
-	    <td><%= gravatar_image_tag user.email, :class => "gravatar", :width => "25" %> <%= link_to user.username.capitalize, user_path(user) rescue ""%></td>
+	    <td>
+			<%# gravatar_image_tag user.email, :class => "gravatar", :width => "25" %> 
+			<img src="http://avatars.io/auto/<%=user.username%>" width="25" height="25">
+			<%= link_to user.username.capitalize, user_path(user) rescue ""%></td>
 	    <td><%= user.officertitle %></td>
 		<td>
 			<% if !user.twitter.blank? %>

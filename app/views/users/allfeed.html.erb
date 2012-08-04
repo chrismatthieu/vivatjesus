@@ -4,8 +4,8 @@
 	<div class="alert alert-success">
 	   <a class="close" data-dismiss="alert" href="#">&times;</a>
 	   <p>
-		<%= image_tag "fblogo.jpg", :style => "width:30px; height:30px" %> 
-		<%= image_tag "twitter_newbird_blue_small.gif", :style => "width:30px; height:30px" %>
+		<%= image_tag "/images/fblogo.jpg", :style => "width:30px; height:30px" %> 
+		<%= image_tag "/images/twitter_newbird_blue_small.gif", :style => "width:30px; height:30px" %>
 		<strong>Now with Twitter and Facebook integration!</strong> You can now link your @VivatJesus account with your Twitter and Facebook accounts. When linked, your status updates will be automatically appear in your Twitter and/or Facebook timelines!</p>
 	   <div class="alert-actions">
 	     <a class="btn small" href="/users/<%=session[:username]%>/edit">Edit Profile</a>
@@ -15,7 +15,7 @@
 <% end %>
 
 <br/><p id="notice"><%= notice %></p>
-<%= link_to image_tag("rss.png", :width=>"50", :align=>"right"), "/activity.rss"%>
+<%= link_to image_tag("/images/rss.png", :width=>"50", :align=>"right"), "/activity.rss"%>
 <h1>All Activity</h1>
 <%= link_to raw("View your timeline &rarr; "), "/feed" %>
 
