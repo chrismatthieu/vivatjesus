@@ -11,12 +11,17 @@ class ApplicationController < ActionController::Base
   def current_council
     # @subdomain = request.env['HTTP_HOST'].split(".")[0].downcase
     @subdomain = request.subdomain
-    puts @subdomain
     if @subdomain == "www" or @subdomain == "vivatjes" 
       # @council = Council.find(1)
       @council = nil
     else
-      @council = Council.find_by_councilnumber(@subdomain)
+      if request.url.index('localhost')
+        @council = Council.find(:first, :conditions => ['councilnumber LIKE ?', @subdomain])
+       else
+        @council = Council.find(:first, :conditions => ['councilnumber ILIKE ?', @subdomain])
+      end
+      
+      # @council = Council.find_by_councilnumber(@subdomain)
       # if @council.nil?
       #   @council = Council.find(1)      
       # end

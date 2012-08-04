@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   
   def index
     
-    if @council and @council.id > 1
+    if @council #and @council.id > 1
       @post = Post.first :conditions => ["privateflag = ? and council_id = ?", false, @council.id], :order => 'created_at DESC'
       render "index"
     else
