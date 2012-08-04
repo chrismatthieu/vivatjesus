@@ -25,7 +25,8 @@
 <% if @post %>
 <h2>
 <p class="well">
-<%= gravatar_image_tag @post.user.email, :class => "gravatar", :width => "25" %> 
+<%# gravatar_image_tag @post.user.email, :class => "gravatar", :width => "25" %> 
+<img src="http://avatars.io/auto/<%=@post.user.username%>" width="25" height="25">
 <a href="/posts/<%= @post.id.to_s rescue ""%>"><%= @post.postname rescue ""%></a> 
 </p>
 </h2>

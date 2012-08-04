@@ -5,7 +5,10 @@
 
 	<% if post.privateflag != true or (post.privateflag == true and @current_user) %>
 	
-		<h2 class="title"><%= gravatar_image_tag post.user.email, :class => "gravatar", :width => "25" rescue ""%> <a href="/posts/<%=post.id%>"><%= post.postname %></a> <small>Posted by <%= link_to post.user.username.capitalize, user_path(post.user.id) rescue ""%> on  <%= post.created_at.strftime("%A %B %d, %Y") %></small><br/>
+		<h2 class="title">
+		<%# gravatar_image_tag post.user.email, :class => "gravatar", :width => "25" rescue ""%> 
+		<img src="http://avatars.io/auto/<%=post.user.username%>" width="25" height="25">
+		<a href="/posts/<%=post.id%>"><%= post.postname %></a> <small>Posted by <%= link_to post.user.username.capitalize, user_path(post.user.id) rescue ""%> on  <%= post.created_at.strftime("%A %B %d, %Y") %></small><br/>
 			</h2>
 
 	    <p><%= raw(post.postbody) %></p>
