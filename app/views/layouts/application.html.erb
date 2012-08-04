@@ -79,7 +79,7 @@
 				
 				<% end %>
 
-				<% if @council %>
+				<% if @current_user or @council %>
 				<li><%= link_to 'News', '/news'%> </li>
 				<li><%= link_to 'Calendar', '/calendar'%> </li>
 				<% end %>
