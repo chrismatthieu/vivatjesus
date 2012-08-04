@@ -1,21 +1,25 @@
-<h1><%=@council.councilname%></h1><br />
+</div>
 
+<div class="hero-unit">
 <div class="row-fluid">
+	<h2><%=@council.councilname%></h2><br />
   	<div class="span8">
 	    <p><%=@council.about%></p><br /><br />
 	  	<p><a class="btn btn-primary btn-large" href="/about">Learn more &raquo;</a></p>
 	</div>
-	<div class="span4">
+	<!div class="span4">
 		
 		<p class="pull-right">
-		<a href="<%=@council.facebookurl%>"><%=image_tag "/images/facebook.png", :width => "130"%></a>
-		<a href="<%=@council.linkedinurl%>"><%=image_tag "/images/linkedin.png", :width => "130"%></a>
-		<a href="<%=@council.twitterurl%>"><%=image_tag "/images/twitter1.png", :width => "130"%></a>
-        <a href="<%=@council.mobileurl%>"><%=image_tag "/images/mobile.png", :width => "130"%></a>
+		<a href="<%=@council.facebookurl%>"><%=image_tag "/images/facebook.png", :width => "100"%></a>
+		<a href="<%=@council.linkedinurl%>"><%=image_tag "/images/linkedin.png", :width => "100"%></a>
+		<a href="<%=@council.twitterurl%>"><%=image_tag "/images/twitter1.png", :width => "100"%></a>
+        <a href="<%=@council.mobileurl%>"><%=image_tag "/images/mobile.png", :width => "100"%></a>
         <!-- <li class="last"><a href="/posts/rss"><%=image_tag "/images/rss.gif"%></a></li> -->
       </p>
-	</div>
+	<!/div>
 </div>
+</div>
+
 
 <!-- close hero div and open generic div -->
 </div><div class="hero-unit"> 
@@ -50,5 +54,7 @@
 	
 <% end %>
 <br class="clear" />
+
+</div>
 
 

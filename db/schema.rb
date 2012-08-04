@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120701014620) do
+ActiveRecord::Schema.define(:version => 20120803234901) do
+
+  create_table "activities", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "status_id"
+    t.integer  "follow_id"
+    t.integer  "register_id"
+    t.string   "message"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "councils", :force => true do |t|
     t.string   "councilname"
@@ -40,6 +50,14 @@ ActiveRecord::Schema.define(:version => 20120701014620) do
     t.integer  "user_id"
   end
 
+  create_table "follows", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "follow_id"
+    t.integer  "block_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "posts", :force => true do |t|
     t.string   "postname"
     t.text     "postbody"
@@ -57,6 +75,16 @@ ActiveRecord::Schema.define(:version => 20120701014620) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "council_id"
+  end
+
+  create_table "statuses", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "message"
+    t.string   "mylat"
+    t.string   "mylong"
+    t.string   "location"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -81,6 +109,16 @@ ActiveRecord::Schema.define(:version => 20120701014620) do
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
     t.string   "auth_token"
+    t.string   "fbid"
+    t.string   "fbtoken"
+    t.string   "uid"
+    t.string   "provider"
+    t.string   "access_token"
+    t.string   "access_secret"
+    t.string   "photo"
+    t.boolean  "allowemail"
+    t.string   "website"
+    t.text     "bio"
   end
 
 end

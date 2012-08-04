@@ -1,0 +1,30 @@
+<div class="hero-unit">
+	<h1>VivatJesus Activity</h1>
+	<br />
+
+
+	<%= render 'statuses/statusbar' %>
+
+	<%= javascript_tag do -%>
+	$(document).ready(
+	  function(){
+	    setInterval(function(){
+	      $.ajax({
+	        url: "/users/pollallfeed",
+	        type: "GET",
+	        dataType: "script"
+	    });
+	  }, 10000 );
+	});
+	<% end -%>
+
+
+	<% if !@activities.nil?%>
+	<div id="statuses">
+
+		<%= render 'feed' %>
+
+	</div>
+	<% end %>
+
+</div>

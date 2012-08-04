@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.7'
 
 # gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
 gem "will_paginate"
@@ -23,15 +23,25 @@ gem 'tinymce-rails'
 gem 'bcrypt-ruby'
 gem 'jquery_mobile-rails'
 
+gem 'omniauth', '1.0.2' 
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+gem 'twitter' 
+gem 'rest-client'
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails' #, "~> 3.1.0.rc"
-  # gem 'coffee-rails' #, "~> 3.1.0.rc"
-  # gem 'uglifier'
+  gem 'sass-rails' 
+  gem 'uglifier'
 end
+gem 'coffee-rails' 
 
 gem 'jquery-rails'
+gem 'bcrypt-ruby'
+gem 'json'
 
 # Use unicorn as the web server
 # gem 'unicorn'

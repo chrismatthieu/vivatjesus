@@ -1,0 +1,92 @@
+<div class="container-fluid">
+<% @activities.each do |activity| %>
+
+	<% @followuser = activity.user %>
+	
+	<% if activity.user %>
+	
+		<% if activity.status_id %>
+			<% @status = Status.find(activity.status_id) rescue nil%>
+			<% if @status %>
+				<% @statusmessage = "Status Update: " + @status.message rescue "Removed status" %>
+			<% else %>
+				<% @statusmessage = "Removed status" %>
+			<% end %>
+		<% elsif activity.follow_id %>
+			<% @follow = Follow.find(activity.follow_id) rescue nil %>
+			<% @followed = User.find(@follow.follow_id) rescue nil%>			
+			<% @statusmessage = "Followed: " +  link_to(@followed.username.upcase, '/' + @followed.username)  rescue "Unfollowed user" %>
+			<% @status = nil %>
+		<% elsif activity.register_id %>
+			<% @statusmessage = "Joined VivatJesus!" %>
+			<% @status = nil %>
+		<% elsif activity.contact_id %>
+			<% @contact = Contact.find(activity.contact_id) rescue nil %>
+			<% @statusmessage = "Contacted: " +  @contact.fullname + " (" + link_to(@contact.callsign.upcase, '/' + @contact.callsign) + ")" + " in " + @contact.state + ", " + @contact.country + " on " + @contact.band + " " + @contact.mode + " " + @contact.txpower + " Watts " + " " + @contact.txsignal + " " + @contact.comment  rescue "Removed contact" %>
+			<% @status = nil %>
+		<% else %>
+			<% @statusmessage = activity.message %>
+			<% @status = nil %>
+		<% end%>
+				
+		<div id="status_<%=activity.status_id rescue activity.id %>">
+			<div class="row-fluid well">
+			<div class="span2">
+			<a href="/<%= activity.user.username rescue ""%>">
+			<% if activity.user and !activity.user.photo.blank? %>	
+				<img src="<%= activity.user.photo rescue "" %>" align="left"  style="width:75px; height: 75px;"/>
+			<% else %>
+				<%= gravatar_image_tag activity.user.email, :class => "gravatar", :align=>"left", :style => "width:75px; height: 75px;" rescue ""%>
+			<% end %>
+			</a>
+			</div>
+
+			<div class="span10">
+				<div class="row-fluid">
+				<div class="span12">
+
+				<p> 
+					<% 
+					@txt = @statusmessage
+					@linkmessage = @txt.gsub(/(@)((?:[a-z][a-z]*[0-9]+[a-z0-9]*))/i) {|s| '<a href=/'+s[1..1000].downcase+'>'+s+'</a>'}
+					@linkmessage = @linkmessage.gsub(/https?:\/\/([^\/]+)(.*)/) {|s| '<a href='+s+'>'+s+'</a>'}
+					%>
+					 <%= raw(@linkmessage) rescue ""%>
+				</p>
+
+				</div>
+				</div>
+				<div class="row-fluid">
+				<div class="span12">
+
+				<p><a href="/<%= activity.user.username.downcase rescue ""%>">
+				<%= activity.user.username.upcase%></a>
+
+				Updated
+
+				<%= link_to time_ago_in_words(activity.created_at), "/activity/#{activity.id.to_s}" %> ago 
+
+
+				<% if activity.id %>
+					<div class="pull-right">
+					<% if session["user_id"] and session["user_id"] == activity.user_id %>
+						<%= link_to raw('<button class="btn" title="delete"><i class="icon-trash"></i></button>'), "/statuses/" + activity.status_id.to_s, :data => { :confirm => 'Are you sure?' }, method: :delete, :remote => true %>
+					<% else %>
+						<a href="#" onclick="addLink('<%= activity.user.username.downcase rescue ""%>');"><button class="btn" title="reply to user"><i class="icon-arrow-left"></i></button></a>					
+					<% end %>
+					</div>
+				<% end %></p>
+
+			</div>
+			</div>
+			</div>
+
+		</div>
+		</div>
+	
+	<% end %>
+<% end %>
+</div>
+
+
+

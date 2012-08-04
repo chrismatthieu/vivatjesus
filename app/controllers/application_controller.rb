@@ -40,4 +40,19 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def isNumeric(s)
+      Float(s) != nil rescue false
+  end
+  
+  def client
+    Twitter.configure do |config|
+      config.consumer_key = 'yFbqzAzWUPSJZaLDCQA' #ENV['CONSUMER_KEY']
+      config.consumer_secret = 'yZLMxkcnOA2IDCLo3twTU3uVLvL1l4foKznBOB7ADFA' #ENV['CONSUMER_SECRET']
+      # 73s' tokens for verse tweets
+      config.oauth_token = session['access_token']
+      config.oauth_token_secret = session['access_secret']
+    end
+    @client ||= Twitter::Client.new
+  end
+  
 end

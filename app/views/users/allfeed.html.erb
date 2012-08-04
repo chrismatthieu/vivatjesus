@@ -1,0 +1,73 @@
+<% content_for :alert do %>
+	<% if session[:username] and session[:access_token].nil? and session[:alert] != true %>
+	<% session[:alert] = true %>
+	<div class="alert alert-success">
+	   <a class="close" data-dismiss="alert" href="#">&times;</a>
+	   <p>
+		<%= image_tag "fblogo.jpg", :style => "width:30px; height:30px" %> 
+		<%= image_tag "twitter_newbird_blue_small.gif", :style => "width:30px; height:30px" %>
+		<strong>Now with Twitter and Facebook integration!</strong> You can now link your @VivatJesus account with your Twitter and Facebook accounts. When linked, your status updates, APRS messages, gear updates, and QSO logbook updates will be automatically appear in your Twitter and/or Facebook timelines!</p>
+	   <div class="alert-actions">
+	     <a class="btn small" href="/users/<%=session[:username]%>/edit">Edit Profile</a>
+	   </div>
+	 </div>
+	<% end %>
+<% end %>
+
+<br/><p id="notice"><%= notice %></p>
+<%= link_to image_tag("rss.png", :width=>"50", :align=>"right"), "/activity.rss"%>
+<h1>All Activity</h1>
+<%= link_to raw("View your timeline &rarr; "), "/feed" %>
+
+<br/>
+
+<%= render 'statuses/statusbar' %>
+
+<%= javascript_tag do -%>
+$(document).ready(
+  function(){
+    setInterval(function(){
+      $.ajax({
+        url: "/users/pollallfeed",
+        type: "GET",
+        dataType: "script"
+    });
+  }, 10000 );
+});
+<% end -%>
+
+
+<% if !@activities.nil?%>
+<div id="statuses">
+
+	<%= render 'feed' %>
+
+</div>
+
+<br />
+<!-- <p><center><div class="pager"><%= will_paginate @activities, :page_links => false %></div></center></p>
+<br /><br/><br/> -->
+
+<a style="display:scroll;position:fixed;bottom:5px;right:5px;" href="#" title="Back to Top"><img src="/assets/up_arrow25.png" width="25"/></a>
+
+<br /><br/><br/>
+<div id="scrollpage" style="display:none;"><%=@page%></div>
+<div id="scrollactive" style="display:none;">false</div>
+
+<script>
+	$(window).scroll(function(){
+	        if  ($(window).scrollTop()+200 >= ($(document).height() - ($(window).height()))){
+
+				if ($('#scrollactive').html() == 'false') { // IMPORTANT - Keeps the loader from fetching more than once.
+					$('#scrollactive').html("true");
+					$.getScript('/activity?page=' + $('#scrollpage').html()); return false;
+				}
+
+	        }
+	});
+</script>
+
+
+<% end %>
+
+

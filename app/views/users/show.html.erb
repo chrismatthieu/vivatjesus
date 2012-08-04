@@ -1,56 +1,202 @@
 <p id="notice"><%= notice %></p>
 
-<%= gravatar_image_tag @user.email, :class => "gravatar" rescue ""%>
 
-<p>
-  <b>Username:</b>
-  <%= @user.username %>
-</p>
-<p>
-  <b>Full Name:</b>
-  <%= @user.fullname rescue ""%>
-</p>
 
-<p>
-  <b>Membership:</b>
-<% if @user.member %>
-	Good Standing
+<div>
+
+<script>
+function setbuttonclick(buttonid) {
+ $("#follow_" + buttonid).click(function() {
+  $("#spinner_" + buttonid).show();
+ });
+};
+</script>
+	
+<div id="photobar">
+	
+	<% if !@image.blank? %>	
+		<img src="<%= @image %>" style="width:100px; height: 100px;"/>
+	<% else %>
+		<%= gravatar_image_tag @user.email, :class => "gravatar", :style=>"width:100px; height: 100px;" rescue "" %>
+	<% end %>
+	<br />
+	
+	<% if session["user_id"] %>
+	
+		<% if @user and session["user_id"] == @user.id %>
+			<!-- <span style="a:underline"><%= link_to 'Edit Profile', "/users/" + session["username"] + "/edit" %> </span> -->
+			<a href="<%= "/users/" + session["username"] + "/edit" %>"><button class="btn"><i class="icon-cog"></i> Edit Profile</button></a>
+		<% end %>
+				
+		
+		<div id="userstatus_<%=@user.id.to_s rescue "0"%>">
+		<% if @user and session["user_id"] != @user.id %>	
+			<% if @follow %>
+				<%= form_for :follow, :url=>{:controller=>"follows", :action=>"create", :id=>@user.id, :status=>'unfollow' }, :remote => true do |f| %>
+					<%= button_tag(raw('<i class="icon-remove icon-white"></i> Unfollow'), :title=>"Unfollow " + @user.username.upcase, :class=>"btn btn-danger", :id=>"follow_" + @user.id.to_s ) %>
+				<% end %>
+				
+			<% elsif @block %>
+
+				<%= form_for :follow, :url=>{:controller=>"follows", :action=>"unblock", :id=>@user.id }, :remote => true do |f| %>
+					<%= button_tag(raw('<i class="icon-stop icon-white"></i> Unblock'), :title=>"Unblock " + @user.username.upcase, :class=>"btn btn-danger", :id=>"follow_" + @user.id.to_s ) %>
+				<% end %>
+
+				
+			<% else %>
+			
+				<%= form_for :follow, :url=>{:controller=>"follows", :action=>"create", :id=>@user.id, :status=>'follow' }, :remote => true do |f| %>
+					<%# button_tag(raw('<i class="icon-ok"></i> Follow'), :title=>"Follow " + @user.username.upcase, :class=>"btn", :id=>"follow_" + @user.id.to_s ) %>
+					<div class="btn-group">
+			          <%= button_tag(raw('<i class="icon-plus"></i> Follow'), :title=>"Follow " + @user.username.upcase, :class=>"btn", :id=>"follow_" + @user.id.to_s ) %>
+			          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><%= link_to "Block #{@user.username.upcase}", {:controller => "follows", :action=>"block", :id=>@user.id}, :remote => true %></li>
+			          </ul>
+			        </div><!-- /btn-group -->
+				<% end %>
+								
+								
+				
+			<% end %>
+		<% elsif !@user %>
+			<!-- Not registered - Send Join request -->
+			<%= form_for :invite, :url=>{:controller=>"static", :action=>"invite", :id=>@callsign, :em=>@email }, :remote => true do |f| %>
+				<%= button_tag(raw('<i class="icon-envelope icon-white"></i> Invite to VivatJesus'), :title=>"Invite " + @callsign.upcase, :class=>"btn btn-primary", :id=>"follow_0" ) %>
+			<% end %>
+		<% end %>
+		<script>
+			setbuttonclick(<%=@user.id.to_s rescue "0"%>);
+		</script>
+		</div>		
+				
+				
+		<div id="spinner_<%=@user.id.to_s rescue "0"%>" style="display:none"><%=image_tag("ajax-spinner.gif")%></div>
+		
+	<% end %>
+	
+	<% if @user %>
+	<h1>
+	<%= @user.username.capitalize + ' (' + @user.fullname + ')' %>'<%= "s" if @user.username[-1,1] != "s"%> Profile 
+	<% if session["user_id"] %>
+		<!-- <a href="#" onclick="addLink('<%= @user.username rescue ""%>');" title="Mention <%= @user.username%> in a status update" rel="tooltip"><%= button_tag(raw('<img src="/assets/reply.gif" style="width:15px; height: 15px;" align="right">'), :class=>"btn", :id=>"reply") %></a> -->
+	<% end %>
+	</h1>
+	<% if @followers %>
+	<h2>
+		<a href="<%= "/" +  @user.username + "/followers"%>">Followers: <span id="followers"><%=@followers%></span></a> | 
+		<a href="<%= "/" +  @user.username + "/following"%>">Following: <span id="following"><%=@following%></span></a>
+	</h2>
+	<% end %>
+	
+	
+	<br />
+	<p class="well">
+	<b>Membership:</b>
+	<% if @user and @user.member %>
+		Good Standing
+	<% else %>
+		Status Pending
+	<% end %>
+	<br /><br />
+	<% if @user %>
+		<b>Bio:</b><br />
+		<%= @user.bio rescue ""%>
+	<% end %>
+	</p>
+	
+
+
+	<p class="well">
+	  <b>Degree:</b>
+	  <%= @user.degree rescue ""%>
+		<br /><br />
+	<% if @user and @user.officer %>
+	  <b>Officer:</b>
+	  <%= @user.officertitle %>
+	<br /><br />
+	<% end %>
+
+	  <b>Email:</b>
+	  <a href="mailto:<%= @user.email rescue ""%>"><%= @user.email rescue ""%></a>
+		<br /><br />
+	  <b>Twitter:</b>
+	  <%= link_to "@" + @user.twitter, "http://twitter.com/" + @user.twitter if @user.twitter  %>
+		<br /><br />
+	  <b>Facebook:</b>
+	  <%= link_to @user.facebook, @user.facebook  if @user.facebook %>
+		<br /><br />
+	  <b>LinkedIn:</b>
+	  <%= link_to @user.linkedin, @user.linkedin  if @user.linkedin %>
+		<br /><br />
+	  <b>Google+:</b>
+	  <%= link_to @user.googleplus, @user.googleplus  if @user.googleplus %>
+	</p>
+	
+	
+<!-- <script>
+		$(document).ready(function() {
+		   initialize();
+		});
+</script>	 -->
+	
+</div>
+
+<%= javascript_tag do -%>
+$(document).ready(
+  function(){
+    setInterval(function(){
+      $.ajax({
+        url: "/users/pollallfeed",
+        type: "GET",
+        dataType: "script"
+    });
+  }, 10000 );
+});
+<% end -%>
+
+
+<% if !@activities.nil?%>
+
+<h1><%= @user.username.capitalize %>'<%= "s" if @user.username[-1,1] != "s"%> Activity</h1>
+
+<div id="statuses">
+
+	<%= render 'feed' %>
+
+	<br />
+	<!-- <p><center><div class="pager"><%= will_paginate @activities, :page_links => false %></div></center></p>
+		
+		<br /><br/><br/> -->
+		
+		<a style="display:scroll;position:fixed;bottom:5px;right:5px;" href="#" title="Back to Top"><img src="/assets/up_arrow25.png" width="25"/></a>
+
+		<br /><br/><br/>
+		<div id="scrollpage" style="display:none;"><%=@page%></div>
+		<div id="scrollactive" style="display:none;">false</div>
+
+		<script>
+			$(window).scroll(function(){
+			        if  ($(window).scrollTop()+200 >= ($(document).height() - ($(window).height()))){
+
+						if ($('#scrollactive').html() == 'false') { // IMPORTANT - Keeps the loader from fetching more than once.
+							$('#scrollactive').html("true");
+							$.getScript('/activity?page=' + $('#scrollpage').html()); return false;
+						}
+
+			        }
+			});
+		</script>	
+		
+</div>
+<% end %>
+
+
 <% else %>
-	Status Pending
-<% end %>
-</p>
+<!-- 404 -->
+<div class="hero-unit">
+	<h1>User not found...</h1>
+</div>
 
-<p>
-  <b>Degree:</b>
-  <%= @user.degree %>
-</p>
-<% if @user.officer %>
-<p>
-  <b>Officer:</b>
-  <%= @user.officertitle %>
-</p>
 <% end %>
 
-<p>
-  <b>Email:</b>
-  <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
-</p>
-<p>
-  <b>Twitter:</b>
-  <%= link_to "@" + @user.twitter, "http://twitter.com/" + @user.twitter if @user.twitter  %>
-</p>
-<p>
-  <b>Facebook:</b>
-  <%= link_to @user.facebook, @user.facebook  if @user.facebook %>
-</p>
-<p>
-  <b>LinkedIn:</b>
-  <%= link_to @user.linkedin, @user.linkedin  if @user.linkedin %>
-</p>
-<p>
-  <b>Google+:</b>
-  <%= link_to @user.googleplus, @user.googleplus  if @user.googleplus %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

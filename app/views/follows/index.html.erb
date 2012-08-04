@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<% if @follows %>
+
+<br/>
+<% if params[:view] == 'following' %>
+	<% if @current_user == @user %>
+		<h1>You Are Following (<%= link_to 'view followers', '/' + @user.username + '/followers' %>)</h1>
+	<% else %>
+		<h1><%= link_to @user.username.upcase, '/' + @user.username  %> <%=params[:view].capitalize %> (<%= link_to 'view followers', '/' + @user.username + '/followers' %>)</h1>
+	<% end %>
+<% else %>
+	<% if @current_user == @user %>
+		<h1>Your Followers (<%= link_to 'view following', '/' + @user.username + '/following' %>)</h1>
+	<% else %>
+		<h1> <%= link_to @user.username.upcase, '/' + @user.username  %> <%=params[:view].capitalize %>  (<%= link_to 'view following', '/' + @user.username + '/following' %>)</h1>
+	<% end %>
+<% end %>
+<br/>
+
+<div>
+<script>
+function setbuttonclick(buttonid) {
+ $("#follow_" + buttonid).click(function() {
+  $("#spinner_" + buttonid).show();
+ });
+};
+</script>
+
+<div id="statuses">
+
+	<%= render 'follows' %>
+
+</div>
+
+	
+</div>
+
+<br />
+<!-- <p><center><div class="pager"><%= will_paginate @follows, :page_links => false %></div></center></p>
+<br/><br/> -->
+
+<a style="display:scroll;position:fixed;bottom:5px;right:5px;" href="#" title="Back to Top"><img src="/assets/up_arrow25.png" width="25"/></a>
+
+<br /><br/><br/>
+<div id="scrollpage" style="display:none;"><%=@page%></div>
+<div id="scrollactive" style="display:none;">false</div>
+
+<script>
+	$(window).scroll(function(){
+	        if  ($(window).scrollTop()+200 >= ($(document).height() - ($(window).height()))){
+
+				if ($('#scrollactive').html() == 'false') { // IMPORTANT - Keeps the loader from fetching more than once.
+					$('#scrollactive').html("true");
+					$.getScript('/<%=@user.username.downcase%>/<%=params[:view]%>?page=' + $('#scrollpage').html()); return false;
+				}
+
+	        }
+	});
+</script>
+
+
+
+<% else %>
+<br/><br/><br/><br/>
+<h1>User not found :(</h1>
+<div id="pagecontent">
+</div>
+<% end %>

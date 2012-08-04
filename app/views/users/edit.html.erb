@@ -1,8 +1,44 @@
-<h1>Editing Profile</h1><br />
+<br/><h1>Editing Your Profile</h1><br/>
 
-<%= gravatar_image_tag @user.email, :class => "gravatar" rescue ""%> <%= link_to "Update Image", "http://gravatar.com"%> | <%= link_to "Change Password", "/password/" + @user.id.to_s%>
+<div>
 
+<div id="photobar">
+	<% if !@user.photo.blank? %>	
+		<img src="<%= @user.photo %>" width="100" height="100" />
+	<% else %>
+		<%= gravatar_image_tag @user.email, :class => "gravatar" rescue ""%>
+	<% end %><br/>
+	<% if false #@current_user.id == @user.id %>
+		<span style="a:underline"><%= link_to 'Edit Profile', "/users/" + @current_user.username + "/edit" %> </span>
+	<% end %>
+</div>
+<br />
+VivatJesus uses Gravatar for photos which is a free service that associates a picture with your email address. 
+If you plan to be an active user, you should sign-up at 
+<span style="a:underline;"><%= link_to "http://gravatar.com", "http://gravatar.com"%></span> and log back into VivatJesus to see it show up.
+
+<br /><br />
 <%= render 'profile' %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<p>
+<%= image_tag "twitter_newbird_blue.png", :width => "50"%> 
+<% if @user.access_token.blank?%>
+	<%= link_to "Link VivatJesus to Twitter", "/auth/twitter" %>
+<% else %>
+	<%= link_to "Deauthorize Twitter", "/deauthtwitter" %>
+<% end %>
+</p>
+
+<p>
+<%= image_tag "fblogo.jpg", :width => "30", :style => "padding-left:10px" %> 
+<% if @user.fbtoken.blank?%>
+	&nbsp;&nbsp;&nbsp;<%= link_to "Link VivatJesus to Facebook", "/auth/facebook" %>
+<% else %>
+	&nbsp;&nbsp;&nbsp;<%= link_to "Deauthorize Facebook", "/deauthfacebook" %>
+<% end %>
+</p>
+<p align="right">
+	<%= link_to raw('<button class="btn btn-danger"><i class="icon-trash icon-white"></i> Delete Account</button>'), @user, confirm: 'WARNING: Are you sure that you want to delete your VivatJesus account!?', method: :delete %>
+</p>
+</div>
+

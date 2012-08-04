@@ -1,0 +1,40 @@
+<%= render 'statusbar' %>	
+	
+<%= javascript_tag do -%>
+$(document).ready(
+  function(){
+    setInterval(function(){
+      $.ajax({
+        url: "/statuses/pollfeed",
+        type: "GET",
+        dataType: "script"
+    });
+  }, 10000 );
+});
+<% end -%>
+
+<div id="statuses">
+	<%= render 'feed' %>
+</div>
+<br />
+<!-- <p><center><div class="pager"><%= will_paginate @statuses, :page_links => false %></div></center></p> -->
+
+
+<a style="display:scroll;position:fixed;bottom:5px;right:5px;" href="#" title="Back to Top"><img src="/assets/up_arrow25.png" width="25"/></a>
+
+<br /><br/><br/>
+<div id="scrollpage" style="display:none;"><%=@page%></div>
+<div id="scrollactive" style="display:none;">false</div>
+
+<script>
+	$(window).scroll(function(){
+	        if  ($(window).scrollTop()+200 >= ($(document).height() - ($(window).height()))){
+
+				if ($('#scrollactive').html() == 'false') { // IMPORTANT - Keeps the loader from fetching more than once.
+					$('#scrollactive').html("true");
+					$.getScript('/statuses?page=' + $('#scrollpage').html()); return false;
+				}
+
+	        }
+	});
+</script>

@@ -1,0 +1,12 @@
+{
+	<% if @user or (@firstname and @firstname != "") %>	
+	"name": "<%=@firstname + " " + @lastname%>",
+	"image": "<%=@image%>",
+	"followers": "<%=@followers.to_i %>",
+	"following": "<%=@following.to_i %>",
+	"profile": "http://VivatJes.us<%=@user.username.downcase%>"
+	<% else %>
+	"status": "NOT FOUND"
+	<% end %>
+}
+

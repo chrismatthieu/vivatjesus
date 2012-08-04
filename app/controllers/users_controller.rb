@@ -21,7 +21,40 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
+    @page = params[:page].to_i
+    if @page == 0
+      @page = 1
+    end
+    @page = @page + 1   
+    
+    if params[:id] and isNumeric(params[:id])
+      @user = User.find(params[:id])
+    else
+      
+      # @user = User.find_by_username(@callsign)
+      if request.url.index('localhost')
+        @user = User.find(:first, :conditions => ['username LIKE ?', params[:user]])
+       else
+        @user = User.find(:first, :conditions => ['username ILIKE ?', params[:user]])
+      end
+      
+      
+    end
+    
+    if @user
+      
+      @follow = Follow.find(:first, :conditions => ["user_id = ? and follow_id = ?", session[:user_id], @user.id])
+      @block = Follow.find(:first, :conditions => ["user_id = ? and block_id = ?", session[:user_id], @user.id])
+      
+      @following = Follow.count(:conditions => ["user_id = ?", @user.id])
+      @followers = Follow.count(:conditions => ["follow_id = ?", @user.id])
+
+      # # @activities = User.comments.paginate :page => params[:page], :per_page => 3
+      # @activities = Comment.paginate :page => params[:page], :conditions => ['user_id = ?', @user.id], :order => 'updated_at DESC'
+      @activities = Activity.paginate :page => params[:page], :conditions => ['user_id = ?', @user.id], :order => 'activities.updated_at DESC'     
+            
+    end #@user
 
     respond_to do |format|
       format.html # show.html.erb
@@ -42,20 +75,29 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    if @current_user.admin
+    if params[:id] and isNumeric(params[:id])
       @user = User.find(params[:id])
     else
-      @user = User.find(@current_user.id)
+      # @user = User.find_by_username(params[:id])
+      if request.url.index('localhost')
+        @user = User.find(:first, :conditions => ['username LIKE ?', params[:id]])
+       else
+        @user = User.find(:first, :conditions => ['username ILIKE ?', params[:id]])
+      end
+      
     end
   end
 
   # GET /users/1/edit
   def password
-    if @current_user.admin
-      @user = User.find(params[:id])
-    else
-      @user = User.find(@current_user.id)
-    end
+    # if @current_user.admin
+    #   @user = User.find(params[:id])
+    # else
+    #   @user = User.find(@current_user.id)
+    # end
+
+    @user = User.find(@current_user.id)
+
   end
 
   # POST /users
@@ -128,4 +170,115 @@ class UsersController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  def allfeed       
+    
+    @page = params[:page].to_i
+    if @page == 0
+      @page = 1
+    end
+    @page = @page + 1   
+
+     respond_to do |format|
+       format.html {
+         @activities = Activity.paginate :page => params[:page], :order => 'updated_at DESC' 
+       }
+       format.rss { 
+         @activities = Activity.find(:all, :order => 'created_at DESC', :limit =>30)
+         render :layout=>false 
+       }
+       format.js {
+         @activities = Activity.paginate :page => params[:page], :order => 'updated_at DESC' 
+       }
+     end
+  end
+  
+  def showfeed
+    # @activities = Activity.find(params[:id])   
+    @activities = Activity.find(:all, :conditions => ["id = ?", params[:id]])              
+  end
+  
+  def pollallfeed
+    @activities = Activity.paginate :page => params[:page], :order => 'activities.updated_at DESC', :conditions=>['created_at > ?', Time.now - 10.seconds]                
+    respond_to do |format|  
+      format.js { render :action => 'pollallfeed.js.coffee', :content_type => 'text/javascript'}
+    end
+
+  end
+
+  def feed     
+    
+    @page = params[:page].to_i
+    if @page == 0
+      @page = 1
+    end
+    @page = @page + 1   
+    
+     
+     # @activities = Activity.paginate :page => params[:page], :select => "comments.user_id, comments.verse_id, comments.comment, comments.color, comments.updated_at",  
+     # :conditions => ["follows.user_id = ? or comments.user_id = ?", @current_user.id, @current_user.id],
+     # :joins => "left outer join follows on comments.user_id = follows.follow_id or comments.user_id = #{@current_user.id}",
+     # :order => 'comments.updated_at DESC'
+
+     @activities = Activity.paginate :page => params[:page],  
+     :conditions => ["follows.user_id = ? or activities.user_id = ?", session[:user_id], session[:user_id]],
+     :joins => "left outer join follows on activities.user_id = follows.follow_id or activities.user_id = #{session[:user_id]}",
+     :order => 'activities.updated_at DESC',
+     :select => 'DISTINCT(activities.id), activities.*'
+     
+     respond_to do |format|
+       format.html 
+       format.rss { render :action => "allfeed", :layout=>false }
+       format.js 
+       
+     end
+     
+          
+  end
+
+  def pollfeed     
+     
+     @activities = Activity.paginate :page => params[:page],  
+     :conditions => ["(follows.user_id = ? or activities.user_id = ?) and (activities.created_at > ?)", session[:user_id], session[:user_id], Time.now - 10.seconds],
+     :joins => "left outer join follows on activities.user_id = follows.follow_id or activities.user_id = #{session[:user_id]}",
+     :order => 'activities.updated_at DESC',
+     :select => 'DISTINCT(activities.id), activities.*'
+                    
+     respond_to do |format|  
+       format.js { render :action => 'pollallfeed.js.coffee', :content_type => 'text/javascript'}
+     end
+     
+          
+  end
+  
+  def deauthtwitter
+    @twitter = User.find(session[:user_id])
+    @twitter.uid = nil
+    @twitter.provider = nil
+    @twitter.access_token = nil
+    @twitter.access_secret = nil
+    @twitter.save
+    
+    session['uid'] = nil
+    session['provider'] = nil
+    session['access_token'] = nil 
+    session['access_secret'] = nil
+    
+    redirect_to "/users/#{@twitter.username.downcase}/edit"
+    
+  end
+
+  def deauthfacebook
+    @fb = User.find(session[:user_id])
+    @fb.fbid = nil
+    @fb.fbtoken = nil
+    @fb.save
+    
+    session['fbid'] = nil 
+    session['fbtoken'] = nil 
+    
+    redirect_to "/users/#{@fb.username.downcase}/edit"
+    
+  end
+  
 end

@@ -13,7 +13,7 @@
 <!-- CSS Overrides  -->
   <style type="text/css">
      body {
-     padding-top: 60px;
+/*     padding-top: 60px;*/
 /*		 background-image:url('/assets/whitey.png');*/
      }
 /*	.hero-unit {
@@ -58,7 +58,7 @@
 				<li class="divider-vertical"></li>
 				<% if @current_user %>
 				
-					<!-- <li class="dropdown">
+					<li class="dropdown">
 										    <a href="#"
 										          class="dropdown-toggle"
 										          data-toggle="dropdown">
@@ -66,27 +66,27 @@
 										          <b class="caret"></b>
 										    </a>
 										    <ul class="dropdown-menu">
-												<li><%= link_to "Public", "/allfeed"  %> </li>
+												<li><%= link_to "Public", "/activity"  %> </li>
 												<li><%= link_to "Friends", "/feed"  %> </li>
 										    </ul>
-										  </li> -->
+										  </li>
 					
 					<!-- <li><%= link_to 'Following', '/' + @current_user.username + '/following' %> </li>
 					<li><%= link_to 'Followers', '/' + @current_user.username + '/followers' %> </li> -->
 					<li><%= link_to 'Knights', '/users'%> </li>
+					
+					<li><%= link_to 'Posts*', '/posts'%> </li>
+					<li><%= link_to 'Councils*', '/councils'%> </li>
+					
 				
 				<% end %>
 
 
 				<li><%= link_to 'News', '/news'%> </li>
 				<li><%= link_to 'Calendar', '/calendar'%> </li>
-				<li><%= link_to 'About', '/about'%> </li>
-				<li><%= link_to 'Sponsors', '/sponsors'%> </li>
 				<li><%= link_to 'Become a Knight', '/join'%> </li>
 
 			  	<% if @current_user && @current_user.admin %>
-					<li><%= link_to 'Posts*', '/posts'%> </li>
-					<li><%= link_to 'Councils*', '/councils'%> </li>
 				<% end %>
                </ul>
 	           <ul class="nav pull-right">
@@ -132,16 +132,16 @@
 	
 	
 	
-  <div class="container-fluid">
+  <div class="container marketing"><br /><br /><br />
 	
-	<div class="hero-unit">
-
+	<!-- <div class="hero-unit"> -->
+		<%= yield :alert %>
 		<%= yield %>
 
-	</div>
+	<!-- </div> -->
 
 	<% time = Time.new %>
-    <p>Copyright &copy; <%=time.year%> - All Rights Reserved - <a href="/">Knights of Columbus</a></p>
+    <p>Copyright &copy; <%=time.year%> - All Rights Reserved - <a href="/">Knights of Columbus</a> | <%= link_to 'About', '/about'%> | <%= link_to 'Sponsors', '/sponsors'%> </p>
 	
   </div>
 

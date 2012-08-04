@@ -1,6 +1,7 @@
 Vivatjesus::Application.routes.draw do
 
 
+
   match '/calendar' => 'pages#calendar'
   # match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
@@ -8,21 +9,39 @@ Vivatjesus::Application.routes.draw do
   match '/events/rss' => 'events#rss'
   match '/password/:id' => 'users#password'
 
-  resources :events
-  resources :posts
-  resources :users
-  resources :sessions
-  resources :password_resets
-  resources :sponsors
-  resources :councils
-  
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
+  
+  get "errors/404"
+  get "errors/500"
+
+  # Omniauth pure
+  match "/signin" => "sessions#signin"
+  match "/signout" => "sessions#signout"
+
+  match '/auth/:service/callback' => 'sessions#create' 
+  match '/auth/failure' => 'sessions#failure'
+  match '/auth/:provider' => "application#omniauth"
+  match '/feed' => "users#feed"
+  match '/activity' => "users#allfeed"
+  match '/activity/:id' => "users#showfeed"
+  match '/twitter' => "users#twitter"
+  match '/facebook' => "users#facebook"
+  match '/deauthtwitter' => "users#deauthtwitter"
+  match '/deauthfacebook' => "users#deauthfacebook"
+
+  match ':user/following' => 'follows#index', :view => 'following'
+  match ':user/followers' => 'follows#index', :view => 'followers'
+  match '/users/pollallfeed' => 'users#pollallfeed'
+  match '/users/pollfeed' => 'users#pollfeed'
+  match '/statuses/pollfeed' => 'statuses#pollfeed'
+  match '/follows/block/:id' => 'follows#block'
+  match '/follows/unblock/:id' => 'follows#unblock'
+  
 
   match '/login' => 'sessions#new'
   match '/logout' => 'sessions#destroy'
@@ -36,12 +55,27 @@ Vivatjesus::Application.routes.draw do
   match '/success' => 'pages#success'
   match '/payments' => 'pages#payments'
   match '/dues' => 'pages#dues'
+  match '/users/password' => "users#password"
 
   match '/mobile/home' => 'mobile#index'
   match '/mobile/about' => 'mobile#about'
   match '/mobile/news' => 'mobile#news'
   match '/mobile/calendar' => 'mobile#calendar'
 
+  resources :events
+  resources :posts
+  resources :users
+  resources :sessions
+  resources :password_resets
+  resources :sponsors
+  resources :councils
+  resources :statuses
+  resources :follows
+  
+
+  match ':user' => 'users#show'
+  
+  match '*a', :to => 'errors#404'
 
 
   # Sample of named route:

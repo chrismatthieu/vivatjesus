@@ -1,10 +1,18 @@
 class User < ActiveRecord::Base
   # attr_accessible :username, :email, :password, :password_confirmation
   has_secure_password
-  validates_presence_of :password, :on => :create
+  validates_uniqueness_of :username, :on => :create  
+  validates :email, :presence =>true,
+                      :uniqueness=>true, :on => :create 
+  validates :password, :presence =>true,
+                      :length => { :minimum => 5, :maximum => 40 },
+                      :confirmation =>true, :on => :create 
   has_many :posts
   has_many :events
   belongs_to :council
+  has_many :follows
+  has_many :statuses
+  has_many :activities
 
   before_create { generate_token(:auth_token) }
   
