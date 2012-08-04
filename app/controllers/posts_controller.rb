@@ -9,7 +9,11 @@ class PostsController < ApplicationController
   def index
     # @posts = Post.order("created_at DESC")
     # @posts = Post.all :page => params[:page], :order => 'created_at DESC'
-    @posts = Post.paginate :page => params[:page], :per_page => 3, :conditions => ['council_id = ?', @council.id], :order => 'created_at DESC'
+    if @current_user
+      @posts = Post.paginate :page => params[:page], :per_page => 3, :conditions => ['council_id = ?', @current_user.council_id], :order => 'created_at DESC'
+    else
+      @posts = Post.paginate :page => params[:page], :per_page => 3, :conditions => ['council_id = ?', @council.id], :order => 'created_at DESC'
+    end
 
     respond_to do |format|
       format.html # index.html.erb

@@ -6,7 +6,13 @@ class SponsorsController < ApplicationController
   # GET /sponsors
   # GET /sponsors.json
   def index
-    @sponsors = Sponsor.order("sponsorname").where("council_id = ?", @council.id)
+    
+    if @current_user
+      @sponsors = Sponsor.order("sponsorname").where("council_id = ?",  @current_user.council_id)
+    else
+      @sponsors = Sponsor.order("sponsorname").where("council_id = ?", @council.id)
+    end
+    
 
     respond_to do |format|
       format.html # index.html.erb

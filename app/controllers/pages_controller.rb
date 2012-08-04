@@ -5,8 +5,12 @@ class PagesController < ApplicationController
   
   def index
     
-    if @council #and @council.id > 1
+    if @council
       @post = Post.first :conditions => ["privateflag = ? and council_id = ?", false, @council.id], :order => 'created_at DESC'
+      render "index"      
+    elsif @current_user 
+      @council = Council.find(@current_user.council_id)
+      @post = Post.first :conditions => ["privateflag = ? and council_id = ?", false, @current_user.council_id], :order => 'created_at DESC'
       render "index"
     else
       @councils = Council.all

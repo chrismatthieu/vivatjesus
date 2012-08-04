@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+  <% if @current_user %>
+	<%= f.hidden_field :council_id, :value => @current_user.council_id %>
+  <% else %>
+	<%= f.hidden_field :council_id, :value => @council.id %>
+  <% end %>
+
   <%= f.hidden_field :council_id, :value => @council.id %>
   <div class="field">
     <%= f.text_field :sponsorname, :autofocus => true, :class=>"input-xxlarge", :autofocus => true, :placeholder=>"Spondor name" %>

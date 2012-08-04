@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html {
         # if @current_user.member
-          @users = User.order("username").where("council_id = ?", @council.id)
+          @users = User.order("username").where("council_id = ?", @current_user.council_id)
         # else
           # redirect_to "/pending"
         # end
