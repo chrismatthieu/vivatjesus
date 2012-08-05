@@ -129,9 +129,12 @@ class UsersController < ApplicationController
     if @council
       @user.council_id = @council.id
     else
-      @newcouncil = Council.new
-      @newcouncil.councilnumber = params[:user][:council_id]
-      @newcouncil.save
+      @newcouncil = Council.find(params[:user][:council_id])
+      if @newcouncil.nil?
+        @newcouncil = Council.new
+        @newcouncil.councilnumber = params[:user][:council_id]
+        @newcouncil.save
+      end
       
       @user.council_id = @newcouncil.id      
     end
