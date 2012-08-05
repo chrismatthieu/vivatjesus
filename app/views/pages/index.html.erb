@@ -7,16 +7,16 @@
 	  	<p><a class="btn btn-primary btn-large" href="/about">Learn more &raquo;</a>&nbsp;<a class="btn btn-primary btn-large" href="/users/new">Register &raquo;</a></p>
 	</div>		
 		<p class="pull-right">
-		<% if !@council.facebookurl.nil? %>
+		<% if !@council.facebookurl.blank? %>
 			<a href="<%=@council.facebookurl%>"><%=image_tag "/images/facebook.png", :width => "100"%></a>
 		<% end %>
-		<% if !@council.linkedinurl.nil? %>
+		<% if !@council.linkedinurl.blank? %>
 			<a href="<%=@council.linkedinurl%>"><%=image_tag "/images/linkedin.png", :width => "100"%></a>
 		<% end %>
-		<% if !@council.twitterurl.nil? %>
+		<% if !@council.twitterurl.blank? %>
 			<a href="<%=@council.twitterurl%>"><%=image_tag "/images/twitter1.png", :width => "100"%></a>
 		<% end %>
-		<% if !@council.mobileurl.nil? %>
+		<% if !@council.mobileurl.blank? %>
         	<a href="<%=@council.mobileurl%>"><%=image_tag "/images/mobile.png", :width => "100"%></a>
 		<% end %>
         <!-- <li class="last"><a href="/posts/rss"><%=image_tag "/images/rss.gif"%></a></li> -->
