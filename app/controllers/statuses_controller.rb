@@ -10,6 +10,7 @@ class StatusesController < ApplicationController
   before_filter :current_user  
   before_filter :current_council  
   before_filter :client, :only => [:create]
+  skip_before_filter :verify_authenticity_token, :only => [:destroy]
   
   
   
