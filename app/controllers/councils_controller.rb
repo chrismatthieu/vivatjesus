@@ -1,11 +1,16 @@
 class CouncilsController < ApplicationController
-  before_filter :current_user  
+  before_filter :admin_required  
   before_filter :current_council  
 
   # GET /councils
   # GET /councils.json
   def index
-    @councils = Council.all
+    
+    if @current_user.id == 1
+      @councils = Council.find(:all, :order => 'councilnumber')
+    else  
+      @councils = Council.find(:all, :conditions => ['id = ?', @current_user.council_id], :order => 'councilnumber')
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -27,8 +32,10 @@ class CouncilsController < ApplicationController
   # GET /councils/new
   # GET /councils/new.json
   def new
-    @council = Council.new
-
+    if @current_user.id == 1
+      @council = Council.new
+    end
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render :json => @council }
@@ -43,7 +50,10 @@ class CouncilsController < ApplicationController
   # POST /councils
   # POST /councils.json
   def create
-    @council = Council.new(params[:council])
+    
+    if @current_user.id == 1
+      @council = Council.new(params[:council])
+    end
 
     respond_to do |format|
       if @council.save
@@ -75,9 +85,12 @@ class CouncilsController < ApplicationController
   # DELETE /councils/1
   # DELETE /councils/1.json
   def destroy
-    @council = Council.find(params[:id])
-    @council.destroy
-
+    
+    if @current_user.id == 1
+      @council = Council.find(params[:id])
+      @council.destroy
+    end
+    
     respond_to do |format|
       format.html { redirect_to councils_url }
       format.json { head :ok }

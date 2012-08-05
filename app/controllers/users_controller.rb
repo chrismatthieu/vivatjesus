@@ -126,7 +126,15 @@ class UsersController < ApplicationController
       @user.token = token
     end
     
-    @user.council_id = @council.id
+    if @council
+      @user.council_id = @council.id
+    else
+      @newcouncil = Council.new
+      @newcouncil.councilnumber = params[:user][:council_id]
+      @newcouncil.save
+      
+      @user.council_id = @newcouncil.id      
+    end
 
     respond_to do |format|
       if @user.save
@@ -150,12 +158,14 @@ class UsersController < ApplicationController
     end
     
     respond_to do |format|
-      if @user.update_attributes(params[:user])
-        format.html { redirect_to @user, :notice => 'User was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.json { render :json => @user.errors, :status => :unprocessable_entity }
+      if @current_user.id == @user.id or (@current_user.admin and (@current_user.council_id == @user.council_id or @current_user == 1))      
+        if @user.update_attributes(params[:user])
+          format.html { redirect_to @user, :notice => 'User was successfully updated.' }
+          format.json { head :ok }
+        else
+          format.html { render :action => "edit" }
+          format.json { render :json => @user.errors, :status => :unprocessable_entity }
+        end
       end
     end
   end
@@ -163,14 +173,27 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    if @current_user.admin
-      @user = User.find(params[:id])
+    if @current_user.admin 
+
+      if params[:id] and isNumeric(params[:id])
+        @user = User.find(params[:id])
+      else
+        # @user = User.find_by_username(params[:id])
+        if request.url.index('localhost')
+          @user = User.find(:first, :conditions => ['username LIKE ?', params[:user]])
+         else
+          @user = User.find(:first, :conditions => ['username ILIKE ?', params[:user]])
+        end
+      end
+      
     else
       @user = User.find(@current_user.id)
     end
     
-    @user.destroy
-
+    if @current_user.id == @user.id or (@current_user.admin and (@current_user.council_id == @user.council_id or @current_user == 1))
+      @user.destroy
+    end
+    
     respond_to do |format|
       format.html { redirect_to users_url }
       format.json { head :ok }

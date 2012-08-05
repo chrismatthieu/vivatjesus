@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   # validates_uniqueness_of :username, :on => :create  
   validates :username, :presence =>true,
                       :uniqueness=>true, :on => :create 
+  validates :fullname, :presence =>true,
+                      :uniqueness=>true, :on => :create 
   validates :email, :presence =>true,
                       :uniqueness=>true, :on => :create 
   validates :password, :presence =>true,

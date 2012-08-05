@@ -74,7 +74,6 @@
 					<li><%= link_to 'Knights*', '/users'%> </li>
 					
 					<li><%= link_to 'Posts*', '/posts'%> </li>
-					<li><%= link_to 'Councils*', '/councils'%> </li>
 					
 				
 				<% end %>
@@ -86,6 +85,7 @@
 				<li><%= link_to 'Become a Knight', '/join'%> </li>
 
 			  	<% if @current_user && @current_user.admin %>
+					<li><%= link_to 'Councils*', '/councils'%> </li>
 				<% end %>
                </ul>
 	           <ul class="nav pull-right">
@@ -116,9 +116,9 @@
 					  </li>
 					
 				<% else %>
-					<% if @council %>
+					<%# if @council %>
 					<li><%= link_to 'Register', new_user_path, :title => "Register" %></li> 
-					<% end %>
+					<%# end %>
 					<li><%= link_to 'Login', '/login', :title => "Login" %></li>
 					
 				

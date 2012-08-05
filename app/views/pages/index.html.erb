@@ -1,12 +1,11 @@
 <div class="hero-unit">
 <div class="row-fluid">
+	<img src="/images/k_of_c_logo.png" width="300" align="right">	
 	<h2><%=@council.councilname%></h2><br />
   	<div class="span8">
 	    <p><%=@council.about%></p><br /><br />
-	  	<p><a class="btn btn-primary btn-large" href="/about">Learn more &raquo;</a></p>
-	</div>
-	<!div class="span4">
-		
+	  	<p><a class="btn btn-primary btn-large" href="/about">Learn more &raquo;</a>&nbsp;<a class="btn btn-primary btn-large" href="/users/new">Register &raquo;</a></p>
+	</div>		
 		<p class="pull-right">
 		<a href="<%=@council.facebookurl%>"><%=image_tag "/images/facebook.png", :width => "100"%></a>
 		<a href="<%=@council.linkedinurl%>"><%=image_tag "/images/linkedin.png", :width => "100"%></a>
@@ -14,15 +13,14 @@
         <a href="<%=@council.mobileurl%>"><%=image_tag "/images/mobile.png", :width => "100"%></a>
         <!-- <li class="last"><a href="/posts/rss"><%=image_tag "/images/rss.gif"%></a></li> -->
       </p>
-	<!/div>
 </div>
 </div>
 
 
 <!-- close hero div and open generic div -->
-<div class="hero-unit"> 
 	
 <% if @post %>
+<div class="hero-unit"> 
 <h2>
 <p class="well">
 <%# gravatar_image_tag @post.user.email, :class => "gravatar", :width => "25" %> 
@@ -50,10 +48,11 @@
 	
 <br />	
 <div class="fb-like" data-href="http://vivatjes.us/posts/<%=@post.id%>" data-send="false" data-width="450" data-show-faces="true"></div>
+
+</div>
 	
 <% end %>
 <br class="clear" />
 
-</div>
 
 

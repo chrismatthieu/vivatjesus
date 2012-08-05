@@ -23,6 +23,12 @@
 	Email Address<br />
     <%= f.text_field :email, :class=>"input-large", :placeholder=>"Email" %>
   </div>
+  <% if @council.nil? %>
+  <div class="field">
+	Council Number<br />
+    <%= f.text_field :council_id, :class=>"input-large", :placeholder=>"Council Number" %>
+  </div>
+  <% end %>
   <% if @current_user && @current_user.admin %>
   <div class="field">
     <%= f.label :admin %><br />

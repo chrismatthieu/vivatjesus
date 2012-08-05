@@ -13,7 +13,7 @@ class PagesController < ApplicationController
       @post = Post.first :conditions => ["privateflag = ? and council_id = ?", false, @current_user.council_id], :order => 'created_at DESC'
       render "index"
     else
-      @councils = Council.all
+      @councils = Council.find(:all, :conditions => ["councilname <> ''"], :order => 'councilnumber')
       render "social"
     end  
     
@@ -21,6 +21,12 @@ class PagesController < ApplicationController
   
   def about
     @users = User.order("username").where("officer = true and council_id = ?", @council.id)
+  end
+
+  def news
+    if !@council
+      @council = Council.find(:first, :conditions => ["id = ?", @current_user.council_id])
+    end
   end
   
   def contact
