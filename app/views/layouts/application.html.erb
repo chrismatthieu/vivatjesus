@@ -38,6 +38,13 @@
 </head>
 <body lang="en">
 	
+	<script type="text/javascript">
+		function lookupuser(){
+			window.location.replace("/search/" + $('#usersearch').val());
+			return false;
+		}
+	</script>
+	
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
@@ -65,7 +72,7 @@
 					    <a href="#"
 					          class="dropdown-toggle"
 					          data-toggle="dropdown">
-					        	Timeline*
+					        	Timeline
 					          <b class="caret"></b>
 					    </a>
 					    <ul class="dropdown-menu">
@@ -74,9 +81,9 @@
 					    </ul>
 					  </li>
 
-					<li><%= link_to 'Knights*', '/users'%> </li>
+					<li><%= link_to 'Knights', '/users'%> </li>
 					
-					<li><%= link_to 'Posts*', '/posts'%> </li>
+					<li><%= link_to 'Posts', '/posts'%> </li>
 					
 				
 				<% end %>
@@ -84,8 +91,12 @@
 				<% if @current_user or @council %>
 				<li><%= link_to 'News', '/news'%> </li>
 				<li><%= link_to 'Calendar', '/calendar'%> </li>
+				<li><%= link_to 'Payments', '/payments'%> </li>
 				<% end %>
+				
+				<% if !@current_user %>
 				<li><%= link_to 'Become a Knight', '/join'%> </li>
+				<% end %>
 
 			  	<% if @current_user && @current_user.admin %>
 					<li><%= link_to 'Councils*', '/councils'%> </li>
@@ -93,6 +104,13 @@
                </ul>
 	           <ul class="nav pull-right">
 			
+				<% if @current_user %>
+					<li>
+						<form onsubmit="return lookupuser();" class="navbar-search pull-left">
+						<input class="input-medium search-query" type="text" placeholder="user search" id="usersearch" name="usersearch" />
+						</form>
+					</li>
+				<% end %>
 
 				<li class="divider-vertical"></li>
 				<% if @current_user %>

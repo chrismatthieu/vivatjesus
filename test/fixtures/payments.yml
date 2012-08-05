@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  council_id: 1
+  title: MyString
+  description: MyText
+  paypalcode: MyText
+  promoactive: false
+
+two:
+  council_id: 1
+  title: MyString
+  description: MyText
+  paypalcode: MyText
+  promoactive: false

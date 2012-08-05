@@ -108,30 +108,21 @@ class StatusesController < ApplicationController
         @activity.status_id = @status.id
         @activity.save
         
-        # Check if message includes a callsign 
+        # Check if message includes a mention 
         txtcall = @status.message.gsub("@", "")
-        re="((?:[a-z][a-z]*[0-9]+[a-z0-9]*))"	# Alphanum 1
-        m=Regexp.new(re,Regexp::IGNORECASE);
-        callsign = m.match(txtcall)
-        
-        # Send mention email
-        if callsign
-          
-          if request.url.index('localhost')
-            @mention = User.find(:first, :conditions => ['username LIKE ?', callsign[0]])
-          else
-            @mention = User.find(:first, :conditions => ['username ILIKE ?', callsign[0]])
-          end
-          
-          if @mention and @mention.email and @mention.allowemail != false
-              begin
-                MentionMailer.alerter(session[:username], @mention.username, session[:image], @mention.email, @activity.id.to_s).deliver
-              rescue
-              end
-          end
-          
+        txtarray = txtcall.split(" ")
+        if request.url.index('localhost')
+          @mention = User.find(:first, :conditions => ['username LIKE ?', txtarray[0]])
+        else
+          @mention = User.find(:first, :conditions => ['username ILIKE ?', txtarray[0]])
         end
         
+        if @mention and @mention.email and @mention.allowemail != false
+            begin
+              MentionMailer.alerter(session[:username], @mention.username, session[:image], @mention.email, @activity.id.to_s).deliver
+            rescue
+            end
+        end        
           
         # Tweet
         if session['access_token'] and params[:status][:twitter] == "1"

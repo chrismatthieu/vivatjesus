@@ -1,5 +1,5 @@
 class MentionMailer < ActionMailer::Base
-  default from: "noreply@73s.com"
+  default from: "noreply@vivatjes.us"
   # rails g mailer mention_mailer alerter
 
   def alerter(fromcall, tocall, photo, email, activityid)
@@ -7,6 +7,6 @@ class MentionMailer < ActionMailer::Base
     @tocall = tocall
     @photo = photo
     @activityid = activityid
-    mail to: email, subject: @fromcall.upcase + " Mentioned You on VivatJesus", :from => "noreply@73s.com"
+    mail to: email, subject: @fromcall.upcase + " Mentioned You on VivatJesus", :from => "noreply@vivatjes.us"
   end
 end

@@ -2,6 +2,8 @@ Vivatjesus::Application.routes.draw do
 
 
 
+  resources :payments
+
   match '/calendar' => 'pages#calendar'
   # match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
@@ -51,12 +53,10 @@ Vivatjesus::Application.routes.draw do
   match '/search' => 'posts#search'
   match '/mobile' => 'pages#mobile'
   match '/news' => 'pages#news'
-  match '/raffle' => 'pages#raffle'
   match '/success' => 'pages#success'
-  match '/payments' => 'pages#payments'
-  match '/dues' => 'pages#dues'
   match '/users/password' => "users#password"
   match ':user/edit' => 'users#edit'
+  match 'search/:username' => 'users#search'
 
   match '/mobile/home' => 'mobile#index'
   match '/mobile/about' => 'mobile#about'

@@ -66,8 +66,8 @@ Vivatjesus::Application.configure do
     domain: "VivatJes.us",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "n7ice@73s.com",
-    password: "dvtdvtdvt"
+    user_name: "chris@vivatjes.us",
+    password: "vivatjesus"
   }
 
   

@@ -1,10 +1,17 @@
+<% if @search %>
+<h1>Search for <i><%=params[:username]%></i></h1>
+<% else %>
 <h1>Knights in Council <%= @current_user.council.councilnumber %></h1>
+<% end %>
 
 <p>
 	<table class="table table-striped">
 		<thead>
 	    <th>Username</th>
-	    <th>Officer Title</th>
+		<% if @search %>
+		<th>Council</th>
+		<% end %>
+	    <th>Officer?</th>
 	    <th>Social Networks</th>
 		<% if @current_user && @current_user.admin %>
 		    <th>Mbr</th>
@@ -21,7 +28,14 @@
 	<% @users.each do |user| %>
 	  <tr>
 	    <!-- <td><%= gravatar_image_tag user.email, :class => "gravatar", :width => "25" %> <%= link_to user.username.capitalize, user_path(user) rescue ""%></td> -->
-	    <td><img src="http://avatars.io/auto/<%=user.username%>" width="25"> <%= link_to user.username.capitalize, user_path(user) rescue ""%></td>
+	    <td>
+			<img src="http://avatars.io/auto/<%=user.username%>" width="25"> 
+			<%= link_to user.username.capitalize + ' (' + user.fullname + ')', user_path(user) rescue ""%>			
+		</td>
+		
+		<% if @search %>
+		<td><%= user.council.councilnumber%></td>
+		<% end %>		
 
 	    <td><%= user.officertitle %></td>
 		<td>

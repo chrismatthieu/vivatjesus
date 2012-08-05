@@ -1,0 +1,39 @@
+<%= form_for(@payment) do |f| %>
+  <% if @payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+      <ul>
+      <% @payment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @current_user %>
+	<%= f.hidden_field :council_id, :value => @current_user.council_id %>
+  <% else %>
+	<%= f.hidden_field :council_id, :value => @council.id %>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title, :autofocus => true, :class=>"input-xxlarge focus", :placeholder=>"Title of Promo" %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :class=>"input-xxlarge", :placeholder=>"Description" %>
+  </div>
+  <div class="field">
+    <%= f.label :paypalcode %><br />
+    <%= f.text_area :paypalcode, :class=>"input-xxlarge", :placeholder=>"PayPal-supplied code" %>
+  </div>
+  <div class="field">
+    <%= f.label :promoactive %><br />
+    <%= f.check_box :promoactive %>
+  </div>
+  <div><br />
+    <%= f.submit :class=>"btn btn-large btn-primary" %>
+  </div>
+<% end %>

@@ -109,7 +109,7 @@ class FollowsController < ApplicationController
       # Send welcome email
       if @user.email and @user.allowemail != false
         begin
-          # @message = "Hi #{@user.username.upcase}, \n\n #{@current_user.username.upcase} is now following you on 73s! You can follow them back by clicking on this link: http://73s.com/#{@current_user.username} \n\n73s, \n73s.com"
+          # @message = "Hi #{@user.username.upcase}, \n\n #{@current_user.username.upcase} is now following you on VivatJesus! You can follow them back by clicking on this link: http://vivatjes.us/#{@current_user.username} \n\nVivat Jesus! \nKofC"
           # Notifier.contact(@user.email, "n7ice@73s.com", @message).deliver
           
           # New HTML emailer

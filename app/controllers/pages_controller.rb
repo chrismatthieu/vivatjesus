@@ -52,5 +52,5 @@ class PagesController < ApplicationController
   def mobile
     redirect_to @council.mobileurl    
   end
-
+  
 end

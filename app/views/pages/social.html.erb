@@ -4,11 +4,10 @@
 	<h1>Welcome to Vivat Jesus!</h1><br />
 	<p>
 		Our mission is to develop a social network for the Knights of Columbus that helps fellow Knights enhance communications and meet our goals.
-		We also offering free council website hosting.  
+		We are also offering free council website hosting!  
 	</p>
 	<p><b>Here are the councils online today:</b></p>
 	<% @councils.each do |council|  %>
 		<p><%= link_to council.councilname, 'http://' + council.councilnumber + '.vivatjes.us'%></p>
-	<% end %>
-	
+	<% end %>	
 </div>

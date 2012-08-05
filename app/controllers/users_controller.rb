@@ -296,8 +296,7 @@ class UsersController < ApplicationController
     session['access_token'] = nil 
     session['access_secret'] = nil
     
-    redirect_to "/#{@twitter.username.downcase}/edit"
-    
+    redirect_to "/#{@twitter.username.downcase}/edit"    
   end
 
   def deauthfacebook
@@ -310,6 +309,16 @@ class UsersController < ApplicationController
     session['fbtoken'] = nil 
     
     redirect_to "/#{@fb.username.downcase}/edit"
+  end
+  
+  def search    
+    if request.url.index('localhost')
+      @users = User.find(:all, :conditions => ["fullname LIKE ? or username LIKE ?", '%' + params[:username] + '%', '%' + params[:username] + '%'], :order => 'username')
+     else
+       @users = User.find(:all, :conditions => ["fullname ILIKE ? or username ILIKE ?", '%' + params[:username] + '%', '%' + params[:username] + '%'], :order => 'username')
+    end
+    @search = true
+    render :index
     
   end
   

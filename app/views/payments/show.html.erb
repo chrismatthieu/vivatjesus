@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Council:</b>
+  <%= @payment.council_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @payment.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @payment.description %>
+</p>
+
+<p>
+  <b>Paypalcode:</b>
+  <%= @payment.paypalcode %>
+</p>
+
+<p>
+  <b>Promoactive:</b>
+  <%= @payment.promoactive %>
+</p>
+
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>

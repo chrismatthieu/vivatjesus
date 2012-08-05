@@ -1,0 +1,55 @@
+<div class="hero-unit">
+	<h1>Now Accepting Online Payments</h1>
+	<br />
+	<img src="/images/logo-paypal.jpg" align="right" width="250">
+	<p>
+		<% if @current_user %>
+			<% @councilnumber = @current_user.council.councilnumber %>
+		<% elsif @council %>
+			<% @councilnumber = @council.councilnumber %>
+		<% else %>
+			<% @councilnumber = "" %>
+		<% end %>
+
+		The Knights of Columbus council <%= @councilnumber %> is now accepting payments online for raffle tickets, sponsor donations, annual dues, etc.   
+	</p>
+
+	<p>
+	
+<% @payments.each do |payment| %>
+
+<% if payment.promoactive or (@current_user && @current_user.admin) %>
+<div class="row-fluid">
+	<div class="span8">
+		<h2>
+			<%= payment.title %>
+			<% if !payment.promoactive %>
+				<span style="color:red;">NOT ACTIVE</span>
+			<% end %>
+		</h2>
+		<p><%= payment.description %></p>
+		<p>
+			<% if @current_user && @current_user.admin %>
+			    <%= link_to 'Show', payment %>
+			    <%= link_to 'Edit', edit_payment_path(payment) %>
+			    <%= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' } %>
+			<% end %>
+		</p>
+	</div>
+
+	<div class="span4">
+		<p><%= raw(payment.paypalcode) %></p>
+	</div>
+</div>
+<% end %>
+
+<% end %>
+
+<br />
+
+
+</div>
+
+<% if @current_user && @current_user.admin %>
+<%= link_to 'New Payment', new_payment_path %>
+<% end %>

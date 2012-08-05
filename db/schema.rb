@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120805052253) do
+ActiveRecord::Schema.define(:version => 20120805215150) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -57,6 +57,16 @@ ActiveRecord::Schema.define(:version => 20120805052253) do
     t.integer  "block_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "payments", :force => true do |t|
+    t.integer  "council_id"
+    t.string   "title"
+    t.text     "description"
+    t.text     "paypalcode"
+    t.boolean  "promoactive"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "posts", :force => true do |t|

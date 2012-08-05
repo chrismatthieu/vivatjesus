@@ -15,7 +15,8 @@
 		<% if !@followuser.photo.blank? %>	
 			<img src="<%= @followuser.photo rescue "" %>" align="left"  style="width:75px; height: 75px;"/>
 		<% else %>
-			<%= gravatar_image_tag @followuser.email, :class => "gravatar", :align=>"left", :style => "width:75px; height: 75px;" rescue ""%>
+			<%# gravatar_image_tag @followuser.email, :class => "gravatar", :align=>"left", :style => "width:75px; height: 75px;" rescue ""%>
+			<img src="http://avatars.io/auto/<%=@followuser.username%>" width="75" height="75" align="left">
 		<% end %>
 		</a>
 		</div>
@@ -27,7 +28,7 @@
 			<p>
 					<% 
 					if @followuser.bio.blank?
-						@txt = "ham radio operator"
+						@txt = "Knight"
 					else
 						@txt = @followuser.bio[0..160]
 					end

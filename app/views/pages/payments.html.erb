@@ -1,8 +1,17 @@
+<div class="hero-unit">
 <h1>Now Accepting Online Payments</h1>
-
+<br />
+<img src="/images/logo-paypal.jpg" align="right" width="250">
 <p>
-	<img src="/images/logo-paypal.jpg" align="right" width="300">
-	The Knights of Columbus council 10062 is now accepting payments online for raffle tickets, sponsor donations, annual dues, etc.   
+	<% if @current_user %>
+		<% @councilnumber = @current_user.council.councilnumber %>
+	<% elsif @council %>
+		<% @councilnumber = @council.councilnumber %>
+	<% else %>
+		<% @councilnumber = "" %>
+	<% end %>
+	
+	The Knights of Columbus council <%= @councilnumber %> is now accepting payments online for raffle tickets, sponsor donations, annual dues, etc.   
 </p>
 
 <p>
@@ -18,5 +27,5 @@
 		</li> -->
 	</ul>
 </p>
-
-<br /><br /><br />
+<br /><br /><br /><br /><br /><br />
+</div>
