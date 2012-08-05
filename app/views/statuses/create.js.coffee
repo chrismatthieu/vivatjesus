@@ -13,7 +13,8 @@ $('#statuses').prepend('
 	<% if session["image"] %>	
 	<img src="<%= session["image"] rescue "" %>" style="width:75px; height: 75px;" align="left"/>
 	<% else %>
-	<%= gravatar_image_tag session["email"], :class => "gravatar", :align => "left", :style => "width:75px; height: 75px;" rescue "" %>
+	<%# gravatar_image_tag session["email"], :class => "gravatar", :align => "left", :style => "width:75px; height: 75px;" rescue "" %>
+	<img src="http://avatars.io/auto/<%=session["username"]%>" width="75" height="75" align="left">
 	<% end %>
 	
 	</div>

@@ -10,7 +10,7 @@
 			<% if @status %>
 				<% @statusmessage = "Status Update: " + @status.message rescue "Removed status" %>
 			<% else %>
-				<% @statusmessage = "Removed status" %>
+				<% @statusmessage = "" %>
 			<% end %>
 		<% elsif activity.follow_id %>
 			<% @follow = Follow.find(activity.follow_id) rescue nil %>
@@ -29,6 +29,7 @@
 			<% @status = nil %>
 		<% end%>
 				
+		<% if !@statusmessage.blank? %>		
 		<div id="status_<%=activity.status_id rescue activity.id %>">
 			<div class="row-fluid well">
 			<div class="span2">
@@ -84,6 +85,7 @@
 
 		</div>
 		</div>
+		<%end%>
 	
 	<% end %>
 <% end %>
