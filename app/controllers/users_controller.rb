@@ -296,7 +296,7 @@ class UsersController < ApplicationController
     session['access_token'] = nil 
     session['access_secret'] = nil
     
-    redirect_to "/users/#{@twitter.username.downcase}/edit"
+    redirect_to "/#{@twitter.username.downcase}/edit"
     
   end
 
@@ -309,7 +309,7 @@ class UsersController < ApplicationController
     session['fbid'] = nil 
     session['fbtoken'] = nil 
     
-    redirect_to "/users/#{@fb.username.downcase}/edit"
+    redirect_to "/#{@fb.username.downcase}/edit"
     
   end
   
