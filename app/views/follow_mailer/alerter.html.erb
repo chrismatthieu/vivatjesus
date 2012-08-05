@@ -1,0 +1,32 @@
+<html>
+	<body style="background-color: #c0c0c0;">		
+		<center>
+		<table style="background-color: #ffffff;"">
+			<tr>
+				<td width="70%" colspan="2">
+					<h1>
+						<img src="http://vivatjes.us/images/k_of_c_logo.png" align="right">
+						You have a new follower!
+					</h1>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="<%=@photo%>" width="200">
+				</td>
+				<td>
+					<p>Hi <%=@tocall.upcase rescue ""%>,</p>
+					
+					<p><%=@fromcall.upcase rescue ""%> is now following you on VivatJesus, the social network for Knights of Columbus! You can follow them back by clicking on this link: </p>
+					
+					<p><a href="http://vivatjes.us/<%=@fromcall.downcase rescue ""%>">http://vivatjes.us/<%=@fromcall.downcase rescue ""%></a></p>
+
+					<p>Vivat Jesus!<br />
+					KofC</p>
+				</td>
+			</tr>
+		</table>
+		</center>
+		
+	</body>
+</html>
