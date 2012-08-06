@@ -13,24 +13,27 @@
 
   <% if @current_user %>
 	<%= f.hidden_field :council_id, :value => @current_user.council_id %>
+	<% @councilnumber = @current_user.council.councilnumber %>
   <% else %>
 	<%= f.hidden_field :council_id, :value => @council.id %>
+	<% @councilnumber = @council.councilnumber %>
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title %>
     <%= f.text_field :title, :autofocus => true, :class=>"input-xxlarge focus", :placeholder=>"Title of Promo" %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description %>
     <%= f.text_area :description, :class=>"input-xxlarge", :placeholder=>"Description" %>
   </div>
   <div class="field">
-    <%= f.label :paypalcode %><br />
+    <%= f.label :paypalcode %>
+	Please direct your PayPal success page to http://<%=@councilnumber%>.vivatjes.us/success<br />
     <%= f.text_area :paypalcode, :class=>"input-xxlarge", :placeholder=>"PayPal-supplied code" %>
   </div>
   <div class="field">
-    <%= f.label :promoactive %><br />
+    <%= f.label :promoactive %>
     <%= f.check_box :promoactive %>
   </div>
   <div><br />
