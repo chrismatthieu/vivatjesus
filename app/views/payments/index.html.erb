@@ -15,34 +15,40 @@
 	</p>
 
 	<p>
+
+<% if @payments %>
 	
-<% @payments.each do |payment| %>
+	<% @payments.each do |payment| %>
 
-<% if payment.promoactive or (@current_user && @current_user.admin) %>
-<div class="row-fluid">
-	<div class="span8">
-		<h2>
-			<%= payment.title %>
-			<% if !payment.promoactive %>
-				<span style="color:red;">NOT ACTIVE</span>
-			<% end %>
-		</h2>
-		<p><%= payment.description %></p>
-		<p>
-			<% if @current_user && @current_user.admin %>
-			    <%= link_to 'Show', payment %>
-			    <%= link_to 'Edit', edit_payment_path(payment) %>
-			    <%= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' } %>
-			<% end %>
-		</p>
+	<% if payment.promoactive or (@current_user && @current_user.admin) %>
+	<div class="row-fluid">
+		<div class="span8">
+			<h2>
+				<%= payment.title %>
+				<% if !payment.promoactive %>
+					<span style="color:red;">NOT ACTIVE</span>
+				<% end %>
+			</h2>
+			<p><%= payment.description %></p>
+			<p>
+				<% if @current_user && @current_user.admin %>
+				    <%= link_to 'Show', payment %>
+				    <%= link_to 'Edit', edit_payment_path(payment) %>
+				    <%= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' } %>
+				<% end %>
+			</p>
+		</div>
+
+		<div class="span4">
+			<p><%= raw(payment.paypalcode) %></p>
+		</div>
 	</div>
+	<% end %>
 
-	<div class="span4">
-		<p><%= raw(payment.paypalcode) %></p>
-	</div>
-</div>
-<% end %>
+	<% end %>
 
+<% else %>
+	No active promotions available...<br /><br />
 <% end %>
 
 <br />
