@@ -41,6 +41,7 @@ Vivatjesus::Application.routes.draw do
   match ':user/followers' => 'follows#index', :view => 'followers', :constraints => { :user => /[0-9A-Za-z\-\_\@\.\%20]+/ }
   match '/users/pollallfeed' => 'users#pollallfeed'
   match '/users/pollfeed' => 'users#pollfeed'
+  match '/users/polluserfeed/:userid' => 'users#polluserfeed'
   match '/statuses/pollfeed' => 'statuses#pollfeed'
   match '/follows/block/:id' => 'follows#block'
   match '/follows/unblock/:id' => 'follows#unblock'

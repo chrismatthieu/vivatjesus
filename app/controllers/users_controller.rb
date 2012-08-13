@@ -313,6 +313,15 @@ class UsersController < ApplicationController
     end
 
   end
+
+  def polluserfeed
+    @activities = Activity.paginate :page => params[:page], :order => 'activities.updated_at DESC', :conditions=>['created_at > ? and council_id = ? and user_id = ?', Time.now - 10.seconds, @current_user.council_id, params[:userid]]                
+    respond_to do |format|  
+      format.js { render :action => 'pollcouncilfeed.js.coffee', :content_type => 'text/javascript'}
+    end
+
+  end
+
   
   def deauthtwitter
     @twitter = User.find(session[:user_id])

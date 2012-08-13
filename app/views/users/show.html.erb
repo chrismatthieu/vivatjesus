@@ -135,25 +135,21 @@ function setbuttonclick(buttonid) {
 		<br /><br />
 		<% end %>
 		
+		
 		<% if !@user.twitter.blank? %>
-	  <b>Twitter:</b>
-	  <%= link_to "@" + @user.twitter, "http://twitter.com/" + @user.twitter, :target=>"_new" %>
-		<br /><br />
+			<%= link_to image_tag("twitter1.png", :width => "50"), "http://twitter.com/" + @user.twitter, :target=>"_new"%>
 		<% end %>
 		<% if !@user.facebook.blank? %>
-	  <b>Facebook:</b>
-	  <%= link_to @user.facebook, @user.facebook, :target=>"_new"   %>
-		<br /><br />
+			<%= link_to image_tag("facebook.png", :width => "50"), @user.facebook, :target=>"_new"%>
 		<% end %>
 		<% if !@user.linkedin.blank? %>
-	  <b>LinkedIn:</b>
-	  <%= link_to @user.linkedin, @user.linkedin, :target=>"_new"  %>
-		<br /><br />
+			<%= link_to image_tag("linkedin.png", :width => "50"), @user.linkedin, :target=>"_new"%>
 		<% end %>
 		<% if !@user.googleplus.blank? %>
-	  <b>Google+:</b>
-	  <%= link_to @user.googleplus, @user.googleplus, :target=>"_new"  %>
+			<%= link_to image_tag("google_plus_150x150.png", :width => "52"), @user.googleplus, :target=>"_new"%>
 		<% end %>
+		
+		
 	</p>
 	
 	
@@ -170,7 +166,7 @@ $(document).ready(
   function(){
     setInterval(function(){
       $.ajax({
-        url: "/users/pollallfeed",
+        url: "/users/polluserfeed/<%=@user.id%>",
         type: "GET",
         dataType: "script"
     });
