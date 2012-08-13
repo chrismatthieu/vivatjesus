@@ -1,0 +1,49 @@
+<br/><p id="notice"><%= notice %></p>
+<%= link_to image_tag("rss.png", :width=>"50", :align=>"right"), "/feed.rss"%>
+<h1>Your Council's Activity Feed </h1>
+<%= link_to raw("&larr; View all activity"), "/activity" %> | 
+<%= link_to raw("Your timeline"), "/feed" %>
+
+<br />
+<%= render 'statuses/statusbar' %>
+
+<%= javascript_tag do -%>
+$(document).ready(
+  function(){
+    setInterval(function(){
+      $.ajax({
+        url: "/users/pollcouncilfeed",
+        type: "GET",
+        dataType: "script"
+    });
+  }, 10000 );
+});
+<% end -%>
+
+
+<% if !@activities.nil?%>
+<div id="statuses">
+
+	<%= render 'feed' %>
+
+</div>
+
+<a style="display:scroll;position:fixed;bottom:5px;right:5px;" href="#" title="Back to Top"><%= image_tag("up_arrow25.png", :width=>"25")%></a>
+
+<br /><br/><br/>
+<div id="scrollpage" style="display:none;"><%=@page%></div>
+<div id="scrollactive" style="display:none;">false</div>
+
+<script>
+	$(window).scroll(function(){
+	        if  ($(window).scrollTop()+200 >= ($(document).height() - ($(window).height()))){
+
+				if ($('#scrollactive').html() == 'false') { // IMPORTANT - Keeps the loader from fetching more than once.
+					$('#scrollactive').html("true");
+					$.getScript('/councilfeed?page=' + $('#scrollpage').html()); return false;
+				}
+
+	        }
+	});
+</script>
+<% end %>

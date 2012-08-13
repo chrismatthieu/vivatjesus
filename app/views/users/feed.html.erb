@@ -1,7 +1,9 @@
 <br/><p id="notice"><%= notice %></p>
-<%= link_to image_tag("/images/rss.png", :width=>"50", :align=>"right"), "/feed.rss"%>
+<%= link_to image_tag("rss.png", :width=>"50", :align=>"right"), "/feed.rss"%>
 <h1>Your Activity and the People You Follow </h1>
-<%= link_to raw("&larr; View all activity"), "/activity" %>
+<%= link_to raw("&larr; View all activity"), "/activity" %> | 
+<%= link_to raw("Your council's activity"), "/councilfeed" %> 
+
 <br />
 <%= render 'statuses/statusbar' %>
 
@@ -31,7 +33,7 @@ $(document).ready(
 
 </div>
 
-<a style="display:scroll;position:fixed;bottom:5px;right:5px;" href="#" title="Back to Top"><img src="/assets/up_arrow25.png" width="25"/></a>
+<a style="display:scroll;position:fixed;bottom:5px;right:5px;" href="#" title="Back to Top"><%= image_tag("up_arrow25.png", :width=>"25")%></a>
 
 <br /><br/><br/>
 <div id="scrollpage" style="display:none;"><%=@page%></div>
@@ -43,7 +45,7 @@ $(document).ready(
 
 				if ($('#scrollactive').html() == 'false') { // IMPORTANT - Keeps the loader from fetching more than once.
 					$('#scrollactive').html("true");
-					$.getScript('/activity?page=' + $('#scrollpage').html()); return false;
+					$.getScript('/feed?page=' + $('#scrollpage').html()); return false;
 				}
 
 	        }

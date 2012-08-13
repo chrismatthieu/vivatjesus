@@ -1,7 +1,9 @@
 <div class="hero-unit">
 	<h1>Now Accepting Online Payments</h1>
 	<br />
-	<img src="/images/logo-paypal.jpg" align="right" width="250">
+	<!-- <img src="/images/logo-paypal.jpg" align="right" width="250"> -->
+	<%= image_tag("logo-paypal.jpg", :align=>"right", :width=>"250")%>
+	
 	<p>
 		<% if @current_user %>
 			<% @councilnumber = @current_user.council.councilnumber %>

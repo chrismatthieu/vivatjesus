@@ -59,6 +59,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @user }
+      format.js {  }
     end
   end
 
@@ -281,6 +282,36 @@ class UsersController < ApplicationController
      end
      
           
+  end
+  
+  def councilfeed       
+    
+    @page = params[:page].to_i
+    if @page == 0
+      @page = 1
+    end
+    @page = @page + 1   
+
+     respond_to do |format|
+       format.html {
+         @activities = Activity.paginate :page => params[:page], :conditions => ["council_id = ?", @current_user.council_id], :order => 'updated_at DESC' 
+       }
+       format.rss { 
+         @activities = Activity.find(:all, :conditions => ["council_id = ?", @current_user.council_id], :order => 'created_at DESC', :limit =>30)
+         render :layout=>false 
+       }
+       format.js {
+         @activities = Activity.paginate :page => params[:page], :conditions => ["council_id = ?", @current_user.council_id], :order => 'updated_at DESC' 
+       }
+     end
+  end
+  
+  def pollcouncilfeed
+    @activities = Activity.paginate :page => params[:page], :order => 'activities.updated_at DESC', :conditions=>['created_at > ? and council_id = ?', Time.now - 10.seconds, @current_user.council_id]                
+    respond_to do |format|  
+      format.js { render :action => 'pollcouncilfeed.js.coffee', :content_type => 'text/javascript'}
+    end
+
   end
   
   def deauthtwitter

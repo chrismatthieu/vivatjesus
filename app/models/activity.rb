@@ -3,4 +3,5 @@ class Activity < ActiveRecord::Base
   has_many :statuses
   has_many :contacts
   belongs_to :user
+  belongs_to :council
 end

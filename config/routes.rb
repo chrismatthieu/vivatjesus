@@ -30,6 +30,7 @@ Vivatjesus::Application.routes.draw do
   match '/auth/:provider' => "application#omniauth"
   match '/feed' => "users#feed"
   match '/activity' => "users#allfeed"
+  match '/councilfeed' => "users#councilfeed"
   match '/activity/:id' => "users#showfeed"
   match '/twitter' => "users#twitter"
   match '/facebook' => "users#facebook"

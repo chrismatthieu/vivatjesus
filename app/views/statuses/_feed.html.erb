@@ -41,7 +41,7 @@
 			Updated <%= time_ago_in_words status.created_at %> ago
 			
 			<% if !status.location.blank? %>
-				<%=image_tag("/images/map_blue16.png", :width=>"12")%> <%= status.location %>
+				<%=image_tag("map_blue16.png", :width=>"12")%> <%= status.location %>
 			<% end %>
 			
 			<% if status.id %>

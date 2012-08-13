@@ -29,16 +29,16 @@
 	    <td><%= user.officertitle %></td>
 		<td>
 			<% if !user.twitter.blank? %>
-				<%= link_to image_tag("/images/twitter1.png", :width => "25"), "http://twitter.com/" + user.twitter, :target=>"_new"%>
+				<%= link_to image_tag("twitter1.png", :width => "25"), "http://twitter.com/" + user.twitter, :target=>"_new"%>
 			<% end %>
 			<% if !user.facebook.blank? %>
-				<%= link_to image_tag("/images/facebook.png", :width => "25"), user.facebook, :target=>"_new"%>
+				<%= link_to image_tag("facebook.png", :width => "25"), user.facebook, :target=>"_new"%>
 			<% end %>
 			<% if !user.linkedin.blank? %>
-				<%= link_to image_tag("/images/linkedin.png", :width => "25"), user.linkedin, :target=>"_new"%>
+				<%= link_to image_tag("linkedin.png", :width => "25"), user.linkedin, :target=>"_new"%>
 			<% end %>
 			<% if !user.googleplus.blank? %>
-				<%= link_to image_tag("/images/google_plus_150x150.png", :width => "27"), user.googleplus, :target=>"_new"%>
+				<%= link_to image_tag("google_plus_150x150.png", :width => "27"), user.googleplus, :target=>"_new"%>
 			<% end %>
 		</td>
 	  </tr>

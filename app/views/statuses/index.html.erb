@@ -20,7 +20,7 @@ $(document).ready(
 <!-- <p><center><div class="pager"><%= will_paginate @statuses, :page_links => false %></div></center></p> -->
 
 
-<a style="display:scroll;position:fixed;bottom:5px;right:5px;" href="#" title="Back to Top"><img src="/assets/up_arrow25.png" width="25"/></a>
+<a style="display:scroll;position:fixed;bottom:5px;right:5px;" href="#" title="Back to Top"><%= image_tag("up_arrow25.png", :width=>"25")%></a>
 
 <br /><br/><br/>
 <div id="scrollpage" style="display:none;"><%=@page%></div>

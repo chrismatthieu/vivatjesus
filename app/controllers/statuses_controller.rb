@@ -106,6 +106,7 @@ class StatusesController < ApplicationController
         @activity = Activity.new
         @activity.user_id = session["user_id"]
         @activity.status_id = @status.id
+        @activity.council_id = @council.id
         @activity.save
         
         # Check if message includes a mention 

@@ -1,6 +1,7 @@
 class FollowsController < ApplicationController
 
   before_filter :current_user  
+  before_filter :current_council  
 
   # GET /follows
   # GET /follows.json
@@ -92,6 +93,7 @@ class FollowsController < ApplicationController
       @activity = Activity.new
       @activity.user_id = session["user_id"]
       @activity.follow_id = @follow.id
+      @activity.council_id = @council.id
       @activity.save
 
     else # unfollow
