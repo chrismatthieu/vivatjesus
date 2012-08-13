@@ -1,5 +1,6 @@
 <div class="hero-unit">
-	<%= image_tag("k_of_c_logo300.png", :align=>"right")%>
+	<img src="/images/k_of_c_logo300.png" width="300" align="right"
+	<%# image_tag("k_of_c_logo300.png", :align=>"right")%>
 	<h1>Reset Password</h1><br />
 <p>Enter your username below to receive a password reset link via email.</p><br />
 <%= form_tag password_resets_path, :method => :post do %>
