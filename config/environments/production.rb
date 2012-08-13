@@ -9,28 +9,30 @@ Vivatjesus::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = true
+  config.serve_static_assets = false
 
-  # # Compress JavaScripts and CSS
-  #  config.assets.compress = false
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false #true
+  config.assets.compile = true #true
 
   # Generate digests for assets URLs
   config.assets.digest = true
-  
+
+  # Defaults to Rails.root.join("public/assets")
+  # config.assets.manifest = YOUR_PATH
+
   # Specifies the header that your server uses for sending files
-  # (comment out if your front-end server doesn't support this)
-  config.action_dispatch.x_sendfile_header = "X-Sendfile" # Use 'X-Accel-Redirect' for nginx
+  # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
+  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
   # See everything in the log (default is :info)
   # config.log_level = :debug
+  
 
   # Use a different logger for distributed setups
   # config.logger = SyslogLogger.new
@@ -57,18 +59,60 @@ Vivatjesus::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
   
-  config.action_mailer.default_url_options = { host: "VivatJes.us" }
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "VivatJes.us",
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: "chris@vivatjes.us",
-    password: "vivatjesus"
+    :address        => "smtp.sendgrid.net",
+    :port           => "25",
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => ENV['SENDGRID_DOMAIN']
   }
+  
+  #  Rails.application.config.middleware.use OmniAuth::Builder do
+  #    # ALWAYS RESTART YOUR SERVER IF YOU MAKE CHANGES TO THESE SETTINGS!
+  # 
+  #    # you need a store for OpenID; (if you deploy on heroku you need Filesystem.new('./tmp') instead of Filesystem.new('/tmp'))
+  #    require 'openid/store/filesystem'
+  # 
+  #    # load certificates
+  #    require "openid/fetchers"
+  #    OpenID.fetcher.ca_file = "#{Rails.root}/config/ca-bundle.crt"
+  # 
+  #    # providers with id/secret, you need to sign up for their services (see below) and enter the parameters here
+  #    provider :facebook, '214563245242191', '576ba383aaf5335c528c9c603ec74828'
+  #    provider :twitter, 'MirwMXxnomdhnywG6ynag', 'keUu5ggHjmGL40YsRZjgIeIGjeswjA9E4KZJLfP9k'
+  # 
+  #    # generic openid
+  #    provider :openid, OpenID::Store::Filesystem.new('./tmp'), :name => 'openid'
+  # 
+  #    # dedicated openid
+  #    provider :openid, OpenID::Store::Filesystem.new('./tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
+  #    # provider :google_apps, OpenID::Store::Filesystem.new('./tmp'), :name => 'google_apps'
+  #    # /auth/google_apps; you can bypass the prompt for the domain with /auth/google_apps?domain=somedomain.com
+  # 
+  #    provider :openid, OpenID::Store::Filesystem.new('./tmp'), :name => 'yahoo', :identifier => 'yahoo.com' 
+  #    provider :openid, OpenID::Store::Filesystem.new('./tmp'), :name => 'aol', :identifier => 'openid.aol.com'
+  #    provider :openid, OpenID::Store::Filesystem.new('./tmp'), :name => 'myopenid', :identifier => 'myopenid.com'
+  # 
+  #    # Sign-up urls for Facebook, Twitter, and Github
+  #    # https://developers.facebook.com/setup
+  #    # https://github.com/account/applications/new
+  #    # https://developer.twitter.com/apps/new
+  # end
+
+  # config.action_mailer.default_url_options = { host: "VivatJes.us" }
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   address: "smtp.gmail.com",
+  #   port: 587,
+  #   domain: "VivatJes.us",
+  #   authentication: "plain",
+  #   enable_starttls_auto: true,
+  #   user_name: "chris@vivatjes.us",
+  #   password: "vivatjesus"
+  # }
 
   
   
