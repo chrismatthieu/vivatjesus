@@ -13,41 +13,50 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :councilname %><%= f.text_field :councilname, :class=>"input-xxlarge" %>
+    <%= f.label "Council Name*" %><%= f.text_field :councilname, :class=>"input-xxlarge" %>
   </div>
   <div class="field">
-    <%= f.label :councilnumber %><%= f.text_field :councilnumber, :class=>"input-xxlarge" %>
+    <%= f.label "Council Number*" %><%= f.text_field :councilnumber, :class=>"input-xxlarge" %>
   </div>
   <div class="field">
-    <%= f.label :twitterurl %><%= f.text_field :twitterurl, :class=>"input-xxlarge" %>
+    <%= f.label "Council email address*" %><%= f.text_field :email, :class=>"input-xxlarge" %>
   </div>
   <div class="field">
-    <%= f.label :facebookurl %><%= f.text_field :facebookurl, :class=>"input-xxlarge" %>
+    <%= f.label "State's Website URL*" %><%= f.text_field :stateurl, :class=>"input-xxlarge" %>
+  </div>
+  <!-- <div class="field">
+    <%= f.label "Posterous URL* (used for News page)" %><%= f.text_field :posterousurl, :class=>"input-xxlarge" %>
+  </div> -->
+  <div class="field">
+    <%= f.label "Google Calendar Embedcode* (used for calendar page)" %>
+    i.e. http://www.google.com/calendar/embed?title=Knights%20of%20Columbus%20Council%2010062&amp;height=600&amp;wkst=1&amp;bgcolor=%233366ff&amp;src=tpg0ni9rp7mdkrdsfarnvi1oqk%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FPhoenix
+	<%= f.text_field :calendarurl, :class=>"input-xxlarge" %>
   </div>
   <div class="field">
-    <%= f.label :linkedinurl %><%= f.text_field :linkedinurl, :class=>"input-xxlarge" %>
+    <%= f.label "Posterous Newsfeed URL* (used for News page)." %>
+	Feedburner recommended (i.e. http://feeds.feedburner.com/TheKnightsOfColumbus10062)
+	<%= f.text_field :newsurl, :class=>"input-xxlarge" %>
   </div>
   <div class="field">
-    <%= f.label :googleplusurl %><%= f.text_field :googleplusurl, :class=>"input-xxlarge" %>
+    <%= f.label "About Us Description* (used on home page and about us page)" %><%= f.text_area :about, :class=>"input-xxlarge" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Twitter URL (optional)" %><%= f.text_field :twitterurl, :class=>"input-xxlarge" %>
   </div>
   <div class="field">
-    <%= f.label :mobileurl %><%= f.text_field :mobileurl, :class=>"input-xxlarge" %>
+    <%= f.label "Facebook URL (optional)" %><%= f.text_field :facebookurl, :class=>"input-xxlarge" %>
   </div>
   <div class="field">
-    <%= f.label :email %><%= f.text_field :email, :class=>"input-xxlarge" %>
+    <%= f.label "LinkedIn URL (optional)" %><%= f.text_field :linkedinurl, :class=>"input-xxlarge" %>
   </div>
   <div class="field">
-    <%= f.label :posterousurl %><%= f.text_field :posterousurl, :class=>"input-xxlarge" %>
+    <%= f.label "Google Plus URL (optional)" %><%= f.text_field :googleplusurl, :class=>"input-xxlarge" %>
   </div>
   <div class="field">
-    <%= f.label :calendarurl %><%= f.text_field :calendarurl, :class=>"input-xxlarge" %>
+    <%= f.label "Mobile App URL (optional)" %><%= f.text_field :mobileurl, :class=>"input-xxlarge" %>
   </div>
-  <div class="field">
-    <%= f.label :newsurl %><%= f.text_field :newsurl, :class=>"input-xxlarge" %>
-  </div>
-  <div class="field">
-    <%= f.label :about %><%= f.text_area :about, :class=>"input-xxlarge" %>
-  </div>
+
   <div>
     <p><%= f.submit "Submit", :class=>"btn  btn-primary btn-large" %></p>
   </div>

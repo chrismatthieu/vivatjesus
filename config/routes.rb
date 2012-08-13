@@ -36,8 +36,8 @@ Vivatjesus::Application.routes.draw do
   match '/deauthtwitter' => "users#deauthtwitter"
   match '/deauthfacebook' => "users#deauthfacebook"
 
-  match ':user/following' => 'follows#index', :view => 'following'
-  match ':user/followers' => 'follows#index', :view => 'followers'
+  match ':user/following' => 'follows#index', :view => 'following', :constraints => { :user => /[0-9A-Za-z\-\_\@\.\%20]+/ }
+  match ':user/followers' => 'follows#index', :view => 'followers', :constraints => { :user => /[0-9A-Za-z\-\_\@\.\%20]+/ }
   match '/users/pollallfeed' => 'users#pollallfeed'
   match '/users/pollfeed' => 'users#pollfeed'
   match '/statuses/pollfeed' => 'statuses#pollfeed'
@@ -74,7 +74,7 @@ Vivatjesus::Application.routes.draw do
   resources :follows
   
 
-  match ':user' => 'users#show'
+  match ':user' => 'users#show', :constraints => { :user => /[0-9A-Za-z\-\_\@\.\%20]+/ }
   
   match '*a', :to => 'errors#404'
 

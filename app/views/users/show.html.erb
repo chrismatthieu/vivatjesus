@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="hero-unit">
 
 
 <div>
@@ -25,7 +25,7 @@ function setbuttonclick(buttonid) {
 	<% if session["user_id"] %>
 	
 		<% if @user and session["user_id"] == @user.id %>
-			<a href="<%= "/users/" + @user.username + "/edit" %>"><button class="btn"><i class="icon-cog"></i> Edit Profile</button></a>
+			<a href="<%= "/" + @user.username + "/edit" %>"><button class="btn"><i class="icon-cog"></i> Edit Profile</button></a>
 		<% end %>
 				
 		
@@ -77,7 +77,13 @@ function setbuttonclick(buttonid) {
 	
 	<% if @user %>
 	<h1>
-	<%= @user.username.capitalize %> ( <%= @user.fullname rescue ""%> )<%= "s" if @user.username[-1,1] != "s" %> Profile 
+	
+	<% if  @user.username[-1,1] != "s" %>
+	<%= @user.username.capitalize %>'s
+	<% else %>
+	<%= @user.username.capitalize %>'
+	<% end %>
+	Profile 
 	<% if session["user_id"] %>
 		<!-- <a href="#" onclick="addLink('<%= @user.username rescue ""%>');" title="Mention <%= @user.username%> in a status update" rel="tooltip"><%= button_tag(raw('<img src="/assets/reply.gif" style="width:15px; height: 15px;" align="right">'), :class=>"btn", :id=>"reply") %></a> -->
 	<% end %>
@@ -92,6 +98,8 @@ function setbuttonclick(buttonid) {
 	
 	<br />
 	<p class="well">
+	<b>Name:</b> <%= @user.fullname rescue ""%>
+	<br /><br />
 	<b>Membership:</b>
 	<% if @user and @user.member %>
 		Good Standing
@@ -120,17 +128,32 @@ function setbuttonclick(buttonid) {
 	  <b>Email:</b>
 	  <a href="mailto:<%= @user.email rescue ""%>"><%= @user.email rescue ""%></a>
 		<br /><br />
+		
+		<% if !@user.wifename.blank? %>
+	  <b>Wife's name:</b>
+	  <%= @user.wifename %>
+		<br /><br />
+		<% end %>
+		
+		<% if !@user.twitter.blank? %>
 	  <b>Twitter:</b>
-	  <%= link_to "@" + @user.twitter, "http://twitter.com/" + @user.twitter if @user.twitter  %>
+	  <%= link_to "@" + @user.twitter, "http://twitter.com/" + @user.twitter, :target=>"_new" %>
 		<br /><br />
+		<% end %>
+		<% if !@user.facebook.blank? %>
 	  <b>Facebook:</b>
-	  <%= link_to @user.facebook, @user.facebook  if @user.facebook %>
+	  <%= link_to @user.facebook, @user.facebook, :target=>"_new"   %>
 		<br /><br />
+		<% end %>
+		<% if !@user.linkedin.blank? %>
 	  <b>LinkedIn:</b>
-	  <%= link_to @user.linkedin, @user.linkedin  if @user.linkedin %>
+	  <%= link_to @user.linkedin, @user.linkedin, :target=>"_new"  %>
 		<br /><br />
+		<% end %>
+		<% if !@user.googleplus.blank? %>
 	  <b>Google+:</b>
-	  <%= link_to @user.googleplus, @user.googleplus  if @user.googleplus %>
+	  <%= link_to @user.googleplus, @user.googleplus, :target=>"_new"  %>
+		<% end %>
 	</p>
 	
 	
@@ -200,3 +223,4 @@ $(document).ready(
 
 <% end %>
 
+</div>

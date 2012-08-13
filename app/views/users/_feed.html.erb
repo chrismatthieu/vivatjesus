@@ -66,7 +66,7 @@
 
 				Updated
 
-				<%= link_to time_ago_in_words(activity.created_at), "/activity/#{activity.id.to_s}" %> ago 
+				<%= link_to time_ago_in_words(activity.created_at), "/activity/#{activity.id.to_s}" %> ago from council <%= link_to activity.user.council.councilnumber,  'http://' + activity.user.council.councilnumber + '.vivatjes.us'%>
 
 
 				<% if activity.id %>

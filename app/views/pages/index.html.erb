@@ -1,6 +1,8 @@
 <div class="hero-unit">
 <div class="row-fluid">
-	<img src="/images/k_of_c_logo.png" width="300" align="right">	
+	<!-- <img src="/images/k_of_c_logo.png" width="300" align="right"> -->
+	<%= image_tag("k_of_c_logo300.png", :align=>"right")%>
+		
 	<h2><%=@council.councilname%></h2><br />
   	<div class="span8">
 	    <p><%=@council.about%></p><br /><br />
@@ -8,16 +10,16 @@
 	</div>		
 		<p class="pull-right">
 		<% if !@council.facebookurl.blank? %>
-			<a href="<%=@council.facebookurl%>"><%=image_tag "/images/facebook.png", :width => "100"%></a>
+			<a href="<%=@council.facebookurl%>" target="_new"><%=image_tag "/images/facebook.png", :width => "100"%></a>
 		<% end %>
 		<% if !@council.linkedinurl.blank? %>
-			<a href="<%=@council.linkedinurl%>"><%=image_tag "/images/linkedin.png", :width => "100"%></a>
+			<a href="<%=@council.linkedinurl%> target="_new""><%=image_tag "/images/linkedin.png", :width => "100"%></a>
 		<% end %>
 		<% if !@council.twitterurl.blank? %>
-			<a href="<%=@council.twitterurl%>"><%=image_tag "/images/twitter1.png", :width => "100"%></a>
+			<a href="<%=@council.twitterurl%>" target="_new"><%=image_tag "/images/twitter1.png", :width => "100"%></a>
 		<% end %>
 		<% if !@council.mobileurl.blank? %>
-        	<a href="<%=@council.mobileurl%>"><%=image_tag "/images/mobile.png", :width => "100"%></a>
+        	<a href="<%=@council.mobileurl%>" target="_new"><%=image_tag "/images/mobile.png", :width => "100"%></a>
 		<% end %>
         <!-- <li class="last"><a href="/posts/rss"><%=image_tag "/images/rss.gif"%></a></li> -->
       </p>

@@ -1,3 +1,4 @@
+<div class="hero-unit">
 <% if @search %>
 <h1>Search for <i><%=params[:username]%></i></h1>
 <% else %>
@@ -14,9 +15,9 @@
 	    <th>Officer?</th>
 	    <th>Social Networks</th>
 		<% if @current_user && @current_user.admin %>
-		    <th>Mbr</th>
-		    <th>Ofcr</th>
-		    <th>Pub</th>
+		    <th>Member</th>
+		    <th>Officer</th>
+		    <th>Publisher</th>
 		    <th>Admin</th>
 		    <th></th>
 		<% elsif @current_user && @current_user.member %>
@@ -30,7 +31,8 @@
 	    <!-- <td><%= gravatar_image_tag user.email, :class => "gravatar", :width => "25" %> <%= link_to user.username.capitalize, user_path(user) rescue ""%></td> -->
 	    <td>
 			<img src="http://avatars.io/auto/<%=user.username%>" width="25"> 
-			<%= link_to user.username.capitalize + ' (' + user.fullname + ')', user_path(user) rescue ""%>			
+			<%= link_to user.username.capitalize , '/' + user.username rescue ""%>	
+			<%= ' (' + user.fullname + ')' rescue ""%>
 		</td>
 		
 		<% if @search %>
@@ -40,16 +42,16 @@
 	    <td><%= user.officertitle %></td>
 		<td>
 			<% if !user.twitter.blank? %>
-				<%= link_to image_tag("/images/twitter1.png", :width => "25"), "http://twitter.com/" + user.twitter%>
+				<%= link_to image_tag("/images/twitter1.png", :width => "25"), "http://twitter.com/" + user.twitter, :target=>"_new"%>
 			<% end %>
 			<% if !user.facebook.blank? %>
-				<%= link_to image_tag("/images/facebook.png", :width => "25"), user.facebook%>
+				<%= link_to image_tag("/images/facebook.png", :width => "25"), user.facebook, :target=>"_new"%>
 			<% end %>
 			<% if !user.linkedin.blank? %>
-				<%= link_to image_tag("/images/linkedin.png", :width => "25"), user.linkedin%>
+				<%= link_to image_tag("/images/linkedin.png", :width => "25"), user.linkedin, :target=>"_new"%>
 			<% end %>
 			<% if !user.googleplus.blank? %>
-				<%= link_to image_tag("/images/google_plus_150x150.png", :width => "27"), user.googleplus%>
+				<%= link_to image_tag("/images/google_plus_150x150.png", :width => "27"), user.googleplus, :target=>"_new"%>
 			<% end %>
 		</td>
 		
@@ -58,8 +60,8 @@
 		    <td><%= user.officer %></td>
 		    <td><%= user.publisher %></td>
 		    <td><%= user.admin %></td>
-		    <td><%= link_to 'Show', user %> 
-		    <%= link_to 'Edit', edit_user_path(user) %>
+		    <td><%= link_to 'Show', '/' + user.username %> 
+		    <%= link_to 'Edit', '/' + user.username + '/edit' %>
 		    <%= link_to 'Destroy', user, :data => { :confirm => 'Are you sure?' }, :method => :delete %></td>
 		<% elsif @current_user && @current_user.member %>
 			<% status = "" %>
@@ -82,3 +84,4 @@
 <% if @current_user && @current_user.admin %>
 <%= link_to 'New User', new_user_path %>
 <% end %>
+</div>

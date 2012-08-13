@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120805215150) do
+ActiveRecord::Schema.define(:version => 20120813004222) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20120805215150) do
     t.datetime "updated_at"
     t.string   "mobileurl"
     t.string   "newsurl"
+    t.string   "stateurl"
   end
 
   create_table "events", :force => true do |t|
@@ -130,6 +131,7 @@ ActiveRecord::Schema.define(:version => 20120805215150) do
     t.boolean  "allowemail"
     t.string   "website"
     t.text     "bio"
+    t.string   "wifename"
   end
 
 end

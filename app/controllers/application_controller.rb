@@ -9,10 +9,9 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_council
-    # @subdomain = request.env['HTTP_HOST'].split(".")[0].downcase
+    
     @subdomain = request.subdomain
     if @subdomain == "www" or @subdomain == "vivatjes" 
-      # @council = Council.find(1)
       @council = nil
     else
       if request.url.index('localhost')
@@ -20,12 +19,12 @@ class ApplicationController < ActionController::Base
        else
         @council = Council.find(:first, :conditions => ['councilnumber ILIKE ?', @subdomain])
       end
-      
-      # @council = Council.find_by_councilnumber(@subdomain)
-      # if @council.nil?
-      #   @council = Council.find(1)      
-      # end
     end
+    
+    if @current_user and @council.nil?
+      @council = @current_user.council
+    end
+    
   end
   
   def admin_required

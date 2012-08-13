@@ -20,7 +20,12 @@ class PagesController < ApplicationController
   end
   
   def about
-    @users = User.order("username").where("officer = true and council_id = ?", @council.id)
+    if @current_user
+      @users = User.order("username").where("officer = true and council_id = ?", @current_user.council_id)
+    else
+      @users = User.order("username").where("officer = true and council_id = ?", @council.id)
+    end
+    
   end
 
   def news
