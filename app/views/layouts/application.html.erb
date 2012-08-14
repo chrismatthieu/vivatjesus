@@ -123,10 +123,18 @@
 					    <a href="#"
 					          class="dropdown-toggle"
 					          data-toggle="dropdown">
-								<!div class="thumbnail">							
+								<!div class="thumbnail">	
+								
+																						
 									<% if @current_user %>
+										<% if !@current_user.photo.blank? %>	
+											<img src="<%= @current_user.photo rescue "" %>" style="width:25px; height: 25px;"/>
+										<% else %>
+											<img src="http://avatars.io/auto/<%=@current_user.username%>" width="25" height="25" >
+										<% end %>
+									
 										<!-- <%= gravatar_image_tag @current_user.email, :class => "gravatar", :width => "25" rescue ""%>	 -->
-										<img src="http://avatars.io/auto/<%=@current_user.username%>" width="25">
+										<!-- <img src="http://avatars.io/auto/<%=@current_user.username%>" width="25"> -->
 										
 									<% end %>
 						        	<%= @current_user.username.capitalize %>
