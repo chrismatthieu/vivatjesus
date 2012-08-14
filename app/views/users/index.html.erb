@@ -30,7 +30,13 @@
 	  <tr>
 	    <!-- <td><%= gravatar_image_tag user.email, :class => "gravatar", :width => "25" %> <%= link_to user.username.capitalize, user_path(user) rescue ""%></td> -->
 	    <td>
-			<img src="http://avatars.io/auto/<%=user.username%>" width="25"> 
+			<% if !user.photo.blank? %>	
+				<img src="<%= user.photo rescue "" %>" style="width:25px; height: 25px;"/>
+			<% else %>
+				<img src="http://avatars.io/auto/<%=user.username%>" width="25" height="25" >
+			<% end %>
+		
+			<!-- <img src="http://avatars.io/auto/<%=user.username%>" width="25">  -->
 			<%= link_to user.username.capitalize , '/' + user.username rescue ""%>	
 			<%= ' (' + user.fullname + ')' rescue ""%>
 		</td>
