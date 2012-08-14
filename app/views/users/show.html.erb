@@ -14,8 +14,8 @@ function setbuttonclick(buttonid) {
 	
 <div id="photobar">
 	
-	<% if !@image.blank? %>	
-		<img src="<%= @image %>" style="width:100px; height: 100px;"/>
+	<% if !@user.photo.blank? %>	
+		<img src="<%= @user.photo %>" style="width:100px; height: 100px;"/>
 	<% else %>
 		<!-- <%= gravatar_image_tag @user.email, :class => "gravatar", :style=>"width:100px; height: 100px;" rescue "" %> -->
 		<img src="http://avatars.io/auto/<%=@user.username%>" width="100" height="100">

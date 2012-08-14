@@ -61,6 +61,7 @@ class SessionsController < ApplicationController
 
             @auth.fbid = @authhash[:uid]            
             @auth.fbtoken = @authhash[:token] 
+            @auth.photo = @authhash[:photo]
             @auth.save
             session['fbid'] = @authhash[:uid]  
             session['fbtoken'] = @authhash[:token]  
@@ -72,6 +73,7 @@ class SessionsController < ApplicationController
             @auth.provider = @authhash[:provider]
             @auth.access_token = @authhash[:token]  
             @auth.access_secret = @authhash[:secret]  
+            @auth.photo = @authhash[:photo]
           
             session['uid'] = @authhash[:uid]
             session['provider'] = @authhash[:provider]
