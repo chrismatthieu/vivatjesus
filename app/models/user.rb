@@ -3,7 +3,9 @@ class User < ActiveRecord::Base
   has_secure_password
   # validates_uniqueness_of :username, :on => :create  
   validates :username, :presence =>true,
-                      :uniqueness=>true, :on => :create 
+                      :uniqueness=>true, :on => :create
+  validates_format_of :username, :with => /^[A-Za-z\d_]+$/,
+                      :message => "can only contain letters and numbers (no spaces)."                      
   validates :fullname, :presence =>true,
                       :uniqueness=>true, :on => :create 
   validates :email, :presence =>true,

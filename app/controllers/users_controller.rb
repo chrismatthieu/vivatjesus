@@ -130,7 +130,7 @@ class UsersController < ApplicationController
     if @council
       @user.council_id = @council.id
     else
-      @newcouncil = Council.find(params[:user][:council_id])
+      @newcouncil = Council.find(params[:user][:council_id]) rescue nil
       if @newcouncil.nil?
         @newcouncil = Council.new
         @newcouncil.councilnumber = params[:user][:council_id]
