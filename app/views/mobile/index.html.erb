@@ -8,16 +8,15 @@
 </head>
 <body>
 	<div data-role="header">
-	  <h1>Vivat Jesus :: <%=@council.councilnumber%></h1>
+	  <h1>Vivat Jesus!</h1>
 	</div>
 	<div data-role="content">
+	  <center><%= image_tag("k_of_c_logo.png", :width=>"100")%></center>
+	  <p>Select a council:</p>
 	  <ul data-role="listview">
-	    <li><a href="/mobile/about">About</a></li>
-	    <li><a href="/mobile/news">News</a></li>
-	    <li><a href="<%=@council.facebookurl.gsub('www.facebook', 'm.facebook')%>">Facebook</a></li>
-	    <li><a href="<%=@council.twitterurl.gsub('http://twitter', 'http://mobile.twitter').gsub('www.twitter', 'mobile.twitter').gsub('#!/', '')%>">Twitter</a></li>
-	    <li><a href="/mobile/calendar">Calendar</a></li>
-	
+	  	<% @councils.each do |council| %>
+		    <li><a href="/mobile/menu?council=<%=council.id%>"><%=council.councilnumber%></a></li>
+		<% end %>	
 	  </ul>
 	</div>
 	<div data-role="footer">

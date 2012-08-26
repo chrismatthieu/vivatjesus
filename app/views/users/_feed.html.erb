@@ -31,7 +31,7 @@
 				
 		<% if !@statusmessage.blank? %>		
 		<div id="status_<%=activity.status_id rescue activity.id %>">
-			<div class="row-fluid well">
+			<div class="row-fluid well" style="margin-bottom: 0px;">
 			<div class="span2">
 			<a href="/<%= activity.user.username rescue ""%>">
 			<% if activity.user and !activity.user.photo.blank? %>	

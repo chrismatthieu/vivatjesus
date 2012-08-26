@@ -147,6 +147,11 @@
  							<li><%= link_to 'Logout', '/logout', :title => "Logout" %> </li>
 					    </ul>
 					  </li>
+
+					  <% if session[:admin] %>
+						<li><%= link_to 'Proxy', '/login', :title => 'Admin' %></li>
+					  <% end %>
+
 					
 				<% else %>
 					<%# if @council %>

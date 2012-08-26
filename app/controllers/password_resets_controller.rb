@@ -12,7 +12,7 @@ class PasswordResetsController < ApplicationController
      else
       user = User.find(:first, :conditions => ['username ILIKE ?', params[:username].strip])
     end
-    
+
     user.send_password_reset if user
     redirect_to root_url, :notice => "Email sent with password reset instructions."
   end
