@@ -47,4 +47,33 @@
 	
 </p>
 
+<h2>Contact Us</h2>
+
+<div id="contact">
+	<br />
+	<%= form_tag :controller=>"pages", :action=>"contact" do -%>
+    <fieldset>
+
+    <label for="fullname">Name:<br/>
+    <%= text_field("contact", "fullname", :class => "input input-xxlarge") -%>
+    </label>
+    <label for="emailaddress" class="margin">Email:<br/>
+    <%= text_field("contact", "emailaddress", :class => "input input-xxlarge") -%>
+    </label>
+    <label for="message">Message:<br />
+    <%= text_area("contact", "message", {"cols"=>"80", "rows"=>"4", "class"=>"input input-xxlarge"}) -%>
+    </label>
+    </fieldset>
+		<% math1 = 1 + rand(10) %>
+		<% math2 = 1 + rand(10) %>
+		<% mathanswer = math1 + math2 %>
+    <!-- <label for="message">Are you human?<br/>What's <%=math1%> + <%=math2%>?
+    <%# text_field("contact", "answer") -%></label> -->
+    <%= hidden_field("contact", "answer", :value => mathanswer) -%>
+    <%= hidden_field("contact", "mathanswer", :value => mathanswer) -%>
+    <p><%= submit_tag "Send", :class=>"btn  btn-primary btn-large" -%></p>
+
+	<% end -%>
+</div>
+
 </div>

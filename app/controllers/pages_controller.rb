@@ -38,7 +38,7 @@ class PagesController < ApplicationController
     if params[:newsletteremail]
 
       if @council and !@council.email.blank?
-        @tomail = @council.email.blank
+        @tomail = @council.email
       else
         @tomail = "chris@matthieu.us"
       end
