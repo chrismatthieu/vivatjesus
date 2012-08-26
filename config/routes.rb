@@ -54,13 +54,13 @@ Vivatjesus::Application.routes.draw do
   match '/join' => 'pages#join'
   match '/pages/contact' => 'pages#contact'
   match '/search' => 'posts#search'
-  match '/mobile' => 'pages#mobile'
   match '/news' => 'pages#news'
   match '/success' => 'pages#success'
   match '/users/password' => "users#password"
   match ':user/edit' => 'users#edit'
   match 'search/:username' => 'users#search'
 
+  match '/mobile' => 'mobile#index'
   match '/mobile/home' => 'mobile#index'
   match '/mobile/about' => 'mobile#about'
   match '/mobile/news' => 'mobile#news'

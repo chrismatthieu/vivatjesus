@@ -36,17 +36,23 @@ class PagesController < ApplicationController
   
   def contact
     if params[:newsletteremail]
+
+      if @council and !@council.email.blank?
+        @tomail = @council.email.blank
+      else
+        @tomail = "chris@matthieu.us"
+      end
       
       if params[:newsletteremail].index("@")
         @answer = true
         @message = "Please add me to your email newsletter!"
-        Notifier.contact("chris@matthieu.us", params[:newsletteremail],  @message).deliver
+        Notifier.contact(@tomail, params[:newsletteremail],  @message).deliver
       end
       
     elsif params[:contact][:answer] == params[:contact][:mathanswer] and params[:contact][:mathanswer].to_i > 0
       @answer = true
       @message = params[:contact][:message] + ' - ' + params[:contact][:fullname]
-      Notifier.contact("chris@matthieu.us", params[:contact][:emailaddress],  @message).deliver
+      Notifier.contact(@tomail, params[:contact][:emailaddress],  @message).deliver
       
     else
       @answer = false
@@ -55,7 +61,7 @@ class PagesController < ApplicationController
   end
   
   def mobile
-    redirect_to @council.mobileurl    
+    # redirect_to @council.mobileurl    
   end
   
 end
