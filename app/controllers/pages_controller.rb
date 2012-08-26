@@ -35,13 +35,14 @@ class PagesController < ApplicationController
   end
   
   def contact
-    if params[:newsletteremail]
+    
+    if @council and !@council.email.blank?
+      @tomail = @council.email
+    else
+      @tomail = "chris@matthieu.us"
+    end
 
-      if @council and !@council.email.blank?
-        @tomail = @council.email
-      else
-        @tomail = "chris@matthieu.us"
-      end
+    if params[:newsletteremail]
       
       if params[:newsletteremail].index("@")
         @answer = true
