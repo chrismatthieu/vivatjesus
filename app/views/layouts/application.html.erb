@@ -32,7 +32,13 @@
 	.hero-unit {
 /*	  background-color: #fff;*/
 	}
-		
+/*	.navbar-inner {
+	  background-color: #4099FF;  background color will be black for all browsers 
+	  background-image: none;
+	  background-repeat: no-repeat;
+	  filter: none;
+	}
+*/		
   </style>
 
 <%= yield :head %>
@@ -66,9 +72,46 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="/"><%= image_tag("vivatjesus.png", :style=>"height: 25px;")%> Vivat Jesus! </a>
+
           <div class="nav-collapse">
 			<ul class="nav">
 				<li class="divider-vertical"></li>
+				<% if @current_user %>
+
+					<li class="dropdown">
+					    <a href="#" class="dropdown-toggle"
+					          data-toggle="dropdown">
+								<!div class="thumbnail">	
+								
+																						
+									<% if @current_user %>
+										<% if !@current_user.photo.blank? %>	
+											<img src="<%= @current_user.photo rescue "" %>" style="width:25px; height: 25px;"/>
+										<% else %>
+											<img src="http://avatars.io/auto/<%=@current_user.username%>" width="25" height="25" >
+										<% end %>
+									
+										<!-- <%= gravatar_image_tag @current_user.email, :class => "gravatar", :width => "25" rescue ""%>	 -->
+										<!-- <img src="http://avatars.io/auto/<%=@current_user.username%>" width="25"> -->
+										
+									<% end %>
+						        	<%= @current_user.username.capitalize %>
+								<!/div>
+					          <b class="caret"></b>
+					    </a>
+					    <ul class="dropdown-menu">
+							<!-- <li><%= link_to "My Activity", "/" + @current_user.username  %> </li> -->
+							<li><%= link_to "Edit Profile", '/' + @current_user.username + '/edit'  %> </li>
+							<% if session[:admin] %>
+								<li><%= link_to 'Proxy', '/login', :title => 'Admin' %></li>
+							<% end %>							
+ 							<li><%= link_to 'Logout', '/logout', :title => "Logout" %> </li>
+					    </ul>
+					</li>
+
+
+				<% end %>
+
 				<% if @current_user %>
 				
 					<li class="dropdown">
@@ -105,52 +148,25 @@
 			  	<% if @current_user && @current_user.admin %>
 					<li><%= link_to 'Councils*', '/councils'%> </li>
 				<% end %>
+
+
                </ul>
 	           <ul class="nav pull-right">
 			
-				<% if @current_user %>
-					<li>
-						<form onsubmit="return lookupuser();" class="navbar-search pull-left">
-						<input class="input-medium search-query" type="text" placeholder="user search" id="usersearch" name="usersearch" />
-						</form>
-					</li>
-				<% end %>
 
-				<li class="divider-vertical"></li>
+				<!-- <li class="divider-vertical"></li> -->
 				<% if @current_user %>
 				
-					<li class="dropdown">
-					    <a href="#"
-					          class="dropdown-toggle"
-					          data-toggle="dropdown">
-								<!div class="thumbnail">	
-								
-																						
-									<% if @current_user %>
-										<% if !@current_user.photo.blank? %>	
-											<img src="<%= @current_user.photo rescue "" %>" style="width:25px; height: 25px;"/>
-										<% else %>
-											<img src="http://avatars.io/auto/<%=@current_user.username%>" width="25" height="25" >
-										<% end %>
-									
-										<!-- <%= gravatar_image_tag @current_user.email, :class => "gravatar", :width => "25" rescue ""%>	 -->
-										<!-- <img src="http://avatars.io/auto/<%=@current_user.username%>" width="25"> -->
-										
-									<% end %>
-						        	<%= @current_user.username.capitalize %>
-								<!/div>
-					          <b class="caret"></b>
-					    </a>
-					    <ul class="dropdown-menu">
-							<!-- <li><%= link_to "My Activity", "/" + @current_user.username  %> </li> -->
-							<li><%= link_to "Edit Profile", '/' + @current_user.username + '/edit'  %> </li>							
- 							<li><%= link_to 'Logout', '/logout', :title => "Logout" %> </li>
-					    </ul>
-					  </li>
+					<li>
+						<form onsubmit="return lookupuser();" class="navbar-form">
+						<input class="span2" type="text" placeholder="user search" id="usersearch" name="usersearch" />
+						<button type="submit" class="btn">Search</button>
+						</form>						
+					</li>
 
-					  <% if session[:admin] %>
-						<li><%= link_to 'Proxy', '/login', :title => 'Admin' %></li>
-					  <% end %>
+					 
+
+
 
 					
 				<% else %>
@@ -181,9 +197,11 @@
 	<!-- </div> -->
 
 	<% time = Time.new %>
-    <p>Copyright &copy; <%=time.year%> - All Rights Reserved - <a href="http://kofc.org">Knights of Columbus</a> 
+    <p>Copyright &copy; <%=time.year%> - All Rights Reserved - <a href="http://kofc.org">Knights of Columbus</a> | 
 	<% if @council %>
-	| <%= link_to 'About', '/about'%> | <%= link_to 'Sponsors', '/sponsors'%> 
+	<%= link_to 'About', '/about'%> | <%= link_to 'Sponsors', '/sponsors'%> 
+	<% else %>
+	<%= link_to 'About Us', '/aboutus'%>
 	<% end %>
 	</p>
 	
