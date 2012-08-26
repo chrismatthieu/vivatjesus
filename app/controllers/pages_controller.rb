@@ -22,7 +22,7 @@ class PagesController < ApplicationController
   def about
     if @current_user
       @users = User.order("username").where("officer = true and council_id = ?", @current_user.council_id)
-    else
+    elsif @council 
       @users = User.order("username").where("officer = true and council_id = ?", @council.id)
     end
     
@@ -35,7 +35,7 @@ class PagesController < ApplicationController
   end
   
   def contact
-    
+
     if @council and !@council.email.blank?
       @tomail = @council.email
     else

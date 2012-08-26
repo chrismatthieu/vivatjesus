@@ -9,6 +9,7 @@
 <p><%=@council.about%></p><br />
 <p><a class="btn btn-primary btn-large" href="/join">Join Us! &raquo;</a></p>
 
+<% if @users %>
 <a name="officers"></a>
 <h2>Council Officers</h2>
 <p>
@@ -46,6 +47,7 @@
 	</table>
 	
 </p>
+<% end %>
 
 <h2>Contact Us</h2>
 
