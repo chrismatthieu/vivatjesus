@@ -67,6 +67,7 @@ Vivatjesus::Application.routes.draw do
   match '/mobile/calendar' => 'mobile#calendar'
   match '/mobile/menu' => 'mobile#menu'
   match '/mobile/timeline' => 'mobile#timeline'
+  match '/mobile/post/:id' => 'mobile#post'
 
   match 'fetchfeeds' => 'posts#fetchfeeds'
 

@@ -12,28 +12,37 @@ class MobileController < ApplicationController
   	if params[:council] 
   		session["mobilecouncil"] = params[:council]    
   	end
-	@council = Council.find(session["mobilecouncil"])
+	  @council = Council.find(session["mobilecouncil"])
     
   end
 
 
   def about    
-	@council = Council.find(session["mobilecouncil"])    
+	  @council = Council.find(session["mobilecouncil"])    
   end
 
 
   def news    
-	@council = Council.find(session["mobilecouncil"])    
+	   @council = Council.find(session["mobilecouncil"])  
+     @posts = Post.find(:all, :conditions => ['council_id = ?', @council.id], :order => 'created_at DESC', :limit=>10)
+  
   end
 
+
+  def post     
+     @council = Council.find(session["mobilecouncil"])  
+     @post = Post.find(params[:id])
+  
+  end
 
   def calendar    
-	@council = Council.find(session["mobilecouncil"])    
+	  @council = Council.find(session["mobilecouncil"])    
   end
 
 
-  def timeline    
-	@council = Council.find(session["mobilecouncil"])  
+  def timeline  
+
+	  @council = Council.find(session["mobilecouncil"])  
     @page = params[:page].to_i
     if @page == 0
       @page = 1

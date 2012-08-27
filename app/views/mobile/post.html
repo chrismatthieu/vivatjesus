@@ -8,16 +8,14 @@
 </head>
 <body>
 	<div data-role="header">
-		<a href="/mobile/menu" data-role="button" data-icon="home">Home</a>
+		<a href="/mobile/news" data-role="button" data-icon="home">News</a>
 	  <h1>Vivat Jesus :: <%=@council.councilnumber%></h1>
 	</div>
 	<div data-role="content">
-		<h1>News</h1>
+		<h1><%=@post.postname%></h1>
 
 	  <ul data-role="listview">
-	  	<% @posts.each do |post| %>
-		    <li><a href="/mobile/post/<%=post.id%>"><%=post.postname%></a></li>
-		<% end %>	
+		    <li><%=raw(@post.postbody)%></li>
 	  </ul>
 
 		
