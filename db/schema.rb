@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120813184109) do
+ActiveRecord::Schema.define(:version => 20120826222225) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(:version => 20120813184109) do
     t.integer  "user_id"
     t.boolean  "privateflag"
     t.integer  "council_id"
+    t.string   "pubdate"
   end
 
   create_table "sponsors", :force => true do |t|

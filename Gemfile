@@ -3,7 +3,9 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.8'
 
 # gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
-gem "will_paginate"
+gem 'will_paginate', '~> 3.0'
+# gem 'bootstrap-will_paginate'
+gem 'will_paginate-bootstrap'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -42,6 +44,8 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'bcrypt-ruby'
 gem 'json'
+
+gem 'feedzirra'
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -40,7 +40,11 @@
 <% end %>
 </div>
 
-<%= will_paginate @posts %>
+
+<%# will_paginate @posts, :class=>"pagination" %>
+<%# will_paginate(@posts, :renderer => WillPaginate::ActionView::LinkRenderer) %>
+<%= will_paginate @posts, :renderer => BootstrapPagination::Rails %>
+
 
 <% if @current_user && @current_user.publisher %>
   <%= link_to 'New post*', :action => 'new' %>

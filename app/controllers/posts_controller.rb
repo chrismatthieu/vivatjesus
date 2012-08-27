@@ -115,9 +115,53 @@ class PostsController < ApplicationController
   def rss    
     @posts = Post.find(:all, :order => "created_at desc")
     render :action => 'rss', :content_type => "application/xml", :layout => false 
-    
   end
   
+  def fetchfeeds
+
+    @councils = Council.all 
+
+    if @councils
+      @councils.each do |council|
+
+        if !council.nil?
+          # "http://10062.posterous.com/rss.xml"
+          @posterousfeed = council.posterousurl
+
+          if !@posterousfeed.blank?
+            if @posterousfeed[-1,1] == '/'
+              @posterousfeed << "rss.xml"
+            else
+              @posterousfeed << "/rss.xml"
+            end
+
+            feed = Feedzirra::Feed.fetch_and_parse(@posterousfeed)
+
+            if feed
+              feed.entries.reverse.each do |entry|
+              # feed.entries.each do |entry|
+
+                @post = Post.find_by_pubdate(entry.published) rescue nil
+                if @post.nil?
+                  @post = Post.new
+                  @post.postname = entry.title            
+                  @post.postbody = entry.summary
+                  @post.user_id = 1
+                  @post.council_id = council.id
+                  @post.privateflag = false
+                  @post.pubdate = entry.published
+                  @post.save
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+
+    render :nothing => true
+
+  end
   
   
 end

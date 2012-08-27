@@ -24,19 +24,19 @@
   <div class="field">
     <%= f.label "State's Website URL*" %><%= f.text_field :stateurl, :class=>"input-xxlarge" %>
   </div>
-  <!-- <div class="field">
-    <%= f.label "Posterous URL* (used for News page)" %><%= f.text_field :posterousurl, :class=>"input-xxlarge" %>
-  </div> -->
+  <div class="field">
+    <%= f.label "Posterous URL* (used for automating posts via email)" %><%= f.text_field :posterousurl, :class=>"input-xxlarge" %>
+  </div> 
   <div class="field">
     <%= f.label "Google Calendar Embedcode* (used for calendar page)" %>
     i.e. http://www.google.com/calendar/embed?title=Knights%20of%20Columbus%20Council%2010062&amp;height=600&amp;wkst=1&amp;bgcolor=%233366ff&amp;src=tpg0ni9rp7mdkrdsfarnvi1oqk%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FPhoenix
 	<%= f.text_field :calendarurl, :class=>"input-xxlarge" %>
   </div>
-  <div class="field">
-    <%= f.label "Posterous Newsfeed URL* (used for News page)." %>
+  <!-- <div class="field">
+    <%# f.label "Posterous Newsfeed URL* (used for News page)." %>
 	Feedburner recommended (i.e. http://feeds.feedburner.com/TheKnightsOfColumbus10062)
-	<%= f.text_field :newsurl, :class=>"input-xxlarge" %>
-  </div>
+	<%# f.text_field :newsurl, :class=>"input-xxlarge" %>
+  </div> -->
   <div class="field">
     <%= f.label "About Us Description* (used on home page and about us page)" %><%= f.text_area :about, :class=>"input-xxlarge" %>
   </div>
@@ -53,10 +53,10 @@
   <div class="field">
     <%= f.label "Google Plus URL (optional)" %><%= f.text_field :googleplusurl, :class=>"input-xxlarge" %>
   </div>
-  <div class="field">
-    <%= f.label "Mobile App URL (optional)" %><%= f.text_field :mobileurl, :class=>"input-xxlarge" %>
+<!--   <div class="field">
+    <%= f.label "Mobile App URL (optional)" %><%# f.text_field :mobileurl, :class=>"input-xxlarge" %>
   </div>
-
+ -->
   <div>
     <p><%= f.submit "Submit", :class=>"btn  btn-primary btn-large" %></p>
   </div>

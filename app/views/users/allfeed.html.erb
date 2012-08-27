@@ -1,7 +1,7 @@
 <% content_for :alert do %>
 	<% if session[:username] and session[:access_token].nil? and session[:alert] != true %>
 	<% session[:alert] = true %>
-	<div class="alert alert-success">
+	<div class="alert alert-info">
 	   <a class="close" data-dismiss="alert" href="#">&times;</a>
 	   <p>
 		<%= image_tag "fblogo.jpg", :style => "width:30px; height:30px" %> 
