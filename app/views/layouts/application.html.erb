@@ -132,13 +132,13 @@
 
 					<li><%= link_to 'Knights', '/users'%> </li>
 					
-					<li><%= link_to 'Posts', '/posts'%> </li>
 					
 				
 				<% end %>
 
 				<% if @current_user or @council %>
 				<!-- <li><%= link_to 'News', '/news'%> </li> -->
+				<li><%= link_to 'Posts', '/posts'%> </li>
 				<li><%= link_to 'Calendar', '/calendar'%> </li>
 				<li><%= link_to 'Payments', '/payments'%> </li>
 				<% end %>
