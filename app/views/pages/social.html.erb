@@ -5,8 +5,41 @@
 	<h1>Welcome to Vivat Jesus!</h1><br />
 	<p>
 		Our mission is to develop a social network for the Knights of Columbus that helps fellow Knights enhance communications and meet our goals.
-		We are also offering free council website hosting!  
+		We provide a free KofC council website hosting platform for helping evangelize our organization!  
 	</p>
+	<p><a class="btn btn-primary btn-large" href="/aboutus">Learn more &raquo;</a></p>
+
+	<div class="row-fluid">
+        <div class="span4">
+          <h2><%=image_tag('glyphicons_006_user_add.png')%> Social Network</h2>
+          <p>Create your own social network by following fellow Knights with similar interests and goals.</p>
+        </div>
+        <div class="span4">
+          <h2><%=image_tag('glyphicons_156_show_thumbnails_with_lines.png')%> Timelines</h2>
+          <p>Post status updates that integrate with both Facebook and Twitter to share activity.</p>
+        </div>
+        <div class="span4">
+          <h2><%=image_tag('glyphicons_163_iphone.png')%> Mobile Apps</h2>
+          <p>We offer mobile apps that run on both iOS and Android allowing you to stay connected on the go.</p>
+        </div>
+    </div>
+
+
+	<div class="row-fluid">
+        <div class="span4">
+          <h2><%=image_tag('glyphicons_266_book_open.png')%> Blog and News</h2>
+          <p>We offer public and private blog posts for your councils with login security.</p>
+        </div>
+        <div class="span4">
+          <h2><%=image_tag('glyphicons_090_table.png')%> Event Calendar</h2>
+          <p>Our platform integrates with Google calendars for tracking and sharing events.</p>
+        </div>
+        <div class="span4">
+          <h2><%=image_tag('glyphicons_202_shopping_cart.png')%> ePayments</h2>
+          <p>Our platform integrates with PayPal for collecting credit card payments online.</p>
+        </div>
+    </div>
+
 	<p><b>Here are the councils online today:</b></p>
 	<% @councils.each do |council|  %>
 		<p><%= link_to council.councilname, 'http://' + council.councilnumber + '.vivatjes.us'%></p>
