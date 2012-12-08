@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.9'
 
 # gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
 gem 'will_paginate', '~> 3.0'
